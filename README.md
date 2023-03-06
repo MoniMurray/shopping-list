@@ -110,14 +110,69 @@ Make sure to include things like git, GitHub, the program used to make your wire
 
 A great tip for this section is to include them as you use them, that way you won't forget what you ended up using when you get to the end of your project.
 
-Deployment & Local Development
-👩🏻‍💻 View an example of a completed Deployment & Local Development section here
+##Deployment
 
-Deployment
-Include instructions here on how to deploy your project. For your first project you will most likely be using GitHub Pages.
+The site is deployed using Heroku - [MYM Shopping List](https://mym-shopping-list.herokuapp.com/)
 
-Local Development
-The local development section gives instructions on how someone else could make a copy of your project to play with on their local machine. This section will get more complex in the later projects, and can be a great reference to yourself if you forget how to do this.
+###To Deploy the site using Heroku:
+
+- Login (or signup) to Heroku;
+- From the dashboard, click on 'New' and select 'Create New App';
+- Populate the App Name field with your new Project or Application name, and select your local region ie. Europe. Click 'Create App' button.
+
+The app is now created and is listed in the Heroku dashboard.
+
+In the 'Settings' tab, add the Config Variables:
+
+- DATABASE_URL: 'Paste ElephantSQL URL';
+- SECRET_KEY: 'Paste in your secret key';
+- PORT: 8000;
+- CLOUDINARY_URL: Cloudinary://*.
+
+In the 'Deploy' tab:
+- Select 'GitHub' from the Deployment method section;
+- Connect to the GitHub repository for this project;
+- Select 'Enable Automatic Deploys' from the the Automatic Deploy section.
+
+###Create a new database on ElephantSQL
+
+Heroku uses an ephemeral file system - which means it is wiped clean every time Heroku updates, or every time the app is redeployed.
+
+So Gunicorn which will act as the web server for the project, and the project will also use a server-based database called 'Postgres'.  It will be seperated from the  application, so it will survive even if the application server is destroyed.
+
+###To Create the Postgres database:
+
+- Login or signup to ElephantSQL;
+- Click 'Create New Instance';
+- Populate the 'Name' field with the name of the Project or Application;
+- Leave the 'Plan' field with the pre-populated Tiny Turtle content;
+- Leave the 'Tags' field blank;
+- Click the 'Select Region' button and choose 'EU-West-1' as the local region;
+- Click the 'Review' button, ensure all the content is correct, with the correct spelling, then click 'Create Instance'.
+
+The Postgres database is now created on ElephantSQL and you can see it on your ElephantSQL dashboard. 
+
+###Connect Gitpod development environment to Postgres database
+
+Through Gitpod, connect ElephantSQL through settings.py with a variable named 'DATABASE_URL', and then migrate the database structure to the newly connected ElephantSQL database.
+
+Test the connection in ElephantSQL:
+
+- Select the database instance from the dashboard;
+- Select 'Browser' tab, then click on 'Table Queries'.
+
+You should see that the dropped down list has been populated from the Django migrations.
+
+###Create Procfile in Gitpod
+
+Heroku needs a Profile so it knows how to run a project.
+
+In the newly created Procfile, add the line 'web: gunicorn PROJECTNAME.wsgi'.
+ - 'web:' tells Heroku that this is a process that should accept http traffic;
+ - 'gunicorn' is a web server installed for the project, a web services gateway server;
+ - '.wsgi' stands for 'web services gateway server' and is the standard that allows Python services to integrate with web servers.
+
+ The Project is now deployed.
 
 How to Fork
 Place instructions on how to fork your project here.
@@ -132,8 +187,9 @@ Testing requirements aren't massive for your first project, however if you start
 
 Use this part of the README to link to your TESTING.md file - you can view the example TESTING.md file here
 
-Credits
-👩🏻‍💻 View an example of a completed Credits section here
+##Credits
+
+README.md - I used the [README.md example](https://github.com/kera-cudmore/readme-examples/blob/main/milestone1-readme.md) by Kera Kudmore to plan and layout my headings and content, to ensure I didn't omit any important content.
 
 The Credits section is where you can credit all the people and sources you used throughout your project.
 
