@@ -68,8 +68,18 @@ Google Fonts is a popular choice for importing fonts to use in your project, as 
 Imagery
 Use this section to explain what sort of imagery you plan to use through your site.
 
-Wireframes
-Add the images or links for your wireframes here.
+##Wireframes
+
+I created my wireframes using Balsamiq, a link to my file is [here]()
+###Early UX Design Wireframe images
+
+[Restricted Homepage](assets/images/wireframes/Authentication-restricted-homepage-wireframe.png)
+
+User Registration [form](assets/images/wireframes/Registration-form-wireframe.png)
+
+Registered user Login [form](assets/images/wireframes/Login-form-wireframe.png)
+
+User Authentication Confirmed [Homepage expanded view](assets/images/wireframes/Authentication-confirmed-homepage-wireframe.png), with additional user functionality
 
 There are lots of different options to create your wireframes - Code Institute students can access Balsamiq as part of the course.
 
