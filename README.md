@@ -46,7 +46,36 @@ User Experience (UX)
 👩🏻‍💻 View an example of a completed user experience section here
 
 User Stories
-Add your user stories here. You want to include first time visitors and returning visitors here as a minimum. Think about each group, and the experience and journey you want them to have on your site. It really helps to think about this before you start coding, and will really help with creating your wireframes.
+
+Add your user stories here. 
+
+| Problem Statement                                                                   | User Story                                                                                                      |
+| ----------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------- |
+| How do I develop a List application that provides all this functionality to a user? | As a (role) I can (capability) so that (received benefit).                                                      |
+|                                                                                     |                                                                                                                 |
+| **REGISTRATION - Authorisation/Authentication**                                     | **User Model**                                                                                                  |
+| Epic                                                                                |                                                                                                                 |
+| Registration                                                                        | As a new user I can register to the List App so that I can access all the application's functionality securely. |
+| Login                                                                               | As a registered user I can Login with username and password.                                                    |
+| Logout                                                                              | As a logged-in user I can Logout of the app when finished using the list.                                       |
+|                                                                                     |                                                                                                                 |
+| **CRUD**                                                                            | **AddItem Model**                                                                                               |
+| Read                                                                                | As an unregistered user, I can only see the updated list on the Home page.                                      |
+| Add Item to List                                                                    | As a logged in user I can click Add so that I can add an item to my List                                        |
+| Edit existing Item on List                                                          | As a logged in user I can click Edit so that I can edit the detail of an item on my List                        |
+| Toggle/Tick list item as complete                                                   | As a logged in user I can tick the checkbox of an item so that I can mark the item as done.                     |
+| Delete list item                                                                    | As a logged in user I can delete an item so that I can remove it from the list.                                 |
+| Mark an item on the List as urgent                                                  | As a logged in user I can tick a star icon so that the item is marked Urgent.                                   |
+|                                                                                     |                                                                                                                 |
+| **COMMENTING**                                                                      | **CommentItem Model**                                                                                           |
+| Add a comment to an item, re bulb wattage, specific shop, size of item etc.         | As a logged in user I can add a comment to an item so that that item has more detail                            |
+|                                                                                     |                                                                                                                 |
+| **FILTERING**                                                                       |                                                                                                                 |
+| Filter view                                                                         | As a logged in user I can filter my shopping list by category so that I know where to shop.                     |
+|                                                                                     |
+
+
+You want to include first time visitors and returning visitors here as a minimum. Think about each group, and the experience and journey you want them to have on your site. It really helps to think about this before you start coding, and will really help with creating your wireframes.
 
 Design
 👩🏻‍💻 View an example of a completed design section here
