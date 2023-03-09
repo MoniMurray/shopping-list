@@ -43,7 +43,22 @@ class List_Item(models.Model):
 
     # helper methods
     class Meta:
-        ordering = ['added_on']
+        ordering = ['-added_on']
 
     def __str__(self):
-        return self
+        return self.item_name
+
+
+class Notes(models.Model):
+
+    # set attributes for Notes Table
+
+    item = models.OneToOneField(List_Item, on_delete=models.CASCADE)
+    user = models.ForeignKey(User, on_delete=models.CASCADE)
+    body = models.TextField()
+    added_on = models.DateTimeField(auto_now_add=True)
+
+    # helper method
+
+    def __str__(self):
+        return self.body
