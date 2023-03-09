@@ -101,6 +101,9 @@ User Stories
 Add your user stories here. You want to include first time visitors and returning visitors here as a minimum. Think about each group, and the experience and journey you want them to have on your site. It really helps to think about this before you start coding, and will really help with creating your wireframes.
 
 Design
+
+I began my design of the database structure by creating an Entity Relationship Diagram, which can be viewed [here](assets/images/Shopping List ERD.png).  The Diagram helped me to consider what to include in each Model and the relationships between the models of the database.
+ 
 👩🏻‍💻 View an example of a completed design section here
 
 Colour Scheme
@@ -109,6 +112,15 @@ Add all information about your colour scheme for your site here. You can explain
 I like to include a palette of the colour scheme here, my favourite site for creating a colour palette is coolors, but there are lots of other sites that also do the same thing, like ColorSpace, Muzli Colors, Adobe Colour Wheel and Canva to name a few.
 
 Typography
+
+Google Fonts was used for the following fonts:
+
+Roboto is used as a traditional, backup font.
+
+Nanum Myeongjo is used for the header text on the site, Regular 400 weight. It is a sans-serif font.
+
+Caveat font is used for the shopping list items, SemiBold 600 weight. It is a cursive font and suits a traditional handwritten shopping list style.
+
 If you've imported fonts to use in your project, add some information about them here. You can include information like:
 
 Why did you choose the font you have? Is this an accessibly friendly font? What weights have you included?
