@@ -1,10 +1,11 @@
-#SHOPPING LIST
+SHOPPING LIST
 
 - An online Shopping List
 
-##User's Goal
+User's Goal
 
-- User wants to create, add to, edit and delete from a shopping list.
+- User wants to have a shopping list on their phone, accessible by login to their account.  The user wants to create a shopping list, add items to the list, edit items, add comments, mark items as urgent or as done, and delete items from their shopping list.
+- User wants response messages to their actions, sucessful or unsuccessful.
 
 Add an image of the finished site here. I like to use amiresponsive to get an image of my site on all device sizes, and amiresponsive allows you to click links on the page and scroll, so each device can show a different element of your site.
 
@@ -15,7 +16,30 @@ If you want to add optional shields.io badges to your README, I like to add them
 CONTENTS
 User Experience
 
+Strategy
+
+Our user is looking for a efficient convenient means of maintaining a shopping list, having it to hand when shopping, and sharing it with household members. Branding should be clean, uncluttered, without distraction, but not sparse.  The features are created with user ease of use in mind.
+
+Scope
+
+A simple, uncomplicated, uncluttered shopping list is the MVP for the present. Features are: Login, Create, Add, Update and Delete items on the list.  The six-week deadline is tight.  MVP is priority.
+
+Structure
+
+User will only have access to features and functionality following registration and login and has restricted shopping list view until successful login.  Registration and Login links are on the Nav bar and also on a reminder text paragraph underneath the restricted shopping list.  Successful login expands Home page view and returns an authenticated view of Shopping list, with add, edit, star, filter and delete features.  Logout feature is automatic following successful login and appears on Nav bar.  Logout returns the user to restricted list view.
+
+Skeleton
+
+Visual iconography for ease of use, repeated on each page in the same location where appropriate.  A user will be familiar with clicking on icons to perform an action, this app will conform with this convention.  Uncluttered, simple UI. Use of wireframes to confirm the important information is seen first and to ensure labels, navigation and arrangement will make sense to the user.
+
+Surface
+
+Colours will be crisp, clean, sophisticated.  Black on white, cool clean colour palette.  White background #ffffff, dark grey text #4b4f58, list container colour rgba (240, 251, 247, 1) or #f3f4f6.  Fonts will follow the clean, uncluttered scope with Roboto, Caveat Semi-bold 600, Nanum Myeongjo Regular 400 in combination look sleak and are easy to read on all devices.
+
+- The User's interaction with this application should be easy and natural.  Use of icons will make actions like add, edit and delete intuitive. Efficient use of response messages will confirm successful actions to the user, with unsuccessful action messages easy to understand.
+
 User Stories
+
 Design
 
 Colour Scheme
