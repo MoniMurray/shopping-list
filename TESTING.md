@@ -66,12 +66,46 @@ MANUAL TESTING
 Testing User Stories
 👩🏻‍💻 View an example of a completed user stories testing section here
 
-This is where you will test the user stories you created in the README against your site. I like to use a table for this section - I create a column for the user stories goals, how these have been achieved and I use the third column to add any supporting images.
+This is where you will test the user stories you created in the README against your site. Use the User Stories table for this Test Case list, the Acceptance Criteria Tasks are repurposed to become the Tests  - use an additional column to add any supporting images by way of links.
+
+AUTOMATED TESTING
+
+I tested this project using [Django TestCase](https://docs.djangoproject.com/en/4.1/topics/testing/overview/)
+Testing Features
+👩🏻‍💻 View a feature list table here
+
+This is where you will test the features as you create them in the README against your site. Use a table for this section - base the table on the User Acceptance Criteria for the User Cases.
 
 Full Testing
 👩🏻‍💻 View an example of a completed full testing section here
 
-Full testing can be tedious, so it is great to try and break this part up into smaller chunks and do a bit at a time. Full testing is when you go through the site and test every single thing that can be tested. So for example you would test that all links in the navbar correctly redirect the user to where there are supposed to go. A table is the perfect way to display this information.
+Full testing is when you go through the site and test every single thing that can be tested.  Display in a table.
+
+Coverage Tool
+
+This needs to be installed.  
+
+pip3 install coverage
+
+to run this tool:
+
+coverage run --source=list manage.py test
+
+It tells you what % of the app's code has been tested - it does not tell you what % of your code passed the tests. It generates a report which should be pasted into here.  To generate an overview report type:
+
+coverage report
+
+To generate an interactive HTML report use the following command:
+
+coverage html
+
+This will create a new folder called htmlcov in which tere is an index.html file, to view the file type:
+
+python3 -m http.server
+
+Open browser, inspect files
+
+Write any remaining tests Coverage reports has gone untested.
 
 BUGS
 Known Bugs
