@@ -12,7 +12,7 @@ class EntryAdmin(SummernoteModelAdmin):
 
     def mark_as_urgent(self, request, queryset):
         queryset.update(star=True)
-    
+
     def mark_as_done(self, request, queryset):
         queryset.update(check_item_as_done=True)
 
@@ -25,6 +25,3 @@ class NoteAdmin(SummernoteModelAdmin):
     list_display = ('item', 'added_on')
     search_fields = ['item',]
     summernote_fields = ('body')
-    
-
-
