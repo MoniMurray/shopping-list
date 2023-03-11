@@ -1,10 +1,10 @@
 from django.contrib import admin
-from .models import List_Item, Notes
+from .models import Entry, Note
 from django_summernote.admin import SummernoteModelAdmin
 
 
-@admin.register(List_Item)
-class List_ItemAdmin(SummernoteModelAdmin):
+@admin.register(Entry)
+class EntryAdmin(SummernoteModelAdmin):
     list_display = ('item_name', 'category', 'quantity', 'added_on', 'star')
     list_filter = ['category',]
     search_fields = ['item_name', 'category']
@@ -17,8 +17,8 @@ class List_ItemAdmin(SummernoteModelAdmin):
         queryset.update(check_item_as_done=True)
 
 
-@admin.register(Notes)
-class NotesAdmin(SummernoteModelAdmin):
+@admin.register(Note)
+class NoteAdmin(SummernoteModelAdmin):
     # where we indicated Note body field was to be TextField we want it to be
     # a summernote field
     list_filter = ('item', 'added_on')

@@ -28,7 +28,7 @@ QUANTITY_CHOICES = [
 # Create your models here.
 
 
-class List_Item(models.Model):
+class Entry(models.Model):
 
     # set attributes for List items Table
     item_name = models.CharField(
@@ -48,11 +48,11 @@ class List_Item(models.Model):
         return self.item_name
 
 
-class Notes(models.Model):
+class Note(models.Model):
 
     # set attributes for Notes Table
 
-    item = models.OneToOneField(List_Item, on_delete=models.CASCADE)
+    item = models.OneToOneField(Entry, on_delete=models.CASCADE)
     user = models.ForeignKey(User, on_delete=models.CASCADE)
     body = models.TextField()
     added_on = models.DateTimeField(auto_now_add=True)
