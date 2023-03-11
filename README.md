@@ -1,6 +1,6 @@
-SHOPPING LIST
+**SHOPPING LIST**
 
-- An online Shopping List
+- A Shopping List application
 
 User's Goal
 

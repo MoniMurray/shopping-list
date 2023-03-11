@@ -4,6 +4,9 @@ from .models import List_Item
 # Create your tests here.
 
 
-class TestList_Item(TestCase):
-    def test_exists(self):
-        list_item = List_Item.objects.create
+class TestModelsExist(TestCase):
+
+    def test_check_item_as_done_defaults_to_True(self):
+        item_name = List_Item.objects.create(item_name='Test New Item')
+        self.assertTrue(item_name.check_item_as_done)
+
