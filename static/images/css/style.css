@@ -13,3 +13,15 @@
 
 // Extra large devices (large desktops, 1200px and up)
 @media (min-width: 1200px) { ... }
+
+.image-container {
+    background: url(../organiser_image.jpg) no-repeat center center;
+    height: 100%;
+
+    background-color: #fff;
+    background-size: cover;
+}
+
+.list-group-item {
+    border: none;
+}

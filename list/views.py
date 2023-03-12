@@ -9,3 +9,4 @@ class EntryList(generic.ListView):
     model = Entry
     queryset = Entry.objects.all()
     template_name = 'index.html'
+    paginate_by = 3
