@@ -13,7 +13,8 @@ Link to the live site [here](https://mym-shopping-list.herokuapp.com/).
 
 If you want to add optional shields.io badges to your README, I like to add them to this section.
 
-CONTENTS
+**CONTENTS**
+
 User Experience
 
 Strategy
@@ -64,7 +65,7 @@ User Stories
 | FILTERING                                                                   |                                                                                     |                                                                                                                 |
 | Filter view                                                                 |                                                                                     | As a logged in user I can filter my shopping list by category so that I know where to shop.                     |
 
-Design
+**Design**
 
 Colour Scheme
 Typography
@@ -77,11 +78,13 @@ Future Implementations
 Accessibility
 Technologies Used
 
+##TECHNOLOGIES
+
 Languages Used
 Frameworks, Libraries & Programs Used
 Deployment & Local Development
 
-Deployment
+##DEPLOYMENT
 Local Development
 How to Fork
 How to Clone
@@ -171,16 +174,24 @@ Have you used icons and added aria-labels to enable screen readers to understand
 
 Code Institute have an amazing channel for all things accessibility (a11y-accessibility) I would highly recommend joining this channel as it contains a wealth of information about accessibility and what we can do as developers to be more inclusive.
 
-Technologies Used
+###Technologies Used
+
 👩🏻‍💻 View an example of a completed Technologies Used section here
 
-Languages Used
-Make a note here of all the languages used in creating your project. For the first project this will most likely just be HTML & CSS.
+###Languages Used
 
-Frameworks, Libraries & Programs Used
-Add any frameworks, libraries or programs used while creating your project.
+Languages in this project were Python, HTML, CSS and JavaScript.
 
-Make sure to include things like git, GitHub, the program used to make your wireframes, any programs used to compress your images, did you use a CSS framework like Bootstrap? If so add it here (add the version used).
+###Frameworks, Libraries & Programs Used
+
+Django framework and Bootstrap CSS were both used in this project.
+
+
+GitHub;
+Balsamiq - Version: 4.5.5 - Editor Version: 5.3.1
+Smartdraw - ERD 2 Template.
+
+(add the version used).
 
 A great tip for this section is to include them as you use them, that way you won't forget what you ended up using when you get to the end of your project.
 
