@@ -3,6 +3,7 @@ from django.views import generic, View
 from django.views.generic.edit import CreateView
 from .models import Entry
 from .forms import NoteForm
+from django.urls import reverse_lazy
 
 
 # Create your views here.
@@ -28,4 +29,5 @@ class AddView(CreateView):
     # fields = []
     template_name = 'add_to_list.html'
     fields = '__all__'
+    success_url = reverse_lazy('home')
 
