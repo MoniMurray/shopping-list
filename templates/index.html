@@ -2,36 +2,8 @@
 
 {% block content %}
 
-<!-- <table>
-                {% for item in items %}
-                <tr>
-                    {% if item.done %}
-                        <td><strike> {{ item.name }} </strike></td>
-                    {% else %}
-                        <td> {{ item.name }} </td>
-                    {% endif %}
-                    <td>
-                        <a href="/toggle/{{ item.id }}">
-                            <button>Toggle</button>
-                        </a>
-                    </td>
-                    <td>
-                        <a href="/edit/{{ item.id }}">
-                            <button>Edit</button>
-                        </a>
-                    </td>
-                    <td>
-                        <a href="/delete/{{ item.id }}">
-                            <button>Delete</button>
-                        </a>
-                    </td>
-                </tr>
-                    {% empty %}
-                    <tr><td>You have nothing to do!</td></tr>
-                {% endfor %}
-            </table> -->
 <!-- utility row for clickable buttons -->
-<hr>
+<!-- <hr>
 <div class="row justify-content-center">
     <span><a href="#"><i class="fa-solid fa-filter"></i></a></span>
     <span><a href="#"><i class="fa-solid fa-plus"></i></a></span>
@@ -40,8 +12,8 @@
 </div>
 <hr>
 <div class="row justify-content-center">
-    <!-- add a jinja if the User is_authenticated statement to display the following, else use the paginated variable in views.py to display only top 3 list items-->
-    {% if user.is_authenticated %}
+    add a jinja if the User is_authenticated statement to display the following, else use the paginated variable in views.py to display only top 3 list items-->
+    <!-- {% if user.is_authenticated %}
         
 
             <ul class="list-group justify-content-center">
@@ -54,34 +26,34 @@
                             <span><a href="#"><i class="fa-solid fa-pencil"></i></a></span>
                             <span><a href="#"><i class="fa-solid fa-trash-can"></i></a></span>
                             <span><a href="#"><i class="fa-regular fa-square"></i></a></span>
-                            <!-- add jinja if entry is stared put the order descending with stared items first-->
-                            <span><a href="#"><i class="fa-solid fa-star"></i></a></span>
-                            <!-- end the if  -->
-                        </li>
-                    </span>
-                    {% endif %}
-                {% endfor %}
-            </ul>
-           
+                            add jinja if entry is stared put the order descending with stared items first-->
+                            <!-- <span><a href="#"><i class="fa-solid fa-star"></i></a></span>
+                            end the if  -->
+                        <!-- </li>
+                    </span> -->
+                    <!-- {% endif %}
+                {% endfor %} -->
+            <!-- </ul> -->
+<!--            
                 
 
 
         
-        <div class="row"></div>
-    {% else %}
+        <div class="row"></div> --> 
+    <!-- {% else %} -->
         <!-- else -->
         <!-- loop first three list items -->
         
         
-        <ul class="list-group justify-content-center">
+        <!-- <ul class="list-group justify-content-center">
             {% for entry in entry_list %}
             <div class="row">
                     
                 <li class="list-group-item">{{entry.item_name}}<span>{{entry.quantity}}</span</li>>
                             
-            </div>
-            {% endfor %}
-        </ul>
+            </div> -->
+            <!-- {% endfor %} -->
+        <!-- </ul>
     </div>          
         <div class="row"></div>
 
@@ -90,11 +62,11 @@
                     class="card-link">Login</a> to <a href="#"><i class="fa-solid fa-plus"></i></a>
                 add to or <a href="#"><i class="fa-solid fa-pencil"></i></a> edit the Shopping List
             </p>
-        </div>
+        </div> -->
 
         
         <!-- end the if  -->
-    {% endif %}
+    <!-- {% endif %}  -->
     
 <!-- </div>
 
@@ -104,53 +76,64 @@
         add to or <a href="#"><i class="fa-solid fa-pencil"></i></a> edit the Shopping List
     </p>
 </div> -->
-{% endblock %}
 
 
 
 
-<!-- <div class="justify-content-center">
-<table >
 
-  <th>
-    <div class="row justify-content-center">
-        <span><a href="#"><i class="fa-solid fa-filter"></i></a></span>
-        <span><a href="#"><i class="fa-solid fa-plus"></i></a></span>
-        <span><a href="#"><i class="fa-solid fa-square-check"></i></a><a href="#"><i class="fa-solid fa-star"></i></a></span>
-    </div>
-  </th>
-  {% for entry in entry_list %}
-  <tr>
-      {% if entry.check_item_as_done %}
-          <td><strike> {{ entry.item_name }} </strike></td>
-      {% else %}
-          <td> {{ entry.item_name }} <span>{{quantity}}</span>
-            <span><a href="#"><i class="fa-solid fa-pencil"></i></a></span>
-            <span><a href="#"><i class="fa-solid fa-trash-can"></i></a></span>
-            <span><a href="#"><i class="fa-regular fa-square"></i></a></span>
-    add jinja if entry is stared -->
-<!-- <span><a href="#"><i class="fa-solid fa-star"></i></a></span> -->
-<!-- end the if  -->
-<!-- </td> -->
-<!-- {% endif %} -->
-<!-- <td>
-          <a href="/toggle/{{ item.id }}">
-              <button>Toggle</button>
-          </a>
-      </td>
-      <td>
-          <a href="/edit/{{ item.id }}">
-              <button>Edit</button>
-          </a>
-      </td>
-      <td>
-          <a href="/delete/{{ item.id }}">
-              <button>Delete</button>
-          </a>
-      </td> -->
-<!-- </tr>
-      {% empty %}
-      <tr><td>Your shopping list is empty!</td></tr>
-  {% endfor %}
-</table>
-</div> -->
+<div class="row justify-content-center">
+    {% if user.is_authenticated %}
+        <table >
+
+            <th>
+                    <td><a href="#"><i class="fa-solid fa-filter"></i></a></td>
+                    <td><a href="/add"><i class="fa-solid fa-plus"></i></a></td>
+                    <td></td>
+                    
+                    <td><a href="#"><i class="fa-solid fa-star"></i></a></td>
+                    <td><a href="#"><i class="fa-solid fa-square-check"></i></a></td>
+                    
+                    
+            </th>
+                <tr></tr>
+                
+                {% for entry in entry_list %}
+                <tr>
+                    {% if entry.check_item_as_done %}
+                        <td><strike> {{ entry.item_name }} </strike></td>
+                    {% else %}
+                        <td> {{ entry.item_name }}</td>
+                        <td>{{entry.quantity}}</td>
+                        <td><a href="#"><i class="fa-solid fa-pencil"></i></a></td>
+                        <td><a href="#"><i class="fa-solid fa-trash-can"></i></a></td>
+                        <td><a href="#"><i class="fa-regular fa-square"></i></a></td>
+                    {% endif %}
+                
+                </tr>
+                {% endfor %}
+        </table>
+    {% else %}
+        <table >
+
+            <tr></tr>
+                
+                {% for entry in entry_list %}
+                    <tr>
+                        
+                            <td> {{ entry.item_name }}</td>
+                            <td>{{entry.quantity}}</td>
+                        
+                    
+                    </tr>
+                {% endfor %}
+        </table>
+</div>
+        <div class="row justify-content-center">
+            <p><a href="{% url 'account_signup' %}" class="card-link">
+                Register</a> or<a href="{% url 'account_login' %}" class="card-link">Login</a> to <a href="#"><i class="fa-solid fa-plus"></i></a>
+                add to or <a href="#"><i class="fa-solid fa-pencil"></i></a> edit the Shopping List
+            </p>
+        </div>
+    {% endif %}
+</div>
+{% endblock %} 
