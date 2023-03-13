@@ -30,55 +30,84 @@
                     <tr><td>You have nothing to do!</td></tr>
                 {% endfor %}
             </table> -->
-                <!-- utility row for clickable buttons -->
-                <hr>
-                <div class="row justify-content-center">
-                  <span><a href="#"><i class="fa-solid fa-filter"></i></a></span>
-                  <span><a href="#"><i class="fa-solid fa-plus"></i></a></span>
-                  <span><a href="#"><i class="fa-solid fa-square-check"></i></a><a href="#"><i class="fa-solid fa-star"></i></a></span>
-                </div>
-                <hr>
+<!-- utility row for clickable buttons -->
+<hr>
+<div class="row justify-content-center">
+    <span><a href="#"><i class="fa-solid fa-filter"></i></a></span>
+    <span><a href="#"><i class="fa-solid fa-plus"></i></a></span>
+    <span><a href="#"><i class="fa-solid fa-square-check"></i></a><a href="#"><i
+                class="fa-solid fa-star"></i></a></span>
+</div>
+<hr>
+<div class="row justify-content-center">
+    <!-- add a jinja if the User is_authenticated statement to display the following, else use the paginated variable in views.py to display only top 3 list items-->
+    {% if user.is_authenticated %}
+        
 
-                <!-- add a jinja if the User is_authenticated statement to display the following, else use the paginated variable in views.py to display only top 3 list items-->
+            <ul class="list-group justify-content-center">
                 {% for entry in entry_list %}
-                    <div class="row justify-content-center">
-                      <ul class="list-group justify-content-center">
-                        {% if entry.check_item_as_done %}
-          <span><strike> {{ entry.item_name }} </strike></span>
-      {% else %}
-                        <span>
-                          <li class="list-group-item">{{entry.item_name}}<span>{{quantity}}</span>
-                          <span><a href="#"><i class="fa-solid fa-pencil"></i></a></span>
-                          <span><a href="#"><i class="fa-solid fa-trash-can"></i></a></span>
-                          <span><a href="#"><i class="fa-regular fa-square"></i></a></span>
-                          <!-- add jinja if entry is stared -->
-                          <span><a href="#"><i class="fa-solid fa-star"></i></a></span>
-                          <!-- end the if  -->
-                          </li>
-                        </span>
-                      </ul>
-                    </div>
-                   {% endif %}
-
-                  
+                    {% if entry.check_item_as_done %}
+                    <span><strike> {{ entry.item_name }} </strike></span>
+                    {% else %}
+                    <span>
+                        <li class="list-group-item">{{entry.item_name}}<span>{{entry.quantity}}</span>
+                            <span><a href="#"><i class="fa-solid fa-pencil"></i></a></span>
+                            <span><a href="#"><i class="fa-solid fa-trash-can"></i></a></span>
+                            <span><a href="#"><i class="fa-regular fa-square"></i></a></span>
+                            <!-- add jinja if entry is stared put the order descending with stared items first-->
+                            <span><a href="#"><i class="fa-solid fa-star"></i></a></span>
+                            <!-- end the if  -->
+                        </li>
+                    </span>
+                    {% endif %}
                 {% endfor %}
-                    <div class="row"></div>
-                <!-- else -->
-                <!-- loop first three list items -->
-             
-                <!-- <ul class="list-group">
-                <span><li class="list-group-item">{{entry}}</li></span>
-                </ul> -->
+            </ul>
+           
+                
 
-                <div class="row">
-                  <p><a href="{% url 'account_signup' %}" class="card-link">Register</a> or<a href="{% url 'account_login' %}" class="card-link">Login</a> to <a href="#"><i class="fa-solid fa-plus"></i></a>
-                    add to or <a href="#"><i class="fa-solid fa-pencil"></i></a> edit the Shopping List
-                </p>
-              </div>
-               <!-- end the if  -->
+
+        
+        <div class="row"></div>
+    {% else %}
+        <!-- else -->
+        <!-- loop first three list items -->
+        
+        
+        <ul class="list-group justify-content-center">
+            {% for entry in entry_list %}
+            <div class="row">
+                    
+                <li class="list-group-item">{{entry.item_name}}<span>{{entry.quantity}}</span</li>>
+                            
             </div>
+            {% endfor %}
+        </ul>
+    </div>          
+        <div class="row"></div>
+
+        <div class="row justify-content-center">
+            <p><a href="{% url 'account_signup' %}" class="card-link">Register</a> or<a href="{% url 'account_login' %}"
+                    class="card-link">Login</a> to <a href="#"><i class="fa-solid fa-plus"></i></a>
+                add to or <a href="#"><i class="fa-solid fa-pencil"></i></a> edit the Shopping List
+            </p>
         </div>
-        {% endblock %}
+
+        
+        <!-- end the if  -->
+    {% endif %}
+    
+<!-- </div>
+
+<div class="row">
+    <p><a href="{% url 'account_signup' %}" class="card-link">Register</a> or<a href="{% url 'account_login' %}"
+            class="card-link">Login</a> to <a href="#"><i class="fa-solid fa-plus"></i></a>
+        add to or <a href="#"><i class="fa-solid fa-pencil"></i></a> edit the Shopping List
+    </p>
+</div> -->
+{% endblock %}
+
+
+
 
 <!-- <div class="justify-content-center">
 <table >
@@ -100,11 +129,11 @@
             <span><a href="#"><i class="fa-solid fa-trash-can"></i></a></span>
             <span><a href="#"><i class="fa-regular fa-square"></i></a></span>
     add jinja if entry is stared -->
-            <!-- <span><a href="#"><i class="fa-solid fa-star"></i></a></span> -->
-            <!-- end the if  -->
-          <!-- </td> -->
-      <!-- {% endif %} -->
-      <!-- <td>
+<!-- <span><a href="#"><i class="fa-solid fa-star"></i></a></span> -->
+<!-- end the if  -->
+<!-- </td> -->
+<!-- {% endif %} -->
+<!-- <td>
           <a href="/toggle/{{ item.id }}">
               <button>Toggle</button>
           </a>
@@ -119,12 +148,9 @@
               <button>Delete</button>
           </a>
       </td> -->
-  <!-- </tr>
+<!-- </tr>
       {% empty %}
       <tr><td>Your shopping list is empty!</td></tr>
   {% endfor %}
 </table>
-</div> --> 
-
-
-
+</div> -->
