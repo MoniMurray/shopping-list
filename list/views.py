@@ -1,6 +1,6 @@
 from django.shortcuts import render
 from django.views import generic, View
-from django.views.generic.edit import CreateView
+from django.views.generic.edit import CreateView, UpdateView
 from .models import Entry
 from .forms import NoteForm
 from django.urls import reverse_lazy
@@ -29,5 +29,16 @@ class AddView(CreateView):
     # fields = []
     template_name = 'add_to_list.html'
     fields = '__all__'
+    success_url = reverse_lazy('home')
+
+
+class EditView(UpdateView):
+    # CRUD - Edit shopping list entry using the entry's primary key
+    
+    model = Entry
+    # fields = []
+    template_name = 'edit_entry.html'
+    fields = '__all__'
+    pk_url_kwarg = 'pk'
     success_url = reverse_lazy('home')
 
