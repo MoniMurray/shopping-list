@@ -20,7 +20,23 @@
     <title>Shopping List | Organisation, at your fingertips</title>
 </head>
 
-<body class="dark-bg>
+<body class="dark-bg">
+  
+  <!-- Django flash messages -->
+
+  <div class="container">
+    <div class="row">
+        <div class="col-md-8 offset-md-2">
+            {% for message in messages %}
+            <div class="alert {{ message.tags }} alert-dismissible fade show" id="msg" role="alert">
+                {{ message | safe }}
+            <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+            </div>
+
+            {% endfor %}
+        </div>
+    </div>
+  </div>
 
   <div class="container-fluid">
 
@@ -70,6 +86,8 @@
         
   </div> 
 
+  
+
 <!-- footer -->
   
 <footer class="footer mt-auto py-3 light-bg sticky">
@@ -97,6 +115,17 @@
         ></a>
       
   </footer> 
+
+<!-- Javascript to automatically dismiss messages after a 2 second delay -->
+
+<script>
+  setTimeout(function () {
+      let messages = document.getElementById("msg");
+      let alert = new bootstrap.Alert(messages);
+      alert.close();
+  }, 3000);
+</script>
+
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
         integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous">
     </script>
