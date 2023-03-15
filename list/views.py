@@ -13,7 +13,7 @@ class EntryList(generic.ListView):
     model = Entry
     queryset = Entry.objects.all()
     template_name = 'index.html'
-    paginate_by = 3
+    paginate_by = 25
 
     # def get_shopping_list(request):
     #     entries = Entry.objects.all()
@@ -41,13 +41,14 @@ class AddView(CreateView):
     # 
     # Not working - first 'request' is an error, 
     # def post(self, request, *args, **kwargs):
-    #     form = self.form_class(request.POST)
+    #     form = AddForm(data=request.POST)
     #     if form.is_valid():
-    #         messages.add_message(messages.INFO, 'Hello world.')
-    #         # <process form cleaned data>
+    #         messages.success(request, 'Added successfully.')
+    #         else:
+            # form = AddForm()
     #         return HttpResponseRedirect('/success/')
 
-    #     return render(request, self.template_name, {'form': form})
+    #     return render(request, 'add_to_list.html', {'form': AddForm})
     
 
 

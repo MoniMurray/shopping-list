@@ -84,25 +84,35 @@
 
 <div class="row justify-content-center">
     {% if user.is_authenticated %}
-        <table>
+    <div class="table-responsive">
+        <table class="table">
+            <thead>
+                <tr>
+                    
+                    
+                    <th scope="col"><a href="#"><i class="fa-solid fa-filter"></i></a></th>
+                    <th scope="col"><a href="add/"><i class="fa-solid fa-plus"></i>Add Item</a></th>
+                    
+                    <th><i class="fa-solid fa-star"></i></th>
+                    <th scope="col"></th>
+                    <th scope="col"></th>
+                    <th><i class="fa-solid fa-square-check"></i></th>
 
-            <th>
-                <td><a href="#"><i class="fa-solid fa-filter"></i></a></td>
-                <td><a href="add/"><i class="fa-solid fa-plus"></i>Add Item</a></td>
-                <td></td>
-
-                <td><a href="#"><i class="fa-solid fa-star"></i></a></td>
-                <td><a href="#"><i class="fa-solid fa-square-check"></i></a></td>
-
-
-            </th>
+                </tr>
+            </thead>
                 <tr></tr>
-
+            <tbody>
                 {% for entry in entry_list %}
                 <tr>
                     {% if entry.check_item_as_done %}
+                        <th scope="row"></th>
                         <td><strike> {{ entry.item_name }} </strike></td>
+                        <td>{{entry.quantity}}</td>
+                        <td></td>
+                        <td><a href="delete/{{entry.id}}"><i class="fa-solid fa-trash-can"></i> Delete</a></td>
+                        <td><a href="#"><i class="fa-solid fa-square-check"></i></i>Done</a></td>
                     {% else %}
+                        <th scope="row"></th>
                         <td> {{ entry.item_name }}</td>
                         <td>{{entry.quantity}}</td>
                         <td><a href="edit/{{entry.id}}"><i class="fa-solid fa-pencil"></i> Edit</a></td>
@@ -118,9 +128,12 @@
                     {% endif %}
                 </tr>
                 {% endfor %}
+            </tbody>
         </table>
+    </div>
     {% else %}
-        <table>
+    <div class="table-responsive">
+        <table class="table">
 
             <tr></tr>
 
@@ -133,6 +146,7 @@
                 </tr>
             {% endfor %}
         </table>
+    </div>
     </div>
         <div class="row justify-content-center">
             <p><a href="{% url 'account_signup' %}" class="card-link">
