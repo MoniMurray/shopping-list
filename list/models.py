@@ -42,7 +42,7 @@ class Entry(models.Model):
 
     # helper methods
     class Meta:
-        ordering = ['-added_on']
+        ordering = ['-added_on', '-star',]
 
     def __str__(self):
         return self.item_name

@@ -1,4 +1,10 @@
 
+body {
+    background-color: #FFFFFF;
+    font-family: 'Bona Nova', 'Nanum Myeongjo', 'Roboto', sans-serif;
+    color: #3a3a3a;
+    text-align: center;
+}
 
 // from Bootstrap
 

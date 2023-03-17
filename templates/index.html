@@ -92,11 +92,13 @@
                     
                     <th scope="col"><a href="#"><i class="fa-solid fa-filter"></i></a></th>
                     <th scope="col"><a href="add/"><i class="fa-solid fa-plus"></i>Add Item</a></th>
+                    <th scope="col"></th>
                     
                     <th><i class="fa-solid fa-star"></i></th>
-                    <th scope="col"></th>
-                    <th scope="col"></th>
                     <th><i class="fa-solid fa-square-check"></i></th>
+                    <th scope="col"></th>
+                    <th scope="col"></th>
+                    
 
                 </tr>
             </thead>
@@ -109,15 +111,19 @@
                         <td><strike> {{ entry.item_name }} </strike></td>
                         <td>{{entry.quantity}}</td>
                         <td></td>
+                        <td><a href="#"><i class="fa-solid fa-square-check"></i></i></a></td>
+                        <td></td>
                         <td><a href="delete/{{entry.id}}"><i class="fa-solid fa-trash-can"></i> Delete</a></td>
-                        <td><a href="#"><i class="fa-solid fa-square-check"></i></i>Done</a></td>
+                        
                     {% else %}
                         <th scope="row"></th>
                         <td> {{ entry.item_name }}</td>
                         <td>{{entry.quantity}}</td>
+                        <td><a href="#"><i class="fa-regular fa-star"></i></a></td>
+                        <td><a href="#"><i class="fa-regular fa-square"></i></a></td>
                         <td><a href="edit/{{entry.id}}"><i class="fa-solid fa-pencil"></i> Edit</a></td>
                         <td><a href="delete/{{entry.id}}"><i class="fa-solid fa-trash-can"></i> Delete</a></td>
-                        <td><a href="#"><i class="fa-regular fa-square"></i>Done</a></td>
+                        
 
                         <!-- consider replacing the checkbox icon with bootstrap's 
                         <div class="custom-control custom-checkbox">
@@ -132,18 +138,21 @@
         </table>
     </div>
     {% else %}
+         <!-- paginate_by: 3  -->
     <div class="table-responsive-sm">
         <table class="table">
 
             <tr></tr>
 
             {% for entry in entry_list %}
+                
                 <tr>
 
                     <td> {{ entry.item_name }}</td>
                     <td>{{entry.quantity}}</td>
 
                 </tr>
+                
             {% endfor %}
         </table>
     </div>
