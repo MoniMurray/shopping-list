@@ -1,9 +1,17 @@
 
 body {
     background-color: #FFFFFF;
-    font-family: 'Bona Nova', 'Nanum Myeongjo', 'Roboto', sans-serif;
+    font-family: 'Nanum Myeongjo', 'Roboto', sans-serif;
     color: #3a3a3a;
     text-align: center;
+    font-weight: 300;
+}
+
+.heading {
+    font-family: 'Bona Nova', sans-serif;
+    text-align: center;
+    font-size: large;
+    font-weight: 700;
 }
 
 // from Bootstrap

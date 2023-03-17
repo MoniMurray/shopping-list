@@ -25,6 +25,8 @@
 <body class="dark-bg">
   
     <div class="container-fluid">
+      
+        
 
         <!-- navigation -->
         <div class="nav bg-dark">
@@ -48,7 +50,12 @@
                 </div>
               </nav>
         </div>
-
+        <!-- heading -->
+      <div class="heading-sm text-center">
+        <h1>
+          THE SHOPPING LIST<br>Organised | Everywhere
+        </h1>
+      </div>
         <!-- Django flash messages -->
 
   <div class="container">
@@ -57,7 +64,7 @@
             {% for message in messages %}
             <div class="alert {{ message.tags }} alert-dismissible fade show" id="msg" role="alert">
                 {{ message | safe }}
-            <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+            <button type="button" class="close btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
             </div>
 
             {% endfor %}
@@ -69,7 +76,7 @@
         <div class="card text-center bg-light">
             
             <!-- List Image -->
-            <div class="image-container">
+            <div class="image-container mt-3">
               <img src="static/images/organiser_image.jpg" class="img-fluid" alt="Responsive image">
               <!-- <img src="static/images/organiser_image.jpg" class="card-img-top" alt="organiser_image"> -->
             </div>

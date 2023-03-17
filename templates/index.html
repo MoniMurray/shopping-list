@@ -108,7 +108,7 @@
                 <tr>
                     {% if entry.check_item_as_done %}
                         <th scope="row"></th>
-                        <td><strike> {{ entry.item_name }} </strike></td>
+                        <td class="text-left text-capitalize"><strike> {{ entry.item_name }} </strike></td>
                         <td>{{entry.quantity}}</td>
                         <td></td>
                         <td><a href="#"><i class="fa-solid fa-square-check"></i></i></a></td>
@@ -117,7 +117,7 @@
                         
                     {% else %}
                         <th scope="row"></th>
-                        <td> {{ entry.item_name }}</td>
+                        <td class="text-left text-capitalize"> {{ entry.item_name }}</td>
                         <td>{{entry.quantity}}</td>
                         <td><a href="#"><i class="fa-regular fa-star"></i></a></td>
                         <td><a href="#"><i class="fa-regular fa-square"></i></a></td>
@@ -148,7 +148,7 @@
                 
                 <tr>
 
-                    <td> {{ entry.item_name }}</td>
+                    <td class="text-left text-capitalize"> {{ entry.item_name }}</td>
                     <td>{{entry.quantity}}</td>
 
                 </tr>

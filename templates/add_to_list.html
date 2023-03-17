@@ -11,15 +11,17 @@
     <form method="post">
         {% csrf_token %}
         {% for field in form.visible_fields %}
-            <div class="form-group">
-            <label for="{{field.id_for_label}}">{{ field.label }}</label>
-            {{ field|add_class:'form-control' }}
+            <div class="form-group row offset-md-2">
+            <label for="{{field.id_for_label}}" class="col-sm-2 col-form-label">{{ field.label }}:</label>
+            <div class="col-sm-8">
+            {{ field|add_class:'form-control col-sm-8'}}
+            </div>
             {% for error in field.errors %}
                 <span class="help-block">{{error}}</span>
             {% endfor %}
             </div>
         {% endfor %}
-        <div class="form-group">
+        <div class="form-group pt-3">
         <button type="submit" class="btn btn-primary">Submit</button>
         <a href="{% url 'home' %}" class="btn btn-default">Cancel</a>
         </div>

@@ -3,12 +3,12 @@
 {% block content %}
 
 <div class="row justify-content-center">
-    <h5>Deleting from your Shopping List:</h5>
+    <h5>Deleting {{ entry.item_name }} from your Shopping List:</h5>
 </div>
 <div class="container pt-5">
     <form method="post">
         {% csrf_token %}
-        <p>Are you sure you want to delete {{ entry.item_name }}?</p>
+        <p class="text-capitalize">Are you sure you want to delete {{ entry.item_name }}?</p>
         <input type="submit" value="Confirm">
     </form>
 </div>
