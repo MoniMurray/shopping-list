@@ -4,8 +4,8 @@
 
 User's Goal
 
-- User wants to have a shopping list on their phone, accessible by login to their account.  The user wants to create a shopping list, add items to the list, edit items, add comments, mark items as urgent or as done, and delete items from their shopping list.
-- User wants response messages to their actions, sucessful or unsuccessful.
+- A User of The Shopping List wants to have a shopping list available on the go, on their portable device, accessible by login to their account.  A user wants to create their shopping list, add items to the list, edit items, add comments, mark items as urgent or as done, and delete items from their shopping list.
+- A User wants response messages to their actions, sucessful or unsuccessful.
 
 Add an image of the finished site here. I like to use amiresponsive to get an image of my site on all device sizes, and amiresponsive allows you to click links on the page and scroll, so each device can show a different element of your site.
 

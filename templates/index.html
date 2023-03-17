@@ -4,98 +4,26 @@
 
 
 
-<!-- utility row for clickable buttons -->
-<!-- <hr>
-<div class="row justify-content-center">
-    <span><a href="#"><i class="fa-solid fa-filter"></i></a></span>
-    <span><a href="#"><i class="fa-solid fa-plus"></i></a></span>
-    <span><a href="#"><i class="fa-solid fa-square-check"></i></a><a href="#"><i
-                class="fa-solid fa-star"></i></a></span>
-</div>
-<hr>
-<div class="row justify-content-center">
-    add a jinja if the User is_authenticated statement to display the following, else use the paginated variable in views.py to display only top 3 list items-->
-<!-- {% if user.is_authenticated %}
-        
-
-            <ul class="list-group justify-content-center">
-                {% for entry in entry_list %}
-                    {% if entry.check_item_as_done %}
-                    <span><strike> {{ entry.item_name }} </strike></span>
-                    {% else %}
-                    <span>
-                        <li class="list-group-item">{{entry.item_name}}<span>{{entry.quantity}}</span>
-                            <span><a href="#"><i class="fa-solid fa-pencil"></i></a></span>
-                            <span><a href="#"><i class="fa-solid fa-trash-can"></i></a></span>
-                            <span><a href="#"><i class="fa-regular fa-square"></i></a></span>
-                            add jinja if entry is stared put the order descending with stared items first-->
-<!-- <span><a href="#"><i class="fa-solid fa-star"></i></a></span>
-                            end the if  -->
-<!-- </li>
-                    </span> -->
-<!-- {% endif %}
-                {% endfor %} -->
-<!-- </ul> -->
-<!--            
-                
-
-
-        
-        <div class="row"></div> -->
-<!-- {% else %} -->
-<!-- else -->
-<!-- loop first three list items -->
-
-
-<!-- <ul class="list-group justify-content-center">
-            {% for entry in entry_list %}
-            <div class="row">
-                    
-                <li class="list-group-item">{{entry.item_name}}<span>{{entry.quantity}}</span</li>>
-                            
-            </div> -->
-<!-- {% endfor %} -->
-<!-- </ul>
-    </div>          
-        <div class="row"></div>
-
-        <div class="row justify-content-center">
-            <p><a href="{% url 'account_signup' %}" class="card-link">Register</a> or<a href="{% url 'account_login' %}"
-                    class="card-link">Login</a> to <a href="#"><i class="fa-solid fa-plus"></i></a>
-                add to or <a href="#"><i class="fa-solid fa-pencil"></i></a> edit the Shopping List
-            </p>
-        </div> -->
-
-
-<!-- end the if  -->
-<!-- {% endif %}  -->
-
-<!-- </div>
-
-<div class="row">
-    <p><a href="{% url 'account_signup' %}" class="card-link">Register</a> or<a href="{% url 'account_login' %}"
-            class="card-link">Login</a> to <a href="#"><i class="fa-solid fa-plus"></i></a>
-        add to or <a href="#"><i class="fa-solid fa-pencil"></i></a> edit the Shopping List
-    </p>
-</div> -->
-
-
-
-
 <div class="row justify-content-center">
     {% if user.is_authenticated %}
-    <div class="table-responsive-sm">
+    
+    <div class="table-responsive-sm pt-5">
         <table class="table">
             <thead>
+                <tr>
+                    <h2>{{user.username}}'s List</h2>
+                </tr>
                 <tr>
                     
                     
                     <th scope="col"><a href="#"><i class="fa-solid fa-filter"></i></a></th>
-                    <th scope="col"><a href="add/"><i class="fa-solid fa-plus"></i>Add Item</a></th>
+                    <th scope="col">
+                        <!-- <a href="add/"><i class="fa-solid fa-plus"></i>Add Item</a> -->
+                    </th>
                     <th scope="col"></th>
                     
-                    <th><i class="fa-solid fa-star"></i></th>
-                    <th><i class="fa-solid fa-square-check"></i></th>
+                    <th scope="col"><i class="fa-solid fa-star"></i></th>
+                    <th scope="col"><i class="fa-solid fa-square-check"></i></th>
                     <th scope="col"></th>
                     <th scope="col"></th>
                     
@@ -124,6 +52,7 @@
                         <td><a href="edit/{{entry.id}}"><i class="fa-solid fa-pencil"></i> Edit</a></td>
                         <td><a href="delete/{{entry.id}}"><i class="fa-solid fa-trash-can"></i> Delete</a></td>
                         
+                        
 
                         <!-- consider replacing the checkbox icon with bootstrap's 
                         <div class="custom-control custom-checkbox">
@@ -134,8 +63,11 @@
                     {% endif %}
                 </tr>
                 {% endfor %}
+                
+                
             </tbody>
         </table>
+        <button type="button" class="btn-lg mb5"><a href="add/">Add Item</a></button>
     </div>
     {% else %}
          <!-- paginate_by: 3  -->
