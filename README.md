@@ -23,7 +23,7 @@ Our user is looking for a efficient convenient means of maintaining a shopping l
 
 - Scope
 
-A simple, uncomplicated, uncluttered shopping list is the MVP for the present. Features are: Login, Create, Add, Update and Delete items on the list.  The six-week deadline is tight.  MVP is priority.
+A simple, uncomplicated, uncluttered shopping list is the MVP. Features are: User Registration, User Login/Logout, Create, Add, Update and Delete items on the list.  The six-week deadline is tight.  MVP is priority.  
 
 - Structure
 
@@ -39,7 +39,13 @@ Colours will be crisp, clean, sophisticated.  Black on white, cool clean colour 
 
 The User's interaction with this application should be easy and natural.  Use of icons will make actions like add, edit and delete intuitive. Efficient use of response messages will confirm successful actions to the user, with unsuccessful action messages easy to understand.
 
-User Stories
+##Agile Methodology
+
+I have used GitHub Projects to plan the Agile development of my project.  I created a new project in the Projects tab of my repository, named ['@MoniMurray's Shopping List Project'](https://github.com/users/MoniMurray/projects/6).  Within this Project I used a Kanban Board to track each User Story as I incrementally developed the MVP of the project.
+
+###User Stories
+
+A user story is a small, self-contained unit of development.  I have used these units within this Project to incrementally achieve the MVP.  Each user story was based on a bespoke user story Template created in the Issues tab of my Github repository.  User Stories have been grouped and categorised into Epics using bespoke 'labels', where appropriate, and then assigned to a Project where they are used to structure the development of the MVP of my project.
 
 | Features/Functionality                                                      | Problem Statement                                                                   | User Story                                                                                                      |
 | --------------------------------------------------------------------------- | ----------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------- |
@@ -64,6 +70,36 @@ User Stories
 |                                                                             |                                                                                     |                                                                                                                 |
 | FILTERING                                                                   |                                                                                     |                                                                                                                 |
 | Filter view                                                                 |                                                                                     | As a logged in user I can filter my shopping list by category so that I know where to shop.                     |
+
+###User Acceptance Criteria
+
+I created acceptance criteria for each User Story to set out a clear objective of what to achieve to complete each story.  The objective is broken down into steps:
+
+| User Story                                                                                                      | Acceptance Criteria                                                                                                                                                                                                                                                                                                                                                                                                                                                            |
+| --------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
+| As a new user I can register to the List App so that I can access all the application's functionality securely. | \- I can click on Register link on Nav bar to launch the Registration form;<br>\- I can enter a username and password in the fields provided;<br>\- I am prompted to complete fields;<br>\- I can click on 'Register' button;<br>\- I see a confirmation message that Registration is successful.                                                                                                                                                                              |
+| As a registered user I can Login with username and password.                                                    | \- I can click on Login link on Nav bar to launch the Login form;<br>\- I can enter my registered username and password;<br>\- I am prompted to complete fields;<br>\- I can click on Login button;<br>\- I can see a success 'welcome' login message;<br>\- I am redirected to the Home page where my expanded view of the full functionality of the shopping list, with clickable icons;<br>\- On the navigation bar I can now see Logout instead of 'Register' and 'Login'. |
+| As a logged-in user I can Logout of the app when finished using the list.                                       | \- I can click on 'Logout' link on Nav bar to launch a confirmation message;<br>\- I can confirm I want to logout;<br>\- I can see a confirmation message of successful logout;<br>\- I can be returned to the Home page automatically on logout;<br>\- On the navigation bar I can see 'Register' and 'Login'.                                                                                                                                                                |
+| As an unregistered user, I can only see the updated list on the Home page.                                      | \- I can read only the shopping list entry names on the home page;<br>\- I can see paragraph inviting me to 'Register' or 'Login' to edit or delete from the list;                                                                                                                                                                                                                                                                                                             |
+| As a logged in user I can click Add so that I can add an item to my List                                        | \- I can click on '+' icon to launch the Add Item form;<br>\- I can complete all fields on the form;<br>\- I am prompted to complete empty fields;<br>\- name the new item;<br>\- quantity drop-down;<br>\- category drop-down - food, household, pet etc. - filter by this;<br>\- I can click 'Submit' and be returned to Home page.                                                                                                                                          |
+| As a logged in user I can click Edit so that I can edit the detail of an item on my List                        | \- I can click on pencil edit icon beside any shopping list entry to open the entry;<br>\- I can edit any field of the entry;<br>\- I can save to return to Home page and full shopping list view;<br>\- I can see my successful.                                                                                                                                                                                                                                              |
+| As a logged in user I can tick the checkbox of an item so that I can mark the item as done.                     | \- I can click on the checkbox beside any shopping list entry;<br>\- An empty checkbox will add a tick, the entry text will appear with a line through the text;<br>\- A ticked checkbox will toggle the box to empty and the text will appear as normal.                                                                                                                                                                                                                      |
+| As a logged in user I can delete an item so that I can remove it from the list.                                 | \- I can click on the delete icon beside any shopping list entry;<br>\- I will see a message asking to confirm I want to delete the named entry, which I must click to confirm;<br>\- I can see a confirmation message "entry" has been deleted.                                                                                                                                                                                                                               |
+| As a logged in user I can tick a star icon so that the item is marked Urgent.                                   | \- I can click on the 'star' icon beside an Item;<br>\- The icon will be solid if urgent, outline only if not urgent.                                                                                                                                                                                                                                                                                                                                                          |
+| As a logged in user I can add a comment to an item so that that item has more detail                            | \- I can click on the list item to open the Item;<br>\- I can click on Comment body field;<br>\- I can Add a comment;<br>\- I can 'Submit' to Save my comments and return to Home page.                                                                                                                                                                                                                                                                                        |
+| As a logged in user I can filter my shopping list by category so that I know where to shop.                     |                                                                                                                                                                                                                                                                                                                                                                                                                                                                                |
+| As a user I can view the shopping list.                                                                         | \- On the landing page I can see the shopping list;<br>\- If I am registered/logged in, I can see the expanded view shopping list;<br>\- If a new item is added to the shopping list I can see it on the list.                                                                                                                                                                                                                                                                 |
+
+###User Story Tasks
+
+I have used the acceptance criteria steps to create tasks to facilitate the execution of each User Story.  Once these tasks for each User Story are complete and tested, the User Story is finished and is assigned as 'Done' in the Project Kanban.
+
+*insert table here*
+
+###Prioritisation of User Stories
+
+I have used MoSCoW Prioritisation to assign a priority level to the User Stories of the Project.
+
 
 **Design**
 

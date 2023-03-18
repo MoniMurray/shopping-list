@@ -1,6 +1,7 @@
-from django.shortcuts import render
+from django.shortcuts import render, get_object_or_404, reverse
 from django.views import generic, View
 from django.views.generic.edit import CreateView, UpdateView, DeleteView
+from django.http import HttpResponseRedirect
 from .models import Entry
 from .forms import NoteForm
 from django.urls import reverse_lazy
@@ -15,20 +16,12 @@ class EntryList(generic.ListView):
     template_name = 'index.html'
     paginate_by = 25
 
-    # def get_shopping_list(request):
-    #     entries = Entry.objects.all()
-    #     context = {
-    #         'entries': entries
-    #     }
-
-    #     return render(request, 'shopping-list/templates/index.html', context)
 
 
 class AddView(CreateView):
     # CRUD - Create a new shopping list entry using the fields from Entry model
 
     model = Entry
-    # fields = []
     template_name = 'add_to_list.html'
     fields = '__all__'
     
@@ -56,7 +49,6 @@ class EditView(UpdateView):
     # CRUD - Edit shopping list entry using the entry's primary key
 
     model = Entry
-    # fields = []
     template_name = 'edit_entry.html'
     fields = '__all__'
     pk_url_kwarg = 'pk'
@@ -71,3 +63,11 @@ class Delete(DeleteView):
     template_name = 'delete.html'
     success_url = reverse_lazy('home')
 
+class ToggleView(View):
+
+    def toggle_star(self, request, item_id):
+        # toggle the star state to solid/empty
+        item = get_object_or_404(Entry, id=item_id)
+        item.star = not item.star
+        item.save(self)    
+        return redirect('home')
