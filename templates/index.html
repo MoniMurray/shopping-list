@@ -33,7 +33,8 @@
                 <tr></tr>
             <tbody>
                 {% for entry in entry_list %}
-                <h1>{{entry.star}}{{entry.check_item_as_done}}</h1>
+                <!-- <td><a href="{% url 'toggle_check' entry.id %}"><i class="fa-regular fa-square"></i></a></td> -->
+                <!-- <h1>{{entry.check_item_as_done}}</h1> -->
 
                 
                 <tr>
@@ -50,7 +51,7 @@
                         <td>{{entry.quantity}}</td>
                         <td></td>
                                               
-                        <td><a href="home/{{entry.id}}"><button type="submit" name="toggle_check" value="{{entry.id}}" class="btn-like"><i class="fa-solid fa-square-check"></i></button></a></td>
+                        <td><a href="{% url 'toggle_check' entry.id %}"><button type="submit" name="toggle_check" value="{{entry.id}}" class="btn-like"><i class="fa-solid fa-square-check"></i></button></a></td>
                         <td></td>
                         <td><a href="{% url 'delete' entry.id %}"><i class="fa-solid fa-trash-can"></i> Delete</a></td>
                             
@@ -102,9 +103,9 @@
     </div>
         <div class="row justify-content-center">
             <p><a href="{% url 'account_signup' %}" class="card-link">
-                    Register</a> or<a href="{% url 'account_login' %}" class="card-link">Login</a> to <a href="#"><i
-                        class="fa-solid fa-plus"></i></a>
-                add to or <a href="#"><i class="fa-solid fa-pencil"></i></a> edit the Shopping List
+                    Register </a>or<a href="{% url 'account_login' %}" class="card-link">Login</a> to <i
+                        class="fa-solid fa-plus"></i>
+                add to or <i class="fa-solid fa-pencil"></i>edit The Shopping List
             </p>
         </div>
     {% endif %}

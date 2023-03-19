@@ -62,7 +62,7 @@ class Delete(DeleteView):
 
 def toggle_star(request, item_id):
     # toggle the star state to solid/empty
-    # print("function called")
+    print(" toggle star function called")
     item = get_object_or_404(Entry, id=item_id)
     item.star = not item.star
     item.save()
@@ -71,7 +71,7 @@ def toggle_star(request, item_id):
 
 def toggle_check(request, item_id):
     # toggle the checkbox state to solid/empty
-    # print("function called")
+    print("toggle check function called")
     item = get_object_or_404(Entry, id=item_id)
     item.check_item_as_done = not item.check_item_as_done
     item.save()
