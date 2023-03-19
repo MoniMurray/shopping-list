@@ -33,18 +33,23 @@
                 <tr></tr>
             <tbody>
                 {% for entry in entry_list %}
+                <!-- <h1>{{entry.star}}</h1> -->
+
+                
                 <tr>
-                    {% if entry.check_item_as_done %}
-                        <th scope="row"></th>
-                        <td class="text-left text-capitalize"><strike> {{ entry.item_name }} </strike></td>
-                        <td>{{entry.quantity}}</td>
-                        <td></td>
-                        {% if entry.id.star %}
+                    {% if entry.star %}
                             <td><a href="home/{{entry.id}}"><button type="submit" name="toggle_star" value="{{entry.id}}" class="btn-like"><i class="fa-solid fa-star"></i></button></a></td>
                         {% else %}   
                             <td><a href="home/{{entry.id}}"><button type="submit" name="toggle_star" value="{{entry.id}}" class="btn-like"><i class="fa-regular fa-star"></i></button></a></td>
                             <!-- <td><a href="home/{{entry.id}}"><i class="fa-regular fa-star"></i></a></td> -->
                         {% endif %}
+                    {% if entry.check_item_as_done %}
+                        <th scope="row"></th>
+                        <td class="text-left text-capitalize"><strike> {{ entry.item_name }} </strike></td>
+                        <td>{{entry.quantity}}</td>
+                        <td></td>
+                        
+                        
                         <td></td>
                         <td><a href="delete/{{entry.id}}"><i class="fa-solid fa-trash-can"></i> Delete</a></td>
                         

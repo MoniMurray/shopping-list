@@ -1,4 +1,4 @@
-from django.shortcuts import render, get_object_or_404, reverse
+from django.shortcuts import render, get_object_or_404, reverse, redirect
 from django.views import generic, View
 from django.views.generic.edit import CreateView, UpdateView, DeleteView
 from django.http import HttpResponseRedirect
@@ -63,11 +63,12 @@ class Delete(DeleteView):
     template_name = 'delete.html'
     success_url = reverse_lazy('home')
 
-class ToggleView(View):
+# class ToggleView(View):
 
-    def toggle_star(self, request, item_id):
-        # toggle the star state to solid/empty
-        item = get_object_or_404(Entry, id=item_id)
-        item.star = not item.star
-        item.save(self)    
-        return redirect('home')
+def toggle_star(request, item_id):
+    # toggle the star state to solid/empty
+    # print("function called")
+    item = get_object_or_404(Entry, id=item_id)
+    item.star = not item.star
+    item.save() 
+    return redirect('home')
