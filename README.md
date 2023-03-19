@@ -320,6 +320,8 @@ On the CI Slack Community I saw a reference to [this YouTube video](https://www.
 
 Reverse_lazy tool was referenced in [this YouTube video](https://www.youtube.com/watch?v=RwWhQTSV44Q) which is a tool I imported from django.urls and used in my Create function to return the user to the home page upon successfully adding a new item to the shopping list.
 
+Though ultimately not an ideal fix to how to scroll my user's shopping list, [this Stack Overflow](https://stackoverflow.com/questions/21168521/table-fixed-header-and-scrollable-body) question and the answers provided helped me to troubleshoot how to best display the shopping list in a table.
+
 The Credits section is where you can credit all the people and sources you used throughout your project.
 
 Code Used
