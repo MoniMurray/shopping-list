@@ -7,11 +7,13 @@
 <div class="row justify-content-center">
     {% if user.is_authenticated %}
     
-    <div class="table-responsive-sm pt-5">
-        <table class="table">
+    <div class="table-responsive-sm pt-5" >
+        <h2>{{user.username}}'s List</h2>
+        <div style="height: 500px; overflow-y: scroll;">
+        <table class="table" >
             <thead>
                 <tr>
-                    <h2>{{user.username}}'s List</h2>
+                    <!-- <h2>{{user.username}}'s List</h2> -->
                 </tr>
                 <tr>
                     
@@ -49,7 +51,6 @@
                         <th scope="row"></th>
                         <td class="text-left text-capitalize"><strike> {{ entry.item_name }} </strike></td>
                         <td>{{entry.quantity}}</td>
-                        <td></td>
                                               
                         <td><a href="{% url 'toggle_check' entry.id %}"><button type="submit" name="toggle_check" value="{{entry.id}}" class="btn-like"><i class="fa-solid fa-square-check"></i></button></a></td>
                         <td></td>
@@ -79,6 +80,7 @@
                 
             </tbody>
         </table>
+    </div>
         <button type="button" class="btn-lg mb5"><a href="{% url 'add' %}">Add Item</a></button>
     </div>
     {% else %}
@@ -89,6 +91,7 @@
             <tr></tr>
 
             {% for entry in entry_list %}
+           
                 
                 <tr>
 

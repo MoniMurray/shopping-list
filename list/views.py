@@ -14,7 +14,7 @@ class EntryList(generic.ListView):
     model = Entry
     queryset = Entry.objects.all()
     template_name = 'index.html'
-    paginate_by = 25
+    paginate_by = 100
 
 
 class AddView(CreateView):
