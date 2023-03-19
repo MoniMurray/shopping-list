@@ -17,32 +17,28 @@ class EntryList(generic.ListView):
     paginate_by = 25
 
 
-
 class AddView(CreateView):
     # CRUD - Create a new shopping list entry using the fields from Entry model
 
     model = Entry
     template_name = 'add_to_list.html'
     fields = '__all__'
-    
     success_url = reverse_lazy('home')
 
-    # Next, add a success flash message when form is submitted.  
-    # should I be able to add a post method to this class-based view?
+    # Next, add a success flash message when form is submitted.
+    # # should I be able to add a post method to this class-based view?
 
     # messages.add_message(request, messages.INFO, 'Hello world.')
-    # 
-    # Not working - first 'request' is an error, 
-    # def post(self, request, *args, **kwargs):
+    # Not working - first 'request' is an error,
+    # # def post(self, request, *args, **kwargs):
     #     form = AddForm(data=request.POST)
     #     if form.is_valid():
     #         messages.success(request, 'Added successfully.')
     #         else:
-            # form = AddForm()
+    #  form = AddForm()
     #         return HttpResponseRedirect('/success/')
 
     #     return render(request, 'add_to_list.html', {'form': AddForm})
-    
 
 
 class EditView(UpdateView):
@@ -63,12 +59,20 @@ class Delete(DeleteView):
     template_name = 'delete.html'
     success_url = reverse_lazy('home')
 
-# class ToggleView(View):
 
 def toggle_star(request, item_id):
     # toggle the star state to solid/empty
     # print("function called")
     item = get_object_or_404(Entry, id=item_id)
     item.star = not item.star
-    item.save() 
+    item.save()
+    return redirect('home')
+
+
+def toggle_check(request, item_id):
+    # toggle the checkbox state to solid/empty
+    # print("function called")
+    item = get_object_or_404(Entry, id=item_id)
+    item.check_item_as_done = not item.check_item_as_done
+    item.save()
     return redirect('home')

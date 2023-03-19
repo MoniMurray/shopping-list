@@ -7,4 +7,5 @@ urlpatterns = [
     path('edit/<int:pk>/', views.EditView.as_view(), name='edit'),
     path('delete/<int:pk>/', views.Delete.as_view(), name='delete'),
     path('home/<item_id>', views.toggle_star, name='toggle_star'),
+    path('home/<item_id>', views.toggle_check, name='toggle_check'),
 ]
