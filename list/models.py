@@ -52,7 +52,7 @@ class Note(models.Model):
 
     # set attributes for Notes Table
 
-    item = models.OneToOneField(Entry, on_delete=models.CASCADE)
+    item = models.OneToOneField(Entry, on_delete=models.CASCADE, related_name='notes')
     user = models.ForeignKey(User, on_delete=models.CASCADE)
     body = models.TextField()
     added_on = models.DateTimeField(auto_now_add=True)

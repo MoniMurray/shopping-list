@@ -22,6 +22,13 @@
             {% endfor %}
             </div>
         {% endfor %}
+            <h5>Add a Note:</h5>
+            <p>Note added by {{user.username}}</p>
+            <form method="post" style="margin-top: 1.3em;">
+            {{note_form}}
+            {% csrf_token %}
+            </form>
+
         <div class="form-group pt-3">
         <button type="submit" class="btn btn-primary">Submit</button>
         <a href="{% url 'home' %}" class="btn btn-default">Cancel</a>

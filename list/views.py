@@ -2,7 +2,7 @@ from django.shortcuts import render, get_object_or_404, reverse, redirect
 from django.views import generic, View
 from django.views.generic.edit import CreateView, UpdateView, DeleteView
 from django.http import HttpResponseRedirect
-from .models import Entry
+from .models import Entry, Note
 from .forms import NoteForm
 from django.urls import reverse_lazy
 from django.contrib import messages
@@ -47,6 +47,15 @@ class EditView(UpdateView):
     model = Entry
     template_name = 'edit_entry.html'
     fields = '__all__'
+    pk_url_kwarg = 'pk'
+    success_url = reverse_lazy('home')
+
+
+class NoteView(CreateView):
+
+    model = Note
+    template_name = 'note.html'
+    fields = ['body',]
     pk_url_kwarg = 'pk'
     success_url = reverse_lazy('home')
 

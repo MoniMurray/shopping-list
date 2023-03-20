@@ -1,0 +1,35 @@
+{% extends 'base.html' %}
+{% load widget_tweaks %}
+
+{% block content %}
+
+<div class="row justify-content-center">
+    <h5 class="text-capitalize">Add a note to {{entry.item_name}}:</h5>
+</div>
+
+    <div class="container pt-3">
+        <!-- from bootstrap -->
+        <h5>Add a Note:</h5>
+            <p>Note added by {{user.username}}</p>
+                <form method="post" style="margin-top: 1.3em;">
+                    {% csrf_token %}
+                    {% for field in form.visible_fields %}
+                        <div class="form-group row offset-md-2">
+                        <label for="{{field.id_for_label}}" class="col-sm-2 col-form-label">{{ field.label }}:</label>
+                        <div class="col-sm-8">
+                        {{ field|add_class:'form-control col-sm-8 text-capitalize'}}
+                        </div>
+                        {% for error in field.errors %}
+                            <span class="help-block">{{error}}</span>
+                        {% endfor %}
+                        </div>
+                    {% endfor %}
+                    
+                    <div class="form-group pt-3">
+                    <button type="submit" class="btn btn-primary">Submit</button>
+                    <a href="{% url 'home' %}" class="btn btn-default">Cancel</a>
+                    </div>
+                </form>
+    </div>
+
+{% endblock %} 
