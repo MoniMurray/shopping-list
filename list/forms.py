@@ -12,4 +12,4 @@ class AddForm(forms.ModelForm):
 class NoteForm(forms.ModelForm):
     class Meta:
         model = Note 
-        fields = ('body',)
+        fields = ('item', 'body',)

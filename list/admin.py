@@ -3,6 +3,11 @@ from .models import Entry, Note
 from django_summernote.admin import SummernoteModelAdmin
 
 
+class EntryNoteInline(admin.TabularInline):
+    model = Note
+    readonly_fields = ['id', 'added_on']
+
+
 @admin.register(Entry)
 class EntryAdmin(SummernoteModelAdmin):
     list_display = (
@@ -12,6 +17,7 @@ class EntryAdmin(SummernoteModelAdmin):
         'added_on',
         'star',
         'check_item_as_done')
+    inlines = [EntryNoteInline,]
     list_filter = ['category',]
     search_fields = ['item_name', 'category']
     actions = ['mark_as_urgent', 'mark_as_done']

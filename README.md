@@ -322,6 +322,8 @@ Reverse_lazy tool was referenced in [this YouTube video](https://www.youtube.com
 
 Though ultimately not an ideal fix to how to scroll my user's shopping list, [this Stack Overflow](https://stackoverflow.com/questions/21168521/table-fixed-header-and-scrollable-body) question and the answers provided helped me to troubleshoot how to best display the shopping list in a table.
 
+Tutor Support helped me to understand how to create an inline view of a model within the Admin section by sharing [this letscodemore link](https://www.letscodemore.com/blog/django-inline-admin-with-examples/).
+
 The Credits section is where you can credit all the people and sources you used throughout your project.
 
 Code Used

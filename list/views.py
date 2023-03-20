@@ -21,6 +21,7 @@ class AddView(CreateView):
     # CRUD - Create a new shopping list entry using the fields from Entry model
 
     model = Entry
+    entries = Entry.objects.filter()
     template_name = 'add_to_list.html'
     fields = '__all__'
     success_url = reverse_lazy('home')
@@ -52,12 +53,18 @@ class EditView(UpdateView):
 
 
 class NoteView(CreateView):
-
+# get an instance of the shopping list item with an id equal to the one that was clicked in the index.html template but 
+# call the note.html template having populated it with the shopping list item name (fk onetoonefield) and add our note to
+# the body field.  When we click submit, we should be returned to the index.html template
+    # item = get_object_or_404(Entry, id=item_id)
     model = Note
     template_name = 'note.html'
-    fields = ['body',]
-    pk_url_kwarg = 'pk'
-    success_url = reverse_lazy('home')
+    fields = ['item', 'user', 'body',]
+    # pk_url_kwarg = 'pk'
+    success_url = reverse_lazy('home')    
+
+   
+
 
 
 class Delete(DeleteView):
