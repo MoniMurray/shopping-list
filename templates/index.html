@@ -17,17 +17,17 @@
                 </tr> -->
                 <tr>
                     
-                    
+                    <!-- Filter by [category, urgent] -->
                     <th scope="col"><a href="#"><i class="fa-solid fa-filter"></i></a></th>
                     <th scope="col">
                         <!-- <a href="add/"><i class="fa-solid fa-plus"></i>Add Item</a> -->
                     </th>
-                    <th scope="col"></th>
+                    <th scope="col">Items</th>
                     
-                    <th scope="col"><i class="fa-solid fa-star"></i></th>
-                    <th scope="col"><i class="fa-solid fa-square-check"></i></th>
-                    <th scope="col"></th>
-                    <th scope="col"></th>
+                    <th scope="col">Quantity</th>
+                    <th scope="col"><i class="fa-solid fa-square-check"></i>Check</th>
+                    <th scope="col">Edit</th>
+                    <th scope="col">Delete</th>
                     
 
                 </tr>
@@ -41,31 +41,49 @@
                 
                 <tr>
                     {% if entry.star %}
-                            <td><a href="{% url 'toggle_star' entry.id %}"><button type="submit" name="toggle_star" value="{{entry.id}}" class="btn-like"><i class="fa-solid fa-star"></i></button></a></td>
+                            <td><a href="{% url 'toggle_star' entry.id %}">
+                                <!-- <button type="submit" name="toggle_star" value="{{entry.id}}" class="btn-like"> -->
+                                    <i class="fa-solid fa-star" style="color: gold"></i>
+                                <!-- </button> -->
+                            </a></td>
                             <!-- {{entry.id_ordering}} -->
                         {% else %}   
-                            <td><a href="{% url 'toggle_star' entry.id %}"><button type="submit" name="toggle_star" value="{{entry.id}}" class="btn-like"><i class="fa-regular fa-star"></i></button></a></td>
+                            <td><a href="{% url 'toggle_star' entry.id %}">
+                                <!-- <button type="submit" name="toggle_star" value="{{entry.id}}" class="btn-like"> -->
+                                    <i class="fa-regular fa-star" style="color: gold"></i>
+                                <!-- </button> -->
+                            </a></td>
                             <!-- <td><a href="home/{{entry.id}}"><i class="fa-regular fa-star"></i></a></td> -->
                     {% endif %}
-
+                    
                     {% if entry.check_item_as_done %}
                         <th scope="row"></th>
                         <td class="text-left text-capitalize"><strike> {{ entry.item_name }} </strike></td>
+                        
                         <td>{{entry.quantity}}</td>
                                               
-                        <td><a href="{% url 'toggle_check' entry.id %}"><button type="submit" name="toggle_check" value="{{entry.id}}" class="btn-like"><i class="fa-solid fa-square-check"></i></button></a></td>
+                        <td><a href="{% url 'toggle_check' entry.id %}">
+                            <!-- <button type="submit" name="toggle_check" value="{{entry.id}}" class="btn-like"> -->
+                                <i class="fa-solid fa-square-check"></i>
+                            <!-- </button> -->
+                        </a></td>
                         <td></td>
                         <td><a href="{% url 'delete' entry.id %}"><i class="fa-solid fa-trash-can"></i> Delete</a></td>
                             
                     {% else %}
                         <th scope="row"></th>
-                        <td class="text-left text-capitalize"> {{ entry.item_name }}</td>
+                        <td class="text-left text-capitalize"> {{ entry.item_name }} <p class="text-capitalize font-italic text-wrap" style="width: 6rem;"><a href="{% url 'note' entry.id %}"><i class="fa-regular fa-message"></i>
+                        </a>{{entry.notes}}</p></td>
                         <td>{{entry.quantity}}</td>
                         <!-- <td><a href="home/{{entry.id}}"><i class="fa-regular fa-star"></i></a></td> -->
-                        <td><a href="{% url 'toggle_check' entry.id %}"><button type="submit" name="toggle_check" value="{{entry.id}}" class="btn-like"><i class="fa-regular fa-square"></i></button></a><a href="#"></a></td>
+                        <td><a href="{% url 'toggle_check' entry.id %}">
+                            <!-- <button type="submit" name="toggle_check" value="{{entry.id}}" class="btn-like"> -->
+                                <i class="fa-regular fa-square"></i>
+                            <!-- </button> -->
+                        </a><a href="#"></a></td>
                         <td><a href="{% url 'edit' entry.id %}"><i class="fa-solid fa-pencil"></i> Edit</a></td>
                         
-                        <td><a href="{% url 'note' entry.id %}"><i class="fa-regular fa-message"></i>Note</a><p class="text-capitalize font-italic text-wrap" style="width: 6rem;">{{entry.notes}}</p></td>
+                        <!-- <td><a href="{% url 'note' entry.id %}"><i class="fa-regular fa-message"></i>Note</a><p class="text-capitalize font-italic text-wrap" style="width: 6rem;">{{entry.notes}}</p></td> -->
                         <td><a href="{% url 'delete' entry.id %}"><i class="fa-solid fa-trash-can"></i> Delete</a></td>
                             
                             
@@ -85,7 +103,7 @@
         </table>
     </div>
         <button type="button" class="btn-lg mb5"><a href="{% url 'add' %}">Add Item</a></button>
-        <button type="button" class="btn-lg mb5"><a href="">Add a Note</a></button>
+        <!-- <button type="button" class="btn-lg mb5"><a href="">Add a Note</a></button> -->
         
     </div>
     {% else %}

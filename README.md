@@ -15,7 +15,49 @@ If you want to add optional shields.io badges to your README, I like to add them
 
 **CONTENTS**
 
-User Experience
+1.  User Experience(UX)
+
+2.  Agile Methodologies
+
+3.  Design
+
+- Colour Scheme
+- Typography
+- Imagery
+- Wireframes
+
+4.  Features
+
+- General Features on Each Page
+- Future Implementations
+- Accessibility
+
+5.  Technologies
+
+- Languages Used
+- Frameworks, Libraries & Programs Used
+- Deployment & Local Development
+
+6. Deployment
+
+- Local Development
+- How to Fork
+- How to Clone
+
+7. Testing
+
+- Link to [Testing.md](TESTING.md)
+
+8. Credits
+
+- Code Used
+- Content
+- Media
+- Acknowledgments
+
+
+
+**User Experience (UX) Design**
 
 - Strategy
 
@@ -39,11 +81,11 @@ Colours will be crisp, clean, sophisticated.  Black on white, cool clean colour 
 
 The User's interaction with this application should be easy and natural.  Use of icons will make actions like add, edit and delete intuitive. Efficient use of response messages will confirm successful actions to the user, with unsuccessful action messages easy to understand.
 
-##Agile Methodology
+**Agile Methodology**
 
 I have used GitHub Projects to plan the Agile development of my project.  I created a new project in the Projects tab of my repository, named ['@MoniMurray's Shopping List Project'](https://github.com/users/MoniMurray/projects/6).  Within this Project I used a Kanban Board to track each User Story as I incrementally developed the MVP of the project.
 
-###User Stories
+##User Stories
 
 A user story is a small, self-contained unit of development.  I have used these units within this Project to incrementally achieve the MVP.  Each user story was based on a bespoke user story Template created in the Issues tab of my Github repository.  User Stories have been grouped and categorised into Epics using bespoke 'labels', where appropriate, and then assigned to a Project where they are used to structure the development of the MVP of my project.
 
@@ -71,9 +113,12 @@ A user story is a small, self-contained unit of development.  I have used these 
 | FILTERING                                                                   |                                                                                     |                                                                                                                 |
 | Filter view                                                                 |                                                                                     | As a logged in user I can filter my shopping list by category so that I know where to shop.                     |
 
-###User Acceptance Criteria
+
+
+##User Acceptance Criteria
 
 I created acceptance criteria for each User Story to set out a clear objective of what to achieve to complete each story.  The objective is broken down into steps:
+
 
 | User Story                                                                                                      | Acceptance Criteria                                                                                                                                                                                                                                                                                                                                                                                                                                                            |
 | --------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
@@ -90,67 +135,30 @@ I created acceptance criteria for each User Story to set out a clear objective o
 | As a logged in user I can filter my shopping list by category so that I know where to shop.                     |                                                                                                                                                                                                                                                                                                                                                                                                                                                                                |
 | As a user I can view the shopping list.                                                                         | \- On the landing page I can see the shopping list;<br>\- If I am registered/logged in, I can see the expanded view shopping list;<br>\- If a new item is added to the shopping list I can see it on the list.                                                                                                                                                                                                                                                                 |
 
-###User Story Tasks
+##User Story Tasks
 
 I have used the acceptance criteria steps to create tasks to facilitate the execution of each User Story.  Once these tasks for each User Story are complete and tested, the User Story is finished and is assigned as 'Done' in the Project Kanban.
 
 *insert table here*
 
-###Prioritisation of User Stories
+##Prioritisation of User Stories
 
 I have used MoSCoW Prioritisation to assign a priority level to the User Stories of the Project.
 
 
-**Design**
-
-Colour Scheme
-Typography
-Imagery
-Wireframes
-Features
-
-General Features on Each Page
-Future Implementations
-Accessibility
-Technologies Used
-
-##TECHNOLOGIES
-
-Languages Used
-Frameworks, Libraries & Programs Used
-Deployment & Local Development
-
-##DEPLOYMENT
-Local Development
-How to Fork
-How to Clone
-
-Testing
-
-Credits
-
-Code Used
-Content
-Media
-Acknowledgments
-User Experience (UX)
-👩🏻‍💻 View an example of a completed user experience section here
-
-User Stories
-Add your user stories here. You want to include first time visitors and returning visitors here as a minimum. Think about each group, and the experience and journey you want them to have on your site. It really helps to think about this before you start coding, and will really help with creating your wireframes.
-
-Design
+##Design
 
 I began my design of the database structure by creating an Entity Relationship Diagram, which can be viewed [here](assets/images/Shopping List ERD.png).  The Diagram helped me to consider what to include in each Model and the relationships between the models of the database.
  
 👩🏻‍💻 View an example of a completed design section here
 
-Colour Scheme
+###Colour Scheme
+
 Add all information about your colour scheme for your site here. You can explain why you choose the colours you did?
 
 I like to include a palette of the colour scheme here, my favourite site for creating a colour palette is coolors, but there are lots of other sites that also do the same thing, like ColorSpace, Muzli Colors, Adobe Colour Wheel and Canva to name a few.
 
-Typography
+###Typography
 
 Google Fonts was used for the following fonts:
 
@@ -164,16 +172,17 @@ If you've imported fonts to use in your project, add some information about them
 
 Why did you choose the font you have? Is this an accessibly friendly font? What weights have you included?
 
-I also like to include an image of the fonts chosen as a reference.
+I also like to include an *image* of the fonts chosen as a reference.
 
 Google Fonts is a popular choice for importing fonts to use in your project, as it doesn't require you to download the fonts to use them.
 
-Imagery
+###Imagery
 Use this section to explain what sort of imagery you plan to use through your site.
 
-##Wireframes
+**##Wireframes**
 
 I created my wireframes using Balsamiq, a link to my file is [here]()
+
 ###Early UX Design Wireframe images
 
 [Restricted Homepage](assets/images/wireframes/Authentication-restricted-homepage-wireframe.png)
@@ -184,24 +193,35 @@ Registered user Login [form](assets/images/wireframes/Login-form-wireframe.png)
 
 User Authentication Confirmed [Homepage expanded view](assets/images/wireframes/Authentication-confirmed-homepage-wireframe.png), with additional user functionality
 
-There are lots of different options to create your wireframes - Code Institute students can access Balsamiq as part of the course.
 
-Some other options include Figma, AdobeXD, Sketch and Mockup to name just a few! Or you can even go old school and get those wireframes completed using pen and paper. Just snap an image of the completed wireframes to add the images to the README.
+Just snap an image of the completed wireframes to add the images to the README.
 
-Features
+
+User Experience (UX)
+👩🏻‍💻 View an example of a completed user experience section here
+
+User Stories
+Add your user stories here. You want to include first time visitors and returning visitors here as a minimum. Think about each group, and the experience and journey you want them to have on your site. It really helps to think about this before you start coding, and will really help with creating your wireframes.
+
+
+**Features**
+
 👩🏻‍💻 View an example of a completed user experience section here
 
 This section can be used to explain what pages your site is made up of.
 
-General features on each page
+##General features on each page
+
 If there is a feature that appears on all pages of your site, include it here. Examples of what to include would the the navigation, a footer and a favicon.
 
 I then like to add a screenshot of each page of the site here, i use amiresponsive which allows me to grab an image of the site as it would be displayed on mobile, tablet and desktop, this helps to show the responsiveness of the site.
 
-Future Implementations
+##Future Implementations
+
 What features would you like to implement in the future on your site? Would you like to add more pages, or create login functionality? Add these plans here.
 
-Accessibility
+##Accessibility
+
 Be an amazing developer and get used to thinking about accessibility in all of your projects!
 
 This is the place to make a note of anything you have done with accessibility in mind. Some examples include:
@@ -210,7 +230,7 @@ Have you used icons and added aria-labels to enable screen readers to understand
 
 Code Institute have an amazing channel for all things accessibility (a11y-accessibility) I would highly recommend joining this channel as it contains a wealth of information about accessibility and what we can do as developers to be more inclusive.
 
-###Technologies Used
+**Technologies Used**
 
 👩🏻‍💻 View an example of a completed Technologies Used section here
 
@@ -222,8 +242,12 @@ Languages in this project were Python, HTML, CSS and JavaScript.
 
 Django framework and Bootstrap CSS were both used in this project.
 
+###Distributed Version Control
 
 GitHub;
+
+###Wireframes and Diagram mock-up design
+
 Balsamiq - Version: 4.5.5 - Editor Version: 5.3.1
 Smartdraw - ERD 2 Template.
 
@@ -231,7 +255,52 @@ Smartdraw - ERD 2 Template.
 
 A great tip for this section is to include them as you use them, that way you won't forget what you ended up using when you get to the end of your project.
 
-##Deployment
+**Testing**
+
+Start as you mean to go on - and get used to writing a TESTING.md file from the very first project!
+
+Testing requirements aren't massive for your first project, however if you start using a TESTING.md file from your first project you will thank yourself later when completing your later projects, which will contain much more information.
+
+Testing is documented in TESTING.md file [here](TESTING.md)
+
+**Credits**
+
+This project is based on and borrows from the design of both the 'Hello Django' and the 'Django Blog' Walkthrough projects during the CI Module on FST Frameworks. 
+
+README.md - I used the [README.md example](https://github.com/kera-cudmore/readme-examples/blob/main/milestone1-readme.md) by Kera Kudmore to plan and layout my headings and content, to ensure I didn't omit any important content.
+
+On the CI Slack Community I saw a reference to [this YouTube video](https://www.youtube.com/watch?v=RwWhQTSV44Q) on building a CRUD Application using Class-based views, which helped supplement the learning from the FST Django Module from this course, in particular using CreateView to add an item to the database, and the reference to Django Widget Tweaks to collect the fields from the database and render form input elements in a html file if necessary.
+
+- On further research about [Widget Tweaks](https://pypi.org/project/django-widget-tweaks/) and looking at the [following YouTube video](https://www.google.com/search?q=django+widget-tweaks+vs+crispy-forms&rlz=1C1ONGR_enIE1019IE1019&sxsrf=AJOqlzWoraYzLPN2lHNHFLqvsMPTx369yA%3A1678736692259&ei=NH0PZMmbD9CGgQbl2pzgAg&oq=is+django+widget+tweaks+the+same+as+crispy&gs_lcp=Cgxnd3Mtd2l6LXNlcnAQARgEMgoIABBHENYEELADMgoIABBHENYEELADMgoIABBHENYEELADMgoIABBHENYEELADMgoIABBHENYEELADMgoIABBHENYEELADMgoIABBHENYEELADMgoIABBHENYEELADSgQIQRgAUABYAGDDFmgBcAF4AIABAIgBAJIBAJgBAMgBCMABAQ&sclient=gws-wiz-serp#fpstate=ive&vld=cid:b254270b,vid:ynToND_xOAM), it appears to be the most Pythonic way to create forms for my project.
+
+Reverse_lazy tool was referenced in [this YouTube video](https://www.youtube.com/watch?v=RwWhQTSV44Q) which is a tool I imported from django.urls and used in my Create function to return the user to the home page upon successfully adding a new item to the shopping list.
+
+Though ultimately not an ideal fix to how to scroll my user's shopping list, [this Stack Overflow](https://stackoverflow.com/questions/21168521/table-fixed-header-and-scrollable-body) question and the answers provided helped me to troubleshoot how to best display the shopping list in a table.
+
+Tutor Support helped me to understand how to create an inline view of a model within the Admin section by sharing [this letscodemore link](https://www.letscodemore.com/blog/django-inline-admin-with-examples/).
+
+The Credits section is where you can credit all the people and sources you used throughout your project.
+
+Code Used
+
+
+If you have used some code in your project that you didn't write, this is the place to make note of it. Credit the author of the code and if possible a link to where you found the code. You could also add in a brief description of what the code does, or what you are using it for here.
+
+Content
+Who wrote the content for the website? Was it yourself - or have you made the site for someone and they specified what the site was to say? This is the best place to put this information.
+
+ Media
+If you have used any media on your site (images, audio, video etc) you can credit them here. I like to link back to the source where I found the media, and include where on the site the image is used.
+
+**Acknowledgments**
+
+The CI Slack Community is a a resource I used almost as much as Google for this project, to bounce ideas, ask for advice, and seek guidance where code went awry.  
+
+CI Tutor Support were also a well-used resource for this project and I'm grateful to all the patient wizards there who gave me guidance.
+
+If someone helped you out during your project, you can acknowledge them here! For example someone may have taken the time to help you on slack with a problem. Pop a little thank you here with a note of what they helped you with (I like to try and link back to their GitHub or Linked In account too). This is also a great place to thank your mentor and tutor support if you used them.
+
+**Deployment**
 
 The site is deployed using Heroku - [MYM Shopping List](https://mym-shopping-list.herokuapp.com/)
 
@@ -301,39 +370,3 @@ Place instructions on how to fork your project here.
 How to Clone
 Place instructions on how to clone your project here.
 
-Testing
-Start as you mean to go on - and get used to writing a TESTING.md file from the very first project!
-
-Testing requirements aren't massive for your first project, however if you start using a TESTING.md file from your first project you will thank yourself later when completing your later projects, which will contain much more information.
-
-Testing is documented in TESTING.md file [here](TESTING.md)
-
-##Credits
-
-README.md - I used the [README.md example](https://github.com/kera-cudmore/readme-examples/blob/main/milestone1-readme.md) by Kera Kudmore to plan and layout my headings and content, to ensure I didn't omit any important content.
-
-This project is based on and borrows from both the Hello Django and the Django Blog Walkthrough projects during FST Frameworks. 
-
-On the CI Slack Community I saw a reference to [this YouTube video](https://www.youtube.com/watch?v=RwWhQTSV44Q) on building a CRUD Application using Class-based views, which helped supplement the learning from the FST Django Module from this course, in particular using CreateView to add an item to the database, and the reference to Django Widget Tweaks to collect the fields from the database and render form input elements in a html file if necessary.
-
-- On further research about [Widget Tweaks](https://pypi.org/project/django-widget-tweaks/) and looking at the [following YouTube video](https://www.google.com/search?q=django+widget-tweaks+vs+crispy-forms&rlz=1C1ONGR_enIE1019IE1019&sxsrf=AJOqlzWoraYzLPN2lHNHFLqvsMPTx369yA%3A1678736692259&ei=NH0PZMmbD9CGgQbl2pzgAg&oq=is+django+widget+tweaks+the+same+as+crispy&gs_lcp=Cgxnd3Mtd2l6LXNlcnAQARgEMgoIABBHENYEELADMgoIABBHENYEELADMgoIABBHENYEELADMgoIABBHENYEELADMgoIABBHENYEELADMgoIABBHENYEELADMgoIABBHENYEELADMgoIABBHENYEELADSgQIQRgAUABYAGDDFmgBcAF4AIABAIgBAJIBAJgBAMgBCMABAQ&sclient=gws-wiz-serp#fpstate=ive&vld=cid:b254270b,vid:ynToND_xOAM), it appears to be the most Pythonic way to create forms for my project.
-
-Reverse_lazy tool was referenced in [this YouTube video](https://www.youtube.com/watch?v=RwWhQTSV44Q) which is a tool I imported from django.urls and used in my Create function to return the user to the home page upon successfully adding a new item to the shopping list.
-
-Though ultimately not an ideal fix to how to scroll my user's shopping list, [this Stack Overflow](https://stackoverflow.com/questions/21168521/table-fixed-header-and-scrollable-body) question and the answers provided helped me to troubleshoot how to best display the shopping list in a table.
-
-Tutor Support helped me to understand how to create an inline view of a model within the Admin section by sharing [this letscodemore link](https://www.letscodemore.com/blog/django-inline-admin-with-examples/).
-
-The Credits section is where you can credit all the people and sources you used throughout your project.
-
-Code Used
-If you have used some code in your project that you didn't write, this is the place to make note of it. Credit the author of the code and if possible a link to where you found the code. You could also add in a brief description of what the code does, or what you are using it for here.
-
-Content
-Who wrote the content for the website? Was it yourself - or have you made the site for someone and they specified what the site was to say? This is the best place to put this information.
-
- Media
-If you have used any media on your site (images, audio, video etc) you can credit them here. I like to link back to the source where I found the media, and include where on the site the image is used.
-
- Acknowledgments
-If someone helped you out during your project, you can acknowledge them here! For example someone may have taken the time to help you on slack with a problem. Pop a little thank you here with a note of what they helped you with (I like to try and link back to their GitHub or Linked In account too). This is also a great place to thank your mentor and tutor support if you used them.
