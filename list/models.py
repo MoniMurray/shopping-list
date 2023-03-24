@@ -33,10 +33,10 @@ class Entry(models.Model):
     # set attributes for List items Table
     item_name = models.CharField(
         max_length=60, null=False, blank=False, unique=True)
-    quantity = models.IntegerField(choices=QUANTITY_CHOICES)
+    quantity = models.IntegerField(choices=QUANTITY_CHOICES, default='1')
     star = models.BooleanField(default=False)
     user = models.ForeignKey(User, on_delete=models.CASCADE)
-    category = models.CharField(max_length=20, choices=CATEGORY_CHOICES)
+    category = models.CharField(max_length=20, choices=CATEGORY_CHOICES, default='Fresh')
     added_on = models.DateTimeField(auto_now_add=True)
     check_item_as_done = models.BooleanField(default=False)
 

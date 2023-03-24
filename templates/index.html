@@ -1,10 +1,21 @@
 {% extends 'base.html' %}
 
+{%  load static %}
+
 {% block content %}
 
 
 
-<div class="row justify-content-center">
+    <!-- List Image -->
+    <div class="image-container mt-3">
+      <img src="{% static 'images/organiser_image.jpg' %}" class="img-fluid" alt="Shopping List and Organiser image">
+      <!-- <img src="static/images/organiser_image.jpg" class="card-img-top" alt="organiser_image"> -->
+    </div>
+    <hr>
+
+    <div class="card-body justify-content-center">
+
+    <div class="row justify-content-center">
     {% if user.is_authenticated %}
     
     <div class="table-responsive-sm pt-5" >
@@ -102,8 +113,8 @@
             </tbody>
         </table>
     </div>
-        <button type="button" class="btn-lg mb5"><a href="{% url 'add' %}">Add Item</a></button>
-        <!-- <button type="button" class="btn-lg mb5"><a href="">Add a Note</a></button> -->
+        <button type="button" class="btn btn-lg mb5"><a href="{% url 'add' %}">Add Item</a></button>
+        <!-- <button type="button" class="btn btn-lg mb5"><a href="">Add a Note</a></button> -->
         
     </div>
     {% else %}

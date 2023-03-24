@@ -1,8 +1,10 @@
+  @import url('https://fonts.googleapis.com/css2?family=Bona+Nova:wght@700&family=Nanum+Myeongjo&family=Roboto:wght@100&display=swap');
+
 
 body {
     background-color: #FFFFFF;
     font-family: 'Nanum Myeongjo', 'Roboto', sans-serif;
-    color: #3a3a3a;
+    color: bright pink;
     text-align: center;
     font-weight: 300;
 }
@@ -10,8 +12,24 @@ body {
 .heading {
     font-family: 'Bona Nova', sans-serif;
     text-align: center;
-    font-size: large;
-    font-weight: 700;
+    /* font-size: large; */
+    font-weight: 300;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-family: 'Roboto', sans-serif;
+    font-weight: 300;
+}
+
+th .col {
+    font-family: 'Roboto', sans-serif;
+    font-weight: 300;
+}
+
+/* from Dee Mc's YouTube tutorial on Recipe site creation  */
+.active {
+    border-bottom: 2px solid white;
+    font-weight: 500;
 }
 
 tbody {
