@@ -1,12 +1,13 @@
 from django.shortcuts import render, get_object_or_404, reverse, redirect
 from django.views import generic, View
-from django.views.generic.edit import CreateView, UpdateView, DeleteView
+from django.views.generic.edit import FormView, CreateView, UpdateView, DeleteView
 from django.http import HttpResponseRedirect
 from .models import Entry, Note
 from .forms import AddForm, NoteForm
 from django.urls import reverse_lazy
 from django.contrib import messages
 from django.db.models import Q
+from django.contrib.auth.models import User
 
 
 # Create your views here.
@@ -28,34 +29,23 @@ class EntryList(generic.ListView):
         return entries
 
 
-class AddView(CreateView):
+class AddView(FormView):
     # CRUD - Create a new shopping list entry using the fields from Entry model
 
-    model = Entry
-    entries = Entry.objects.filter()
+    # model = Entry
+    # entries = Entry.objects.filter()
     template_name = 'add_to_list.html'
-    fields = '__all__'
+    form_class = AddForm
     success_url = reverse_lazy('home')
 
     # ensure new items are automatically saved to the logged in user
     def form_valid(self, form):
-        form.instance.user = self.request.user
-        return super(AddView, self).form_valid(form)
-
-    # Next, add a success flash message when form is submitted.
-    # # should I be able to add a post method to this class-based view?
-
-    # messages.add_message(request, messages.INFO, 'Hello world.')
-    # Not working - first 'request' is an error,
-    # # def post(self, request, *args, **kwargs):
-    #     form = AddForm(data=request.POST)
-    #     if form.is_valid():
-    #         messages.success(request, 'Added successfully.')
-    #         else:
-    #  form = AddForm()
-    #         return HttpResponseRedirect('/success/')
-
-    #     return render(request, 'add_to_list.html', {'form': AddForm})
+        form = form.save(commit=False)
+        form.user = User.objects.get(id=self.request.user.id)
+        messages.success(self.request, 'Added successfully.')
+        form.save()
+        return super().form_valid(form)
+        
 
 
 class EditView(UpdateView):

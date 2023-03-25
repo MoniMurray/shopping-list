@@ -4,7 +4,7 @@
 {% block content %}
 
 <div class="row justify-content-center">
-    <h5 class="text-capitalize mt-3">Edit {{entry}}:</h5>
+    <h2 class="text-capitalize mt-3">Edit {{entry}}:</h2>
 </div>
 
 <div class="container pt-3">
@@ -22,12 +22,12 @@
             {% endfor %}
             </div>
         {% endfor %}
-            <h5>Add a Note:</h5>
+            <!-- <h3>Add a Note:</h3>
             <p>Note added by {{user.username}}</p>
             <form method="post" style="margin-top: 1.3em;">
             {{note_form}}
             {% csrf_token %}
-            </form>
+            </form> -->
 
         <div class="form-group pt-3">
         <button type="submit" class="btn btn-primary mb-3">Submit</button>

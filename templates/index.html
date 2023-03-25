@@ -16,7 +16,7 @@
     {% if user.is_authenticated %}
 
     <div class="table-responsive-sm pt-5">
-      <h2>{{user.username}}'s List</h2>
+      <h1>{{user.username}}'s List</h1>
       <div style="height: 500px; overflow-y: scroll">
         <table class="table">
           <thead>
@@ -25,9 +25,7 @@
                 </tr> -->
             <tr>
               <!-- Filter by [category, urgent] -->
-              <th scope="col">
-                <a href="#"><i class="fa-solid fa-filter"></i></a>
-              </th>
+              <th scope="col"></th>
               <th scope="col">
                 <!-- <a href="add/"><i class="fa-solid fa-plus"></i>Add Item</a> -->
               </th>
