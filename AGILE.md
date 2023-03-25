@@ -2,13 +2,13 @@
 
 I have used GitHub Projects to plan the Agile development of my project.  I created a new project in the Projects tab of my repository, named ['@MoniMurray's Shopping List Project'](https://github.com/users/MoniMurray/projects/6).  Within this Project I used a Kanban Board to track each User Story as I incrementally developed the MVP of the project.
 
-##User Stories
+- User Stories
 
 A user story is a small, self-contained unit of development.  I have used these units within this Project to incrementally achieve the MVP.  Each user story is based on a bespoke user story Template created in the Issues tab of my Github repository.  
 
 User Stories have been grouped and categorised into Epics using bespoke 'labels', where appropriate, and then assigned to a Project where they are used to structure the development of the MVP of my project.
 
-###**Problem Statement**
+    - **Problem Statement**
 
     - How do I develop a List application that provides all this functionality to a user?
 
@@ -40,7 +40,7 @@ User Stories have been grouped and categorised into Epics using bespoke 'labels'
 
 
 
-##User Acceptance Criteria
+- User Acceptance Criteria
 
 I created acceptance criteria for each User Story to set out a clear objective of what to achieve to complete each story.  The objective is broken down into steps:
 
@@ -60,11 +60,10 @@ I created acceptance criteria for each User Story to set out a clear objective o
 | As a logged in user I can filter my shopping list by category so that I know where to shop.                     |                                                                                                                                                                                                                                                                                                                                                                                                                                                                                |
 | As a user I can view the shopping list.                                                                         | \- On the landing page I can see the shopping list;<br>\- If I am registered/logged in, I can see the expanded view shopping list;<br>\- If a new item is added to the shopping list I can see it on the list.                                                                                                                                                                                                                                                                 |
 
-##User Story Tasks
+- User Story Tasks
 
 I have used the acceptance criteria steps to create tasks to facilitate the execution of each User Story.  Once these tasks for each User Story are complete and tested, the User Story is finished and is assigned as 'Done' in the Project Kanban.
 
-*insert table here*
 
 | Acceptance Criteria                                                                                                                                                                                                                                                                                                                                                                                                                                                            | User Story Task                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                    |
 | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
@@ -81,6 +80,8 @@ I have used the acceptance criteria steps to create tasks to facilitate the exec
 | \- On the landing page I can see the shopping list;<br>\- If I am registered/logged in, I can see the expanded view shopping list;<br>\- If a new item is added to the shopping list I can see it on the list.                                                                                                                                                                                                                                                                 | 1\. Create the view code in views.py;<br>2\. Create the base.html template to render the view, extend base.html into index.html, add if statement to conditionally check if user is authenticated to render full list or else a limited list;<br>3\. Connect up the URLS in the urls.py file                                                                                                                                                                                                                                                                       |
 
 
-##Prioritisation of User Stories
+The User Tasks lists will be used as Manual Testing steps to ensure full application testing.
+
+- Prioritisation of User Stories
 
 I have used MoSCoW Prioritisation to assign a priority level to the User Stories of the Project.
