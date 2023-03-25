@@ -102,7 +102,9 @@ I began my design of the database structure by creating an Entity Relationship D
 
 ###Colour Scheme
 
-The Shopping List colour scheme is designed to be crisp, clean, sophisticated.  I used [Coolors](https://coolors.co) to generate a ![colour palette!](static/images/coolorspalette.png). These colours were chosen based on a possible homepage image I used during early development of a ![personal organiser!](static/images/organiser_image.jpg) which looked effortlessly organised and calming.
+The Shopping List colour scheme is designed to be crisp, clean, sophisticated.  I used [Coolors](https://coolors.co) to generate a ![colour palette!](static/images/coolorspalette.png). 
+
+These colours were chosen based on a possible homepage image I used during early development of a ![personal organiser!](static/images/organiser_image.jpg) which looked effortlessly organised and calming.
 
 
 ###Typography
