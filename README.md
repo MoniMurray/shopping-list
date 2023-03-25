@@ -102,7 +102,7 @@ I began my design of the database structure by creating an Entity Relationship D
 
 ###Colour Scheme
 
-Add all information about your colour scheme for your site here. You can explain why you choose the colours you did?
+The Shopping List colour scheme is designed to be crisp, clean, sophisticated.  I used [Coolors](https://coolors.co) to generate a ![colour palette!](static/images/coolorspalette.png). 
 
 I like to include a palette of the colour scheme here, my favourite site for creating a colour palette is coolors, but there are lots of other sites that also do the same thing, like ColorSpace, Muzli Colors, Adobe Colour Wheel and Canva to name a few.
 
