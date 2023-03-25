@@ -26,6 +26,8 @@ class EntryList(generic.ListView):
             )
         else:
             entries = self.model.objects.all()
+            # messages.info(self.request, 'Not on The Shopping List.')
+            
         return entries
 
 

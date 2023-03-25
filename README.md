@@ -1,54 +1,55 @@
-**SHOPPING LIST**
+**THE SHOPPING LIST
+Organised | Everywhere**
 
 - A Shopping List application
 
 User's Goal
 
-- A User of The Shopping List wants to have a shopping list available on the go, on their portable device, accessible by login to their account.  A user wants to create their shopping list, add items to the list, edit items, add comments, mark items as urgent or as done, and delete items from their shopping list.
+- A User of The Shopping List wants to have a shopping list available on the go, on their portable device, secure thanks to login requirements to access their account.  A user wants to create their shopping list, add items to the list, edit items, add comments, mark items as urgent or as done, and delete items from their shopping list.
+
 - A User wants response messages to their actions, sucessful or unsuccessful.
 
-Add an image of the finished site here. I like to use amiresponsive to get an image of my site on all device sizes, and amiresponsive allows you to click links on the page and scroll, so each device can show a different element of your site.
+*Add an image of the finished site here. I like to use amiresponsive to get an image of my site on all device sizes, and amiresponsive allows you to click links on the page and scroll, so each device can show a different element of your site.*
 
-Link to the live site [here](https://mym-shopping-list.herokuapp.com/).
-
-If you want to add optional shields.io badges to your README, I like to add them to this section.
+Please visit the live site via [this link](https://mym-shopping-list.herokuapp.com/).
 
 **CONTENTS**
 
-1.  User Experience(UX)
+1. [User Experience(UX)](#ux)
 
-2.  Agile Methodologies
+2.  [Agile Methodologies](#agile)
 
-3.  Design
+3.  [Design](#design)
 
 - Colour Scheme
 - Typography
 - Imagery
 - Wireframes
 
-4.  Features
+4.  [Features](#features)
 
 - General Features on Each Page
 - Future Implementations
 - Accessibility
 
-5.  Technologies
+5.  [Technologies](#technologies)
 
 - Languages Used
 - Frameworks, Libraries & Programs Used
 - Deployment & Local Development
 
-6. Deployment
+6. [Testing](#testing)
+
+- Link to [Testing.md](TESTING.md)
+
+7. [Deployment](#deployment)
 
 - Local Development
 - How to Fork
 - How to Clone
 
-7. Testing
 
-- Link to [Testing.md](TESTING.md)
-
-8. Credits
+8. [Credits](#credits)
 
 - Code Used
 - Content
@@ -57,7 +58,7 @@ If you want to add optional shields.io badges to your README, I like to add them
 
 
 
-**User Experience (UX) Design**
+**User Experience (UX) Design**<a name="ux"></a>
 
 - Strategy
 
@@ -65,7 +66,14 @@ Our user is looking for a efficient convenient means of maintaining a shopping l
 
 - Scope
 
-A simple, uncomplicated, uncluttered shopping list is the MVP. Features are: User Registration, User Login/Logout, Create, Add, Update and Delete items on the list.  The six-week deadline is tight.  MVP is priority.  
+A simple, uncomplicated, uncluttered shopping list is the MVP. Features are: 
+    - Responsive design,
+    - Minimum one-page custom HTML and CSS webpage,
+    - User Registration, 
+    - User Login/Logout, 
+    - CRUD - Create, Add, Update and Delete items on the list,
+
+The six-week deadline is tight.  MVP is priority.  
 
 - Structure
 
@@ -81,72 +89,12 @@ Colours will be crisp, clean, sophisticated.  Black on white, cool clean colour 
 
 The User's interaction with this application should be easy and natural.  Use of icons will make actions like add, edit and delete intuitive. Efficient use of response messages will confirm successful actions to the user, with unsuccessful action messages easy to understand.
 
-**Agile Methodology**
+**Agile Methodology**<a name="agile"></a>
 
-I have used GitHub Projects to plan the Agile development of my project.  I created a new project in the Projects tab of my repository, named ['@MoniMurray's Shopping List Project'](https://github.com/users/MoniMurray/projects/6).  Within this Project I used a Kanban Board to track each User Story as I incrementally developed the MVP of the project.
-
-##User Stories
-
-A user story is a small, self-contained unit of development.  I have used these units within this Project to incrementally achieve the MVP.  Each user story was based on a bespoke user story Template created in the Issues tab of my Github repository.  User Stories have been grouped and categorised into Epics using bespoke 'labels', where appropriate, and then assigned to a Project where they are used to structure the development of the MVP of my project.
-
-| Features/Functionality                                                      | Problem Statement                                                                   | User Story                                                                                                      |
-| --------------------------------------------------------------------------- | ----------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------- |
-|                                                                             | How do I develop a List application that provides all this functionality to a user? | As a (role) I can (capability) so that (received benefit).                                                      |
-|                                                                             |                                                                                     |                                                                                                                 |
-| REGISTRATION - Authorisation/Authentication - Epic                          |                                                                                     |                                                                                                                 |
-|                                                                             |                                                                                     |                                                                                                                 |
-| Registration                                                                |                                                                                     | As a new user I can register to the List App so that I can access all the application's functionality securely. |
-| Login                                                                       |                                                                                     | As a registered user I can Login with username and password.                                                    |
-| Logout                                                                      |                                                                                     | As a logged-in user I can Logout of the app when finished using the list.                                       |
-|                                                                             |                                                                                     |                                                                                                                 |
-| CRUD                                                                        |                                                                                     |                                                                                                                 |
-| Read                                                                        |                                                                                     | As an unregistered user, I can only see the updated list on the Home page.                                      |
-| Add Item to List                                                            |                                                                                     | As a logged in user I can click Add so that I can add an item to my List                                        |
-| Edit existing Item on List                                                  |                                                                                     | As a logged in user I can click Edit so that I can edit the detail of an item on my List                        |
-| Toggle/Tick list item as complete                                           |                                                                                     | As a logged in user I can tick the checkbox of an item so that I can mark the item as done.                     |
-| Delete list item                                                            |                                                                                     | As a logged in user I can delete an item so that I can remove it from the list.                                 |
-| Mark an item on the List as urgent                                          |                                                                                     | As a logged in user I can tick a star icon so that the item is marked Urgent.                                   |
-|                                                                             |                                                                                     |                                                                                                                 |
-| COMMENTING                                                                  |                                                                                     |                                                                                                                 |
-| Add a comment to an item, re bulb wattage, specific shop, size of item etc. |                                                                                     | As a logged in user I can add a comment to an item so that that item has more detail                            |
-|                                                                             |                                                                                     |                                                                                                                 |
-| FILTERING                                                                   |                                                                                     |                                                                                                                 |
-| Filter view                                                                 |                                                                                     | As a logged in user I can filter my shopping list by category so that I know where to shop.                     |
+Please follow this link to open my [AGILE.md](AGILE.md) file and read about how I used Agile Methodology in the planning and development of The Shopping List application.
 
 
-
-##User Acceptance Criteria
-
-I created acceptance criteria for each User Story to set out a clear objective of what to achieve to complete each story.  The objective is broken down into steps:
-
-
-| User Story                                                                                                      | Acceptance Criteria                                                                                                                                                                                                                                                                                                                                                                                                                                                            |
-| --------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
-| As a new user I can register to the List App so that I can access all the application's functionality securely. | \- I can click on Register link on Nav bar to launch the Registration form;<br>\- I can enter a username and password in the fields provided;<br>\- I am prompted to complete fields;<br>\- I can click on 'Register' button;<br>\- I see a confirmation message that Registration is successful.                                                                                                                                                                              |
-| As a registered user I can Login with username and password.                                                    | \- I can click on Login link on Nav bar to launch the Login form;<br>\- I can enter my registered username and password;<br>\- I am prompted to complete fields;<br>\- I can click on Login button;<br>\- I can see a success 'welcome' login message;<br>\- I am redirected to the Home page where my expanded view of the full functionality of the shopping list, with clickable icons;<br>\- On the navigation bar I can now see Logout instead of 'Register' and 'Login'. |
-| As a logged-in user I can Logout of the app when finished using the list.                                       | \- I can click on 'Logout' link on Nav bar to launch a confirmation message;<br>\- I can confirm I want to logout;<br>\- I can see a confirmation message of successful logout;<br>\- I can be returned to the Home page automatically on logout;<br>\- On the navigation bar I can see 'Register' and 'Login'.                                                                                                                                                                |
-| As an unregistered user, I can only see the updated list on the Home page.                                      | \- I can read only the shopping list entry names on the home page;<br>\- I can see paragraph inviting me to 'Register' or 'Login' to edit or delete from the list;                                                                                                                                                                                                                                                                                                             |
-| As a logged in user I can click Add so that I can add an item to my List                                        | \- I can click on '+' icon to launch the Add Item form;<br>\- I can complete all fields on the form;<br>\- I am prompted to complete empty fields;<br>\- name the new item;<br>\- quantity drop-down;<br>\- category drop-down - food, household, pet etc. - filter by this;<br>\- I can click 'Submit' and be returned to Home page.                                                                                                                                          |
-| As a logged in user I can click Edit so that I can edit the detail of an item on my List                        | \- I can click on pencil edit icon beside any shopping list entry to open the entry;<br>\- I can edit any field of the entry;<br>\- I can save to return to Home page and full shopping list view;<br>\- I can see my successful.                                                                                                                                                                                                                                              |
-| As a logged in user I can tick the checkbox of an item so that I can mark the item as done.                     | \- I can click on the checkbox beside any shopping list entry;<br>\- An empty checkbox will add a tick, the entry text will appear with a line through the text;<br>\- A ticked checkbox will toggle the box to empty and the text will appear as normal.                                                                                                                                                                                                                      |
-| As a logged in user I can delete an item so that I can remove it from the list.                                 | \- I can click on the delete icon beside any shopping list entry;<br>\- I will see a message asking to confirm I want to delete the named entry, which I must click to confirm;<br>\- I can see a confirmation message "entry" has been deleted.                                                                                                                                                                                                                               |
-| As a logged in user I can tick a star icon so that the item is marked Urgent.                                   | \- I can click on the 'star' icon beside an Item;<br>\- The icon will be solid if urgent, outline only if not urgent.                                                                                                                                                                                                                                                                                                                                                          |
-| As a logged in user I can add a comment to an item so that that item has more detail                            | \- I can click on the list item to open the Item;<br>\- I can click on Comment body field;<br>\- I can Add a comment;<br>\- I can 'Submit' to Save my comments and return to Home page.                                                                                                                                                                                                                                                                                        |
-| As a logged in user I can filter my shopping list by category so that I know where to shop.                     |                                                                                                                                                                                                                                                                                                                                                                                                                                                                                |
-| As a user I can view the shopping list.                                                                         | \- On the landing page I can see the shopping list;<br>\- If I am registered/logged in, I can see the expanded view shopping list;<br>\- If a new item is added to the shopping list I can see it on the list.                                                                                                                                                                                                                                                                 |
-
-##User Story Tasks
-
-I have used the acceptance criteria steps to create tasks to facilitate the execution of each User Story.  Once these tasks for each User Story are complete and tested, the User Story is finished and is assigned as 'Done' in the Project Kanban.
-
-*insert table here*
-
-##Prioritisation of User Stories
-
-I have used MoSCoW Prioritisation to assign a priority level to the User Stories of the Project.
-
-
-##Design
+**Design**<a name="design"></a>
 
 I began my design of the database structure by creating an Entity Relationship Diagram, which can be viewed [here](assets/images/Shopping List ERD.png).  The Diagram helped me to consider what to include in each Model and the relationships between the models of the database.
  
@@ -204,7 +152,7 @@ User Stories
 Add your user stories here. You want to include first time visitors and returning visitors here as a minimum. Think about each group, and the experience and journey you want them to have on your site. It really helps to think about this before you start coding, and will really help with creating your wireframes.
 
 
-**Features**
+**Features**<a name="features"></a>
 
 👩🏻‍💻 View an example of a completed user experience section here
 
@@ -230,7 +178,7 @@ Have you used icons and added aria-labels to enable screen readers to understand
 
 Code Institute have an amazing channel for all things accessibility (a11y-accessibility) I would highly recommend joining this channel as it contains a wealth of information about accessibility and what we can do as developers to be more inclusive.
 
-**Technologies Used**
+**Technologies Used**<a name="technologies"></a>
 
 👩🏻‍💻 View an example of a completed Technologies Used section here
 
@@ -255,7 +203,7 @@ Smartdraw - ERD 2 Template.
 
 A great tip for this section is to include them as you use them, that way you won't forget what you ended up using when you get to the end of your project.
 
-**Testing**
+**Testing**<a name="testing"></a>
 
 Start as you mean to go on - and get used to writing a TESTING.md file from the very first project!
 
@@ -263,7 +211,7 @@ Testing requirements aren't massive for your first project, however if you start
 
 Testing is documented in TESTING.md file [here](TESTING.md)
 
-**Credits**
+**Credits**<a name="credits"></a>
 
 This project is based on and borrows from the design of both the 'Hello Django' and the 'Django Blog' Walkthrough projects during the CI Module on FST Frameworks. 
 
@@ -302,7 +250,7 @@ CI Tutor Support were also a well-used resource for this project and I'm gratefu
 
 If someone helped you out during your project, you can acknowledge them here! For example someone may have taken the time to help you on slack with a problem. Pop a little thank you here with a note of what they helped you with (I like to try and link back to their GitHub or Linked In account too). This is also a great place to thank your mentor and tutor support if you used them.
 
-**Deployment**
+**Deployment**<a name="deployment"></a>
 
 The site is deployed using Heroku - [MYM Shopping List](https://mym-shopping-list.herokuapp.com/)
 

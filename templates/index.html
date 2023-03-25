@@ -127,6 +127,10 @@
 
               {% endif %}
             </tr>
+            {% empty %}
+            <tr>
+              The Shopping list is currently empty.
+            </tr>
             {% endfor %}
           </tbody>
         </table>
