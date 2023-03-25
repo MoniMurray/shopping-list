@@ -3,9 +3,10 @@ from django.views import generic, View
 from django.views.generic.edit import CreateView, UpdateView, DeleteView
 from django.http import HttpResponseRedirect
 from .models import Entry, Note
-from .forms import NoteForm
+from .forms import AddForm, NoteForm
 from django.urls import reverse_lazy
 from django.contrib import messages
+from django.db.models import Q
 
 
 # Create your views here.
@@ -16,6 +17,16 @@ class EntryList(generic.ListView):
     template_name = 'index.html'
     paginate_by = 100
 
+    def get_queryset(self, **kwargs):
+        search = self.request.GET.get('query')
+        if search:
+            entries = self.model.objects.filter(
+                Q(item_name__icontains=search)
+            )
+        else:
+            entries = self.model.objects.all()
+        return entries
+
 
 class AddView(CreateView):
     # CRUD - Create a new shopping list entry using the fields from Entry model
@@ -25,6 +36,11 @@ class AddView(CreateView):
     template_name = 'add_to_list.html'
     fields = '__all__'
     success_url = reverse_lazy('home')
+
+    # ensure new items are automatically saved to the logged in user
+    def form_valid(self, form):
+        form.instance.user = self.request.user
+        return super(AddView, self).form_valid(form)
 
     # Next, add a success flash message when form is submitted.
     # # should I be able to add a post method to this class-based view?
@@ -52,6 +68,7 @@ class EditView(UpdateView):
     success_url = reverse_lazy('home')
 
 
+
 class NoteView(CreateView):
 # get an instance of the shopping list item with an id equal to the one that was clicked in the index.html template but 
 # call the note.html template having populated it with the shopping list item name (fk onetoonefield) and add our note to
@@ -61,10 +78,7 @@ class NoteView(CreateView):
     template_name = 'note.html'
     fields = ['item', 'user', 'body',]
     # pk_url_kwarg = 'pk'
-    success_url = reverse_lazy('home')    
-
-   
-
+    success_url = reverse_lazy('home')
 
 
 class Delete(DeleteView):

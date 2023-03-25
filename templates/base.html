@@ -7,11 +7,13 @@
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
   <!-- link to css -->
   <link rel="stylesheet" href="{% static 'css/style.css' %}" />
-  <link rel="preconnect" href="https://fonts.googleapis.com">
+
+  <!-- <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Bona+Nova:wght@700&family=Nanum+Myeongjo&family=Roboto:wght@100&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Bona+Nova:wght@700&family=Nanum+Myeongjo&family=Roboto:wght@100&display=swap" rel="stylesheet"> -->
 
 <!-- link to bootstrap -->
 
@@ -61,6 +63,10 @@
                     </div>
                   </div>
               </div>
+              <form class="d-flex" role="search" method="GET" action="{% url 'home' %}">
+                <input class="form-control me-2" name="query" type="search" placeholder="Search" aria-label="Search">
+                <button class="btn btn-outline-primary" type="submit">Search</button>
+              </form>
             </div>
           </nav>  
       {% endwith %}
@@ -116,6 +122,8 @@
             aria-label="Visit my Instagram page (Opens a new browser page)"><i class="fa-brands fa-instagram"></i></a>
           <a href="https://www.twitter.com" target="_blank" rel="noopener"
             aria-label="Visit my Twitter page (Opens a new browser page)"><i class="fa-brands fa-twitter"></i></a>
+           <a href="https://github.com/MoniMurray" target="_blank" rel="noopener"
+            aria-label="Visit my Github profile to see more projects (Opens a new browser page)"><i class="fa-brands fa-github"></i></a>
 
       </footer>
 

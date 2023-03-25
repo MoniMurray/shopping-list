@@ -17,7 +17,7 @@ class TestViews(TestCase):
         self.assertTemplateUsed(response, 'add_to_list.html')
     
     #The following test failed "AssertionError: 405 != 302"
-    #  def test_can_add_to_list(self):
+    # def test_can_add_to_list(self):
     #     response = self.client.post(reverse_lazy('home'), {
     #         'item_name': 'Test Added Item',
             

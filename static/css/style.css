@@ -3,6 +3,7 @@
 
 body {
     background-color: #FFFFFF;
+    
     font-family: 'Nanum Myeongjo', 'Roboto', sans-serif;
     color: bright pink;
     text-align: center;
@@ -25,6 +26,12 @@ th .col {
     font-family: 'Roboto', sans-serif;
     font-weight: 300;
 }
+
+/* .card-body {
+    /* background-image: url(..images/organiser_image.jpg) no-repeat
+    center center; */
+    color: blue;
+} */
 
 /* from Dee Mc's YouTube tutorial on Recipe site creation  */
 .active {
