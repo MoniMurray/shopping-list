@@ -52,21 +52,26 @@
                       {% if user.is_authenticated %}
                         <a class="nav-item nav-link {% if url_name == 'account_logout' %}active{% endif %} text-white"
                           href="{% url 'account_logout' %}">Logout</a>
+                        
+                        </div>
+                  </div>
+              </div>
+                        <form class="d-flex" role="search" method="GET" action="{% url 'home' %}">
+                          <input class="form-control me-2" name="query" type="search" placeholder="Search" aria-label="Search">
+                          <button class="btn btn-outline-success ml-1" type="submit">Search</button>
+                        </form>
                         {% else %}
                         <a class="nav-item nav-link {% if url_name == 'account_signup' %}active{% endif %} text-white"
                           href="{% url 'account_signup' %}">Register</a>
                         <a class="nav-item nav-link {% if url_name == 'account_login' %}active{% endif %} text-white"
                           href="{% url 'account_login' %}">Login</a>
-
+                      
                       {% endif %}
 
                     </div>
                   </div>
               </div>
-              <form class="d-flex" role="search" method="GET" action="{% url 'home' %}">
-                <input class="form-control me-2" name="query" type="search" placeholder="Search" aria-label="Search">
-                <button class="btn btn-outline-success ml-1" type="submit">Search</button>
-              </form>
+              
             </div>
           </nav>  
       {% endwith %}
