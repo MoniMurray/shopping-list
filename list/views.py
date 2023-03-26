@@ -8,6 +8,7 @@ from django.urls import reverse_lazy
 from django.contrib import messages
 from django.db.models import Q
 from django.contrib.auth.models import User
+from django.contrib.auth.mixins import UserPassesTestMixin
 
 
 # Create your views here.
@@ -50,14 +51,28 @@ class AddView(FormView):
         
 
 
-class EditView(UpdateView):
+class EditView(UserPassesTestMixin, UpdateView):
     # CRUD - Edit shopping list entry using the entry's primary key
 
     model = Entry
+    
     template_name = 'edit_entry.html'
-    fields = '__all__'
+    # fields = '__all__'
+    form_class = AddForm
     pk_url_kwarg = 'pk'
     success_url = reverse_lazy('home')
+      
+    def test_func(self):
+        return self.request.user == self.get_object().user
+
+   
+    def form_valid(self, form):
+        messages.success(self.request, 'Edited successfully.')
+        instance = form.save()
+        return super(EditView, self).form_valid(form)
+    
+
+
 
 
 
