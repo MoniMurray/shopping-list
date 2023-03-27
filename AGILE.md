@@ -88,10 +88,14 @@ I have used the acceptance criteria steps to create tasks to facilitate the exec
 This is a screenshot of the Kandban board as I worked through the User Story Tasks.
 ![User Story Tasks!](static/images/screenshots/agile/Toggling_In_Progress.png).
 
-You will see from this screenshot that some User Stories are in the 'Done' column, those whose User Story Tasks I was actively working on visible in the 'In Progress' column, and User Stories in the 'ToDo' column which have yet to be assigned to me to be worked on.
+You will see from this screenshot above that some User Stories are in the 'Done' column, those whose User Story Tasks I was actively working on visible in the 'In Progress' column, and User Stories in the 'ToDo' column which have yet to be assigned to me to be worked on.
 
 The User Tasks lists will be used as Manual Testing steps to ensure full application testing.
 
 - Prioritisation of User Stories
 
 I have used MoSCoW Prioritisation to assign a priority level to the User Stories of the Project.
+
+1.  Must Have - these User Stories are non-negotiable and represent the core functionality of the Project - those being Registration and Authentication, and CRUD.  This represents approximately 60% of the effort planned for the project overall.
+2.  Should Have and Could Have - Should have/Could have can be grouped together as being important aspects of the Project adding significant value, but as they are not vital they should represent approximately 20% of the effort planned for the project.
+3. Won't Have - User Stories marked as Won't have may be included as features in future iterations of my Project, but will not be delivered in this iteration.
