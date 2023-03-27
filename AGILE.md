@@ -18,11 +18,10 @@ User Stories have been grouped and categorised into Epics using bespoke 'labels'
 
     - How do I develop a List application that provides all this functionality to a user?
 
-    
 
-| **Features/Functionality**                                                      | **Problem Statement**                                                                   | **User Story**                                                                                                      |
+| Features/Functionality                                                      | Problem Statement                                                                   | User Story                                                                                                      |
 | --------------------------------------------------------------------------- | ----------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------- |
-|                                                                             | *How do I develop a List application that provides all this functionality to a user?* | User Story Template: As a (role) I can (capability) so that (received benefit).                                                      |
+|                                                                             | How do I develop a List application that provides all this functionality to a user? | As a (role) I can (capability) so that (received benefit).                                                      |
 |                                                                             |                                                                                     |                                                                                                                 |
 | REGISTRATION - Authorisation/Authentication - Epic                          |                                                                                     |                                                                                                                 |
 |                                                                             |                                                                                     |                                                                                                                 |
@@ -41,8 +40,12 @@ User Stories have been grouped and categorised into Epics using bespoke 'labels'
 | COMMENTING                                                                  |                                                                                     |                                                                                                                 |
 | Add a comment to an item, re bulb wattage, specific shop, size of item etc. |                                                                                     | As a logged in user I can add a comment to an item so that that item has more detail                            |
 |                                                                             |                                                                                     |                                                                                                                 |
-| Searching                                                                   |                                                                                     |                                                                                                                 |
-| Search my shopping list, Filter by category so that I know where to shop.                     |
+| FILTERING                                                                   |                                                                                     |                                                                                                                 |
+| Filter view                                                                 |                                                                                     | As a logged in user I can filter my shopping list by category so that I know where to shop.                     |
+| View Shopping List                                                          |                                                                                     | As a user I can view the shopping list.                                                                         |
+| MESSAGING                                                                   |                                                                                     |                                                                                                                 |
+| Feedback to User on all feedback - Success/Error                            |                                                                                     | As I user I can see response messages to each action so that I know if they have been successful or not         |
+
 
 
 
@@ -66,6 +69,30 @@ I created a set of Acceptance Criteria for each User Story to set out a clear ob
 | As a logged in user I can filter my shopping list by category so that I know where to shop.                     |                                                                                                                                                                                                                                                                                                                                                                                                                                                                                |
 | As a user I can view the shopping list.                                                                         | \- On the landing page I can see the shopping list;<br>\- If I am registered/logged in, I can see the expanded view shopping list;<br>\- If a new item is added to the shopping list I can see it on the list.                                                                                                                                                                                                                                                                 |
 
+- Prioritisation of User Stories
+
+I have used MoSCoW Prioritisation to assign a priority level to the User Stories of the Project.  'MoSCoW' is an acronym for 'Must have', 'Should have', 'Could have, 'Will not have' and represent the prioritisation level applied to User Stories during this iteration of production.  For the purpose of this project, 'an iteration' represents this project's lifecycle up to submission.
+
+1.  Must Have - these User Stories are non-negotiable and represent the core functionality of the Project - those being the Responsive front-end design, User Registration and Authentication, and CRUD.  This represents approximately 60% of the effort planned for the project overall.
+2.  Should Have and Could Have - Should have/Could have can be grouped together as being important aspects of the Project adding significant value, but as they are not vital they should each represent approximately 20% of the effort planned for the project.
+3. Won't Have - User Stories marked as Won't have may be included as features in future iterations of my Project, but will not be delivered in this iteration.
+
+| User Story                                                                                                      | MOSCOW      |
+| --------------------------------------------------------------------------------------------------------------- | ----------- |
+| As a new user I can register to the List App so that I can access all the application's functionality securely. | Must Have   |
+| As a registered user I can Login with username and password.                                                    | Must Have   |
+| As a logged-in user I can Logout of the app when finished using the list.                                       | Must Have   |
+| As an unregistered user, I can only see the updated list on the Home page.                                      | Must Have   |
+| As a logged in user I can click Add so that I can add an item to my List                                        | Must Have   |
+| As a logged in user I can click Edit so that I can edit the detail of an item on my List                        | Must Have   |
+| As a logged in user I can tick the checkbox of an item so that I can mark the item as done.                     | Should Have |
+| As a logged in user I can delete an item so that I can remove it from the list.                                 | Must Have   |
+| As a logged in user I can tick a star icon so that the item is marked Urgent.                                   | Could have  |
+| As a logged in user I can add a comment to an item so that that item has more detail                            | Could have  |
+| As a logged in user I can filter my shopping list by category so that I know where to shop.                     | Should have |
+| As a user I can view the shopping list.                                                                         | Must have   |
+| As I user I can see response messages to each action so that I know if they have been successful or not         | Should have |
+
 - User Story Tasks
 
 I have used the acceptance criteria steps to create tasks to facilitate the execution of each User Story.  Once these tasks for each User Story are complete and tested, the User Story is finished and is assigned as 'Done' in the Project Kanban.
@@ -88,30 +115,6 @@ I have used the acceptance criteria steps to create tasks to facilitate the exec
 This is a screenshot of the Kandban board as I worked through the User Story Tasks.
 ![User Story Tasks!](static/images/screenshots/agile/Toggling_In_Progress.png).
 
-You will see from this screenshot above that some User Stories are in the 'Done' column, those whose User Story Tasks I was actively working on visible in the 'In Progress' column, and User Stories in the 'ToDo' column which have yet to be assigned to me to be worked on.
+You will see from this screenshot above that some User Stories are in the 'Done' column, those whose User Story Tasks I was actively working on when this screenshot was captured are visible in the 'In Progress' column, and User Stories in the 'ToDo' column which have yet to be assigned to me to be worked on.
 
-The User Tasks lists will be used as Manual Testing steps to ensure full application testing.
-
-- Prioritisation of User Stories
-
-I have used MoSCoW Prioritisation to assign a priority level to the User Stories of the Project.  My User Stories were added to the Project Kanban board in order of importance. 
-
-1.  Must Have - these User Stories are non-negotiable and represent the core functionality of the Project - those being the Responsive front-end design, User Registration and Authentication, and CRUD.  This represents approximately 60% of the effort planned for the project overall.
-2.  Should Have and Could Have - Should have/Could have can be grouped together as being important aspects of the Project adding significant value, but as they are not vital they should represent approximately 20% of the effort planned for the project.
-3. Won't Have - User Stories marked as Won't have may be included as features in future iterations of my Project, but will not be delivered in this iteration.
-
-| User Story                                                                                                      | MOSCOW      |
-| --------------------------------------------------------------------------------------------------------------- | ----------- |
-| As a new user I can register to the List App so that I can access all the application's functionality securely. | Must Have   |
-| As a registered user I can Login with username and password.                                                    | Must Have   |
-| As a logged-in user I can Logout of the app when finished using the list.                                       | Must Have   |
-| As an unregistered user, I can only see the updated list on the Home page.                                      | Must Have   |
-| As a logged in user I can click Add so that I can add an item to my List                                        | Must Have   |
-| As a logged in user I can click Edit so that I can edit the detail of an item on my List                        | Must Have   |
-| As a logged in user I can tick the checkbox of an item so that I can mark the item as done.                     | Should Have |
-| As a logged in user I can delete an item so that I can remove it from the list.                                 | Must Have   |
-| As a logged in user I can tick a star icon so that the item is marked Urgent.                                   | Could have  |
-| As a logged in user I can add a comment to an item so that that item has more detail                            | Could have  |
-| As a logged in user I can filter my shopping list by category so that I know where to shop.                     | Should have |
-| As a user I can view the shopping list.                                                                         | Must have   |
-| As I user I can see response messages to each action so that I know if they have been successful or not         | Should have |
+The User Tasks lists will be used as Manual Testing steps to ensure full application testing.  Follow this [link to read more about the Testing for this application](TESTING.md)
