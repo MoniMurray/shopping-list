@@ -20,9 +20,7 @@
       <div style="height: 500px; overflow-y: scroll">
         <table class="table">
           <thead>
-            <!-- <tr>
-                    <h2>{{user.username}}'s List</h2>
-                </tr> -->
+            
             <tr>
               <!-- Filter by [category, urgent] -->
               <th scope="col"><i class="fa-solid fa-filter"></i></th>
@@ -37,12 +35,10 @@
               <th scope="col">Delete</th>
             </tr>
           </thead>
-          <!-- <tr></tr> -->
+          
           <tbody>
             {% for entry in entry_list %}
-            <!-- <td><a href="{% url 'toggle_check' entry.id %}"><i class="fa-regular fa-square"></i></a></td> -->
-            <!-- <h1>{{entry.check_item_as_done}}</h1> -->
-
+            
             <tr>
               {% if entry.star %}
               <td>
@@ -62,7 +58,9 @@
                 </a>
               </td>
               <!-- <td><a href="home/{{entry.id}}"><i class="fa-regular fa-star"></i></a></td> -->
-              {% endif %} {% if entry.check_item_as_done %}
+              {% endif %} 
+              
+              {% if entry.check_item_as_done %}
               <th scope="row"></th>
               <td class="text-left text-capitalize">
                 <strike> {{ entry.item_name }} </strike>

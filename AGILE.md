@@ -1,12 +1,14 @@
 **Agile Methodology**
 
-I have used GitHub Projects to plan the Agile development of my project.  I created a new project in the Projects tab of my repository, named ['@MoniMurray's Shopping List Project'](https://github.com/users/MoniMurray/projects/6).  Within this Project I used a Kanban Board to track each User Story as I incrementally developed the MVP of the project.
+I have used GitHub Projects to plan the Agile development of my project.  I created a new project in the Projects tab of my repository, named ['@MoniMurray's Shopping List Project'](https://github.com/users/MoniMurray/projects/6).  Within this Project I used a Kanban Board to track each User Story as I incrementally developed the MVP of the project.  
+
+This is a screenshot of the ![Kanban board in Projects!](static/images/screenshots/agile/kanban_board.png) 
 
 - User Stories
 
-A user story is a small, self-contained unit of development.  I have used these units within this Project to incrementally achieve the MVP.  Each user story is based on a bespoke user story Template created in the Issues tab of my Github repository.  
+A user story is a small, self-contained unit of development.  I have used these units in my Project to incrementally achieve the MVP.  Each user story is based on a ![bespoke user story Template!](static/images/screenshots/agile/user_story_bespoke_template.png), and created in the Issues tab of my Github repository.  
 
-User Stories have been grouped and categorised into Epics using bespoke 'labels', where appropriate, and then assigned to a Project where they are used to structure the development of the MVP of my project.
+User Stories have been grouped and categorised into Epics using bespoke 'labels', where appropriate, and then assigned to the project named '@MoniMurray's Shopping List Project' where they are used to structure the development of the MVP of my project.
 
     - **Problem Statement**
 
@@ -42,7 +44,7 @@ User Stories have been grouped and categorised into Epics using bespoke 'labels'
 
 - User Acceptance Criteria
 
-I created acceptance criteria for each User Story to set out a clear objective of what to achieve to complete each story.  The objective is broken down into steps:
+I created a set of Acceptance Criteria for each User Story to set out a clear objective of what to achieve to complete each story.  The objective is broken down into steps, and in that way is a clear and measurable way of confirming the work is complete:
 
 
 | User Story                                                                                                      | Acceptance Criteria                                                                                                                                                                                                                                                                                                                                                                                                                                                            |
@@ -79,6 +81,9 @@ I have used the acceptance criteria steps to create tasks to facilitate the exec
 | \- Click on the list item to open the Item;<br>\- Click on Comment body field;<br>\- Add comment;<br>\- Save to return to Home page.                                                                                                                                                                                                                                                                                                                                           | 1\. Create a clickable comment link using fontawesome icon,<br>2\. Create a new class-based View in views.py to add a comment to an item<br>3\. Create a new note html Template,<br>4\. Connect the path url in urls.py.                                                                                                                                                                                                                                                                                                                                           |
 | \- On the landing page I can see the shopping list;<br>\- If I am registered/logged in, I can see the expanded view shopping list;<br>\- If a new item is added to the shopping list I can see it on the list.                                                                                                                                                                                                                                                                 | 1\. Create the view code in views.py;<br>2\. Create the base.html template to render the view, extend base.html into index.html, add if statement to conditionally check if user is authenticated to render full list or else a limited list;<br>3\. Connect up the URLS in the urls.py file                                                                                                                                                                                                                                                                       |
 
+This is a screenshot of the Kandban board as I worked through the ![User Story Tasks!](static/images/screenshots/agile/Toggling_In_Progress.png).
+
+You will see from this screenshot that some User Stories are in the 'Done' column, those whose User Story Tasks I was actively working on visible in the 'In Progress' column, and User Stories in the 'ToDo' column which have yet to be assigned to me to be worked on.
 
 The User Tasks lists will be used as Manual Testing steps to ensure full application testing.
 

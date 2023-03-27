@@ -67,6 +67,7 @@ Our user is looking for a efficient convenient means of maintaining a shopping l
 - Scope
 
 A simple, uncomplicated, uncluttered shopping list is the MVP. Features are: 
+
     - Responsive design,
     - Minimum one-page custom HTML and CSS webpage,
     - User Registration, 
@@ -315,7 +316,7 @@ In the newly created Procfile, add the line 'web: gunicorn PROJECTNAME.wsgi'.
  - 'gunicorn' is a web server installed for the project, a web services gateway server;
  - '.wsgi' stands for 'web services gateway server' and is the standard that allows Python services to integrate with web servers.
 
- The Project is now deployed.
+ The Project is now ![successfully deployed!](static/images/screenshots/deployment/django-successful_installation_screenshot.png).
 
 How to Fork
 Place instructions on how to fork your project here.
