@@ -66,7 +66,7 @@ Our user is looking for a efficient convenient means of maintaining a shopping l
 
 - Scope
 
-A simple, uncomplicated, uncluttered shopping list is the MVP. Features are: 
+A simple, uncomplicated, uncluttered shopping list is the Minimum Viable Product (MVP). Features are: 
 
     - Responsive design,
     - Minimum one-page custom HTML and CSS webpage,
@@ -74,7 +74,7 @@ A simple, uncomplicated, uncluttered shopping list is the MVP. Features are:
     - User Login/Logout, 
     - CRUD - Create, Add, Update and Delete items on the list,
 
-The six-week deadline is tight.  MVP is priority.  
+The six-week deadline is fixed and the timeline is tight.  MVP is priority.  
 
 - Structure
 

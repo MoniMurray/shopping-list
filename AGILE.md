@@ -94,8 +94,24 @@ The User Tasks lists will be used as Manual Testing steps to ensure full applica
 
 - Prioritisation of User Stories
 
-I have used MoSCoW Prioritisation to assign a priority level to the User Stories of the Project.
+I have used MoSCoW Prioritisation to assign a priority level to the User Stories of the Project.  My User Stories were added to the Project Kanban board in order of importance. 
 
-1.  Must Have - these User Stories are non-negotiable and represent the core functionality of the Project - those being Registration and Authentication, and CRUD.  This represents approximately 60% of the effort planned for the project overall.
+1.  Must Have - these User Stories are non-negotiable and represent the core functionality of the Project - those being the Responsive front-end design, User Registration and Authentication, and CRUD.  This represents approximately 60% of the effort planned for the project overall.
 2.  Should Have and Could Have - Should have/Could have can be grouped together as being important aspects of the Project adding significant value, but as they are not vital they should represent approximately 20% of the effort planned for the project.
 3. Won't Have - User Stories marked as Won't have may be included as features in future iterations of my Project, but will not be delivered in this iteration.
+
+| User Story                                                                                                      | MOSCOW      |
+| --------------------------------------------------------------------------------------------------------------- | ----------- |
+| As a new user I can register to the List App so that I can access all the application's functionality securely. | Must Have   |
+| As a registered user I can Login with username and password.                                                    | Must Have   |
+| As a logged-in user I can Logout of the app when finished using the list.                                       | Must Have   |
+| As an unregistered user, I can only see the updated list on the Home page.                                      | Must Have   |
+| As a logged in user I can click Add so that I can add an item to my List                                        | Must Have   |
+| As a logged in user I can click Edit so that I can edit the detail of an item on my List                        | Must Have   |
+| As a logged in user I can tick the checkbox of an item so that I can mark the item as done.                     | Should Have |
+| As a logged in user I can delete an item so that I can remove it from the list.                                 | Must Have   |
+| As a logged in user I can tick a star icon so that the item is marked Urgent.                                   | Could have  |
+| As a logged in user I can add a comment to an item so that that item has more detail                            | Could have  |
+| As a logged in user I can filter my shopping list by category so that I know where to shop.                     | Should have |
+| As a user I can view the shopping list.                                                                         | Must have   |
+| As I user I can see response messages to each action so that I know if they have been successful or not         | Should have |
