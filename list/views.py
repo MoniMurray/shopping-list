@@ -57,7 +57,6 @@ class EditView(UserPassesTestMixin, UpdateView):
     model = Entry
     
     template_name = 'edit_entry.html'
-    # fields = '__all__'
     form_class = AddForm
     pk_url_kwarg = 'pk'
     success_url = reverse_lazy('home')
@@ -72,10 +71,6 @@ class EditView(UserPassesTestMixin, UpdateView):
         return super(EditView, self).form_valid(form)
     
 
-
-
-
-
 class NoteView(CreateView):
 # get an instance of the shopping list item with an id equal to the one that was clicked in the index.html template but 
 # call the note.html template having populated it with the shopping list item name (fk onetoonefield) and add our note to
@@ -88,7 +83,7 @@ class NoteView(CreateView):
     success_url = reverse_lazy('home')
 
 
-class Delete(DeleteView):
+class Delete(UserPassesTestMixin, DeleteView):
     # CRUD - Target the entry with the pk again
 
     model = Entry
@@ -96,10 +91,20 @@ class Delete(DeleteView):
     template_name = 'delete.html'
     success_url = reverse_lazy('home')
 
+    # only permit delete if logged-in user created item
+    def test_func(self):
+        return self.request.user == self.get_object().user
+
+    def form_valid(self, form):
+        instance = form.save()
+        messages.success(self.request, 'Deleted successfully.')
+            
+        return super(Delete, self).form_valid(form)
+
 
 def toggle_star(request, item_id):
     # toggle the star state to solid/empty
-    print(" toggle star function called")
+    
     item = get_object_or_404(Entry, id=item_id)
     item.star = not item.star
     item.save()
@@ -108,7 +113,7 @@ def toggle_star(request, item_id):
 
 def toggle_check(request, item_id):
     # toggle the checkbox state to solid/empty
-    print("toggle check function called")
+    
     item = get_object_or_404(Entry, id=item_id)
     item.check_item_as_done = not item.check_item_as_done
     item.save()
