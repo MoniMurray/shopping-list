@@ -99,16 +99,14 @@ Please follow this link to open my [AGILE.md](AGILE.md) file and read about how 
 
 I began my design of the database structure by creating an Entity Relationship Diagram, which can be viewed [here](assets/images/Shopping List ERD.png).  The Diagram helped me to consider what to include in each Model and the relationships between the models of the database.
  
-👩🏻‍💻 View an example of a completed design section here
-
-###Colour Scheme
+Colour Scheme
 
 The Shopping List colour scheme is designed to be crisp, clean, sophisticated.  I used [Coolors](https://coolors.co) to generate a ![colour palette!](static/images/coolorspalette.png). 
 
 These colours were chosen based on a possible homepage image I used during early development of a ![personal organiser!](static/images/organiser_image.jpg) which looked effortlessly organised and calming.
 
 
-###Typography
+Typography
 
 Google Fonts was used for the following fonts:
 
@@ -126,39 +124,50 @@ I also like to include an *image* of the fonts chosen as a reference.
 
 Google Fonts is a popular choice for importing fonts to use in your project, as it doesn't require you to download the fonts to use them.
 
-###Imagery
-Use this section to explain what sort of imagery you plan to use through your site.
+Imagery
+*Use this section to explain what sort of imagery you plan to use through your site*.
 
-**##Wireframes**
+**Wireframes**
 
-I created my wireframes using Balsamiq, a link to my file is [here]()
+I created my wireframes using Balsamiq.
 
-###Early UX Design Wireframe images
+Early UX Design Wireframe images
 
-[Restricted Homepage](assets/images/wireframes/Authentication-restricted-homepage-wireframe.png)
+Registration/Authentication
 
-User Registration [form](assets/images/wireframes/Registration-form-wireframe.png)
+![Restricted Homepage!](static/images/wireframes/Authentication-restricted-homepage-wireframe.png)
 
-Registered user Login [form](assets/images/wireframes/Login-form-wireframe.png)
+User Registration ![form!](static/images/wireframes/Registration-form-wireframe.png)
 
-User Authentication Confirmed [Homepage expanded view](assets/images/wireframes/Authentication-confirmed-homepage-wireframe.png), with additional user functionality
+Registered user Login ![form!](static/images/wireframes/Login-form-wireframe.png)
 
+User Authentication Confirmed ![Homepage expanded view!](static/images/wireframes/Authentication-confirmed-homepage-wireframe.png), with additional user functionality
 
-Just snap an image of the completed wireframes to add the images to the README.
+CRUD
 
+![Add Item!](static/images/wireframes/Add-item-wireframe.png)
 
-User Experience (UX)
-👩🏻‍💻 View an example of a completed user experience section here
+![Edit Item!](static/images/wireframes/Edit-item-wireframe.png)
 
-User Stories
-Add your user stories here. You want to include first time visitors and returning visitors here as a minimum. Think about each group, and the experience and journey you want them to have on your site. It really helps to think about this before you start coding, and will really help with creating your wireframes.
+![Delete Item!](static/images/wireframes/Delete-item-user-clarification-msg-wireframe.png)
+
+User Messages Wireframes
+
+![Successful Login!](static/images/wireframes/Successful-login-confirmation-msg-wireframe.png)
+
+![User Clarification of Logout Request!](static/images/wireframes/Logout-user-clarification-msg-wireframe.png)
+
+![Flash Success message on Deletion!](static/images/wireframes/Item-deletion-successful-user-flash-msg-wireframe.png)
+
+![Flash Success message on Adding Item!](static/images/wireframes/Add-item-user-flash-msg-wireframe.png)
+
 
 
 **Features**<a name="features"></a>
 
-👩🏻‍💻 View an example of a completed user experience section here
 
-This section can be used to explain what pages your site is made up of.
+
+*This section can be used to explain what pages your site is made up of.*
 
 ##General features on each page
 
@@ -166,11 +175,11 @@ If there is a feature that appears on all pages of your site, include it here. E
 
 I then like to add a screenshot of each page of the site here, i use amiresponsive which allows me to grab an image of the site as it would be displayed on mobile, tablet and desktop, this helps to show the responsiveness of the site.
 
-##Future Implementations
+Future Implementations
 
 What features would you like to implement in the future on your site? Would you like to add more pages, or create login functionality? Add these plans here.
 
-##Accessibility
+Accessibility
 
 Be an amazing developer and get used to thinking about accessibility in all of your projects!
 
@@ -182,34 +191,36 @@ Code Institute have an amazing channel for all things accessibility (a11y-access
 
 **Technologies Used**<a name="technologies"></a>
 
-👩🏻‍💻 View an example of a completed Technologies Used section here
-
-###Languages Used
+Languages Used
 
 Languages in this project were Python, HTML, CSS and JavaScript.
 
-###Frameworks, Libraries & Programs Used
+Frameworks, Libraries & Programs Used
 
-Django framework and Bootstrap CSS were both used in this project.
+- Balsamiq Version: 4.5.5 - Editor Version: 5.3.1 - Used to create wireframes.
 
-###Distributed Version Control
+- GitPod - The Cloud development environment used to develop the site.
 
-GitHub;
+- Google Fonts - To import the fonts used on the website.
 
-###Wireframes and Diagram mock-up design
+- Google Developer Tools - To troubleshoot and test features, solve issues with responsiveness and styling.
 
-Balsamiq - Version: 4.5.5 - Editor Version: 5.3.1
-Smartdraw - ERD 2 Template.
+- TinyPNG - To compress the Organiser image
 
-(add the version used).
+- Am I Responsive? To show the website image on a range of devices.
 
-A great tip for this section is to include them as you use them, that way you won't forget what you ended up using when you get to the end of your project.
+- Django framework and Bootstrap CSS were both used in this project.
+
+- Fontawesome - Used for icons.
+
+- Heroku and ElephantSQL - For deployment and Hosting of the project.
+
+- GitHub - Distributed Version Control;
+
+- Smartdraw - To create the Entity Relationship Model - ERD 2 Template.
+
 
 **Testing**<a name="testing"></a>
-
-Start as you mean to go on - and get used to writing a TESTING.md file from the very first project!
-
-Testing requirements aren't massive for your first project, however if you start using a TESTING.md file from your first project you will thank yourself later when completing your later projects, which will contain much more information.
 
 Testing is documented in TESTING.md file [here](TESTING.md)
 
@@ -223,42 +234,30 @@ On the CI Slack Community I saw a reference to [this YouTube video](https://www.
 
 - On further research about [Widget Tweaks](https://pypi.org/project/django-widget-tweaks/) and looking at the [following YouTube video](https://www.google.com/search?q=django+widget-tweaks+vs+crispy-forms&rlz=1C1ONGR_enIE1019IE1019&sxsrf=AJOqlzWoraYzLPN2lHNHFLqvsMPTx369yA%3A1678736692259&ei=NH0PZMmbD9CGgQbl2pzgAg&oq=is+django+widget+tweaks+the+same+as+crispy&gs_lcp=Cgxnd3Mtd2l6LXNlcnAQARgEMgoIABBHENYEELADMgoIABBHENYEELADMgoIABBHENYEELADMgoIABBHENYEELADMgoIABBHENYEELADMgoIABBHENYEELADMgoIABBHENYEELADMgoIABBHENYEELADSgQIQRgAUABYAGDDFmgBcAF4AIABAIgBAJIBAJgBAMgBCMABAQ&sclient=gws-wiz-serp#fpstate=ive&vld=cid:b254270b,vid:ynToND_xOAM), it appears to be the most Pythonic way to create forms for my project.
 
+I found Dee Mc's YouTube videos on creating a [Django Recipe Sharing tutorial](https://www.youtube.com/watch?v=E9eWdZTpiGA&list=PLXuTq6OsqZjbCSfiLNb2f1FOs8viArjWy&index=4) useful to solidify what had been taught on the FSF Django module as she explained similar aspects in a different way that made sense to me.  For example, Dee Mc uses Django to load static files such as style.css using the curly braces syntax which I am already using for all href links throughout the project, and once I saw this it made perfect sense to extend this syntax to use within the head tags of of my templates.  Another conditional statement used on this Recipe Sharing tutorial was the one adding the 'active' class to the navigation bar which I also included in this Project.
+
 Reverse_lazy tool was referenced in [this YouTube video](https://www.youtube.com/watch?v=RwWhQTSV44Q) which is a tool I imported from django.urls and used in my Create function to return the user to the home page upon successfully adding a new item to the shopping list.
 
 Though ultimately not an ideal fix to how to scroll my user's shopping list, [this Stack Overflow](https://stackoverflow.com/questions/21168521/table-fixed-header-and-scrollable-body) question and the answers provided helped me to troubleshoot how to best display the shopping list in a table.
 
 Tutor Support helped me to understand how to create an inline view of a model within the Admin section by sharing [this letscodemore link](https://www.letscodemore.com/blog/django-inline-admin-with-examples/).
 
-I found Dee Mc's YouTube videos on creating a [Django Recipe Sharing tutorial](https://www.youtube.com/watch?v=E9eWdZTpiGA&list=PLXuTq6OsqZjbCSfiLNb2f1FOs8viArjWy&index=4) useful to solidify what had been taught on the FSF Django module as she explained similar aspects in a different way that made sense to me.  For example, Dee Mc uses Django to load static files such as style.css using the curly braces syntax which I am already using for all href links throughout the project, and once I saw this it made perfect sense to extend this syntax to use within the head tags of of my templates.  Another conditional statement used on this Recipe Sharing tutorial was the one adding the 'active' class to the navigation bar which I also included in this Project.
 
-Due to the requirment to have custom user messages throughout this project I could not use standard Django 403 error message to return an error to the users of The Shopping List.  Instead I created a [custom 403 template](https://stackoverflow.com/questions/31981239/django-custom-403-template) to relay a very simple 403 forbidden error message where required.
+Due to the requirment to have custom user messages throughout this project I could not use standard Django 403 error message to return an error to the users of The Shopping List as it was too generic.  Instead I created a [custom 403 template](https://stackoverflow.com/questions/31981239/django-custom-403-template) to relay a very simple but more elegant 403 forbidden error message where required.
 
-The Credits section is where you can credit all the people and sources you used throughout your project.
-
-Code Used
-
-
-If you have used some code in your project that you didn't write, this is the place to make note of it. Credit the author of the code and if possible a link to where you found the code. You could also add in a brief description of what the code does, or what you are using it for here.
-
-Content
-Who wrote the content for the website? Was it yourself - or have you made the site for someone and they specified what the site was to say? This is the best place to put this information.
-
- Media
-If you have used any media on your site (images, audio, video etc) you can credit them here. I like to link back to the source where I found the media, and include where on the site the image is used.
 
 **Acknowledgments**
 
 The CI Slack Community is a a resource I used almost as much as Google for this project, to bounce ideas, ask for advice, and seek guidance where code went awry.  
 
-CI Tutor Support were also a well-used resource for this project and I'm grateful to all the patient wizards there who gave me guidance.
+CI Tutor Support were also a well-used resource for this project and I'm grateful to all the patient Tutors from whome I received a huge amount of reasurance and guidance.
 
-If someone helped you out during your project, you can acknowledge them here! For example someone may have taken the time to help you on slack with a problem. Pop a little thank you here with a note of what they helped you with (I like to try and link back to their GitHub or Linked In account too). This is also a great place to thank your mentor and tutor support if you used them.
 
 **Deployment**<a name="deployment"></a>
 
 The site is deployed using Heroku - [MYM Shopping List](https://mym-shopping-list.herokuapp.com/)
 
-###To Deploy the site using Heroku:
+To Deploy the site using Heroku:
 
 - Login (or signup) to Heroku;
 - From the dashboard, click on 'New' and select 'Create New App';
@@ -284,7 +283,7 @@ Heroku uses an ephemeral file system - which means it is wiped clean every time 
 
 So Gunicorn which will act as the web server for the project, and the project will also use a server-based database called 'Postgres'.  It will be seperated from the  application, so it will survive even if the application server is destroyed.
 
-###To Create the Postgres database:
+To Create the Postgres database:
 
 - Login or signup to ElephantSQL;
 - Click 'Create New Instance';
@@ -307,7 +306,7 @@ Test the connection in ElephantSQL:
 
 You should see that the dropped down list has been populated from the Django migrations.
 
-###Create Procfile in Gitpod
+Create Procfile in Gitpod
 
 Heroku needs a Profile so it knows how to run a project.
 
@@ -319,8 +318,17 @@ In the newly created Procfile, add the line 'web: gunicorn PROJECTNAME.wsgi'.
  The Project is now ![successfully deployed!](static/images/screenshots/deployment/django-successful_installation_screenshot.png).
 
 How to Fork
-Place instructions on how to fork your project here.
+
+A Fork of a repository is a copy of the original repository that you now own. Any changes made to the project in your fork will not affect the original. 
+
+To make a fork, go to my [repository](https://github.com/MoniMurray/shopping-list), and click on the "Fork" button in the top right of the screen. The window should then refresh, and you should be redirected to your newly created Fork of the project.
 
 How to Clone
-Place instructions on how to clone your project here.
+
+Go to the forked (the copy of the) repository in Github under your list of repositories. Click on the green "Code" button and from the panel, in the 'Local' tab select the 'HTTPS' tab and click the icon to copy the prepopulated link.
+In Gitpod click on the green 'Gitpod' button and the cloned repository will open for editing.  If you use an alternative IDE/Editor, open the CLI and type the following: 
+
+git clone {insert copied url here} 
+
+The Forked repository will now clone to your preferred development method.
 

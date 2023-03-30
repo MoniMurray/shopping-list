@@ -7,7 +7,7 @@ This is a screenshot of the Kanban board in Projects.
 
 - User Stories
 
-A user story is a small, self-contained unit of development.  I have used these units in my Project to incrementally achieve the MVP.  Each user story is based on a bespoke user story Template which is created in the Settings tab of my GitHub repository.
+A user story is a small, self-contained unit of development.  They are used to map the development progress of the project via a Kanban board.  I have used these units in my Project to incrementally achieve the MVP.  Each user story is based on a bespoke user story Template which is created in the Settings tab of my GitHub repository.
 ![bespoke user story Template!](static/images/screenshots/agile/user_story_bespoke_template.png)
 
 Each User Story extends from the Template and is created in the Issues tab of my Github repository.  
@@ -73,7 +73,7 @@ I created a set of Acceptance Criteria for each User Story to set out a clear ob
 
 I have used MoSCoW Prioritisation to assign a priority level to the User Stories of the Project.  'MoSCoW' is an acronym for 'Must have', 'Should have', 'Could have, 'Will not have' and represent the prioritisation level applied to User Stories during this iteration of production.  For the purpose of this project, 'an iteration' represents this project's lifecycle up to submission.
 
-1.  Must Have - these User Stories are non-negotiable and represent the core functionality of the Project - those being the Responsive front-end design, User Registration and Authentication, and CRUD.  This represents approximately 60% of the effort planned for the project overall.
+1.  Must Have - these User Stories are non-negotiable and represent the core functionality of the Project.  As such, they are guaranteed to be delivered. Must have features of this project are the Responsive front-end design, User Registration and Authentication, and CRUD.  This represents approximately 60% of the effort planned for the project overall.
 2.  Should Have and Could Have - Should have/Could have can be grouped together as being important aspects of the Project adding significant value, but as they are not vital they should each represent approximately 20% of the effort planned for the project.
 3. Won't Have - User Stories marked as Won't have may be included as features in future iterations of my Project, but will not be delivered in this iteration.
 

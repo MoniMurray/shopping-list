@@ -1,9 +1,12 @@
-{% extends 'base.html' %} {% load static %} {% block content %}
+{% extends 'base.html' %} 
+{% load static %} 
+
+{% block content %}
 
 <!-- List Image -->
 <div class="image-container mt-3">
   <img
-    src="{% static 'images/organiser_image.jpg' %}"
+    src="{% static 'images/Organiser_image.jpg' %}"
     class="img-fluid"
     alt="The Shopping List and Organiser landing image"
   />
@@ -20,7 +23,6 @@
       <div style="height: 500px; overflow-y: scroll">
         <table class="table">
           <thead>
-            
             <tr>
               <!-- Filter by [category, urgent] -->
               <th scope="col"><i class="fa-solid fa-filter"></i></th>
@@ -86,13 +88,16 @@
               <th scope="row"></th>
               <td class="text-left text-capitalize">
                 {{ entry.item_name }}
+                
                 <p
                   class="text-capitalize font-italic text-wrap"
                   style="width: 6rem"
                 >
                   <a href="{% url 'note' entry.id %}"
-                    ><i class="fa-regular fa-message"></i> </a
-                  >{{entry.notes}}
+                    >
+                    <i class="fa-regular fa-message"></i> 
+                    </a>
+                    {{entry.notes}}
                 </p>
               </td>
               <td>{{entry.quantity}}</td>

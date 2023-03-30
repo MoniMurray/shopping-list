@@ -13,7 +13,14 @@ CONTENTS
 2. [MANUAL TESTING](#manual testing)
 
 W3C Validator
+
+HTML
+CSS
+
+[CI Python Linter](https://pep8ci.herokuapp.com/)
 Lighthouse
+
+
 WAVE
 MANUAL TESTING
 
@@ -49,6 +56,10 @@ CSS Validation
 CSS Validation can only be done by copying and pasting the CSS file contents into the direct input. Make sure that the checkbox for CSS is selected.
 
 W3C CSS Validation
+
+Python Code testing
+
+[CI Python Linter](https://pep8ci.herokuapp.com/)
 
 Lighthouse
 👩🏻‍💻 View an example of a completed lighthouse testing section here

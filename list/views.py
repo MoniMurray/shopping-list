@@ -79,6 +79,7 @@ class NoteView(CreateView):
     model = Note
     template_name = 'note.html'
     fields = ['item', 'user', 'body',]
+    # fields = ['item', 'body',]
     # pk_url_kwarg = 'pk'
     success_url = reverse_lazy('home')
 
