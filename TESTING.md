@@ -140,7 +140,9 @@ Manual testing tests as follows:
 Testing User Stories
 👩🏻‍💻 View an example of a completed user stories testing section here
 
-This is where you will test the user stories you created in the README against your site. Use the User Stories table for this Test Case list, the Acceptance Criteria Tasks are repurposed to become the Tests  - use an additional column to add any supporting images by way of links.
+This is where I tested the User Stories I created and listed in [AGILE.md](AGILE.md) against my application. I have used the User Stories table for this Test Case list, the Acceptance Criteria Tasks are repurposed to become the Tests.
+
+*insert Manual Testing table*
 
 BUGS
 Known Bugs

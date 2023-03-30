@@ -58,7 +58,7 @@ Please visit the live site via [this link](https://mym-shopping-list.herokuapp.c
 
 
 
-**User Experience (UX) Design**<a name="ux"></a>
+**USER EXPERIENCE (UX) DESIGN**<a name="ux"></a>
 
 - Strategy
 
@@ -90,12 +90,12 @@ Colours will be crisp, clean, sophisticated.  Black on white, cool clean colour 
 
 The User's interaction with this application should be easy and natural.  Use of icons will make actions like add, edit and delete intuitive. Efficient use of response messages will confirm successful actions to the user, with unsuccessful action messages easy to understand.
 
-**Agile Methodology**<a name="agile"></a>
+**AGILE METHODOLOGY**<a name="agile"></a>
 
 Please follow this link to open my [AGILE.md](AGILE.md) file and read about how I used Agile Methodology in the planning and development of The Shopping List application.
 
 
-**Design**<a name="design"></a>
+**DESIGN**<a name="design"></a>
 
 I began my design of the database structure by creating an Entity Relationship Diagram, which can be viewed [here](assets/images/Shopping List ERD.png).  The Diagram helped me to consider what to include in each Model and the relationships between the models of the database.
  
@@ -103,7 +103,7 @@ Colour Scheme
 
 The Shopping List colour scheme is designed to be crisp, clean, sophisticated.  I used [Coolors](https://coolors.co) to generate a ![colour palette!](static/images/coolorspalette.png). 
 
-These colours were chosen based on a possible homepage image I used during early development of a ![personal organiser!](static/images/organiser_image.jpg) which looked effortlessly organised and calming.
+These colours were chosen based on a possible homepage image I used during early development of a ![personal organiser!](static/images/Organiser_image.jpg) which looked effortlessly organised and calming.
 
 
 Typography
@@ -116,18 +116,11 @@ Nanum Myeongjo is used for the header text on the site, Regular 400 weight. It i
 
 Caveat font is used for the shopping list items, SemiBold 600 weight. It is a cursive font and suits a traditional handwritten shopping list style.
 
-If you've imported fonts to use in your project, add some information about them here. You can include information like:
-
-Why did you choose the font you have? Is this an accessibly friendly font? What weights have you included?
-
-I also like to include an *image* of the fonts chosen as a reference.
-
-Google Fonts is a popular choice for importing fonts to use in your project, as it doesn't require you to download the fonts to use them.
 
 Imagery
 *Use this section to explain what sort of imagery you plan to use through your site*.
 
-**Wireframes**
+**WIREFRAMES**
 
 I created my wireframes using Balsamiq.
 
@@ -135,23 +128,34 @@ Early UX Design Wireframe images
 
 Registration/Authentication
 
+The following are the Wireframes I created to represent how the Registration, Login and Logout user views will appear.
+
+Restricted view of Homepage to an unregistered user
 ![Restricted Homepage!](static/images/wireframes/Authentication-restricted-homepage-wireframe.png)
 
-User Registration ![form!](static/images/wireframes/Registration-form-wireframe.png)
+User Registration form 
+![form!](static/images/wireframes/Registration-form-wireframe.png)
 
-Registered user Login ![form!](static/images/wireframes/Login-form-wireframe.png)
+Registered user Login form 
+![form!](static/images/wireframes/Login-form-wireframe.png)
 
-User Authentication Confirmed ![Homepage expanded view!](static/images/wireframes/Authentication-confirmed-homepage-wireframe.png), with additional user functionality
+User Authentication Confirmed, with additional user functionality 
+![Homepage expanded view!](static/images/wireframes/Authentication-confirmed-homepage-wireframe.png)
 
 CRUD
 
+Add Item form
 ![Add Item!](static/images/wireframes/Add-item-wireframe.png)
 
+Edit Item form
 ![Edit Item!](static/images/wireframes/Edit-item-wireframe.png)
 
+Delete Item Confirmation page
 ![Delete Item!](static/images/wireframes/Delete-item-user-clarification-msg-wireframe.png)
 
 User Messages Wireframes
+
+These messages will be presented to the User as Flash messages which will automatically close after 3 seconds.
 
 ![Successful Login!](static/images/wireframes/Successful-login-confirmation-msg-wireframe.png)
 
@@ -169,7 +173,7 @@ User Messages Wireframes
 
 *This section can be used to explain what pages your site is made up of.*
 
-##General features on each page
+General features on each page
 
 If there is a feature that appears on all pages of your site, include it here. Examples of what to include would the the navigation, a footer and a favicon.
 
@@ -277,7 +281,7 @@ In the 'Deploy' tab:
 - Connect to the GitHub repository for this project;
 - Select 'Enable Automatic Deploys' from the the Automatic Deploy section.
 
-###Create a new database on ElephantSQL
+Create a new database on ElephantSQL
 
 Heroku uses an ephemeral file system - which means it is wiped clean every time Heroku updates, or every time the app is redeployed.
 
@@ -295,7 +299,7 @@ To Create the Postgres database:
 
 The Postgres database is now created on ElephantSQL and you can see it on your ElephantSQL dashboard. 
 
-###Connect Gitpod development environment to Postgres database
+Connect Gitpod development environment to Postgres database
 
 Through Gitpod, connect ElephantSQL through settings.py with a variable named 'DATABASE_URL', and then migrate the database structure to the newly connected ElephantSQL database.
 
@@ -315,7 +319,8 @@ In the newly created Procfile, add the line 'web: gunicorn PROJECTNAME.wsgi'.
  - 'gunicorn' is a web server installed for the project, a web services gateway server;
  - '.wsgi' stands for 'web services gateway server' and is the standard that allows Python services to integrate with web servers.
 
- The Project is now ![successfully deployed!](static/images/screenshots/deployment/django-successful_installation_screenshot.png).
+ The Project is now successfully deployed.
+ ![successfully deployed!](static/images/screenshots/deployment/django-successful_installation_screenshot.png).
 
 How to Fork
 
@@ -325,10 +330,10 @@ To make a fork, go to my [repository](https://github.com/MoniMurray/shopping-lis
 
 How to Clone
 
-Go to the forked (the copy of the) repository in Github under your list of repositories. Click on the green "Code" button and from the panel, in the 'Local' tab select the 'HTTPS' tab and click the icon to copy the prepopulated link.
+Go to the forked (which is the copy of the original, you made above) repository in Github under your list of repositories. Click on the green "Code" button and from the panel, in the 'Local' tab select the 'HTTPS' tab and click the icon to copy the prepopulated link.
 In Gitpod click on the green 'Gitpod' button and the cloned repository will open for editing.  If you use an alternative IDE/Editor, open the CLI and type the following: 
 
-git clone {insert copied url here} 
+git clone {insert the copied url here} 
 
 The Forked repository will now clone to your preferred development method.
 
