@@ -165,7 +165,11 @@ These messages will be presented to the User as Flash messages which will automa
 
 ![Flash Success message on Adding Item!](static/images/wireframes/Add-item-user-flash-msg-wireframe.png)
 
+The Entity Relationship Model for the relational database was first created on paper and then a model designed using Smartdraw.
 
+![SmartdrawERD!](static/images/wireframes/ERD_Shopping_List_created_with_smartdraw.png)
+
+![DIAGRAM!](static/images/wireframes/Shopping_List_ERD.png)
 
 **Features**<a name="features"></a>
 
