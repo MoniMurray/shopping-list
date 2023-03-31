@@ -17,7 +17,9 @@
 <div class="card-body justify-content-center">
   <div class="row justify-content-center">
     {% if user.is_authenticated %}
-
+    <!-- <form method="get">
+      {{shoppingFilter.form}}
+   </form> -->
     <div class="table-responsive-sm pt-5">
       <h1>{{user.username}}'s List</h1>
       <div style="height: 500px; overflow-y: scroll">
@@ -25,10 +27,12 @@
           <thead>
             <tr>
               <!-- Filter by [category, urgent] -->
-              <th scope="col"><i class="fa-solid fa-filter"></i></th>
-              <th scope="col">
-                <!-- <a href="add/"><i class="fa-solid fa-plus"></i>Add Item</a> -->
-              </th>
+              <!-- <th scope="col">
+                <a href="#">
+                <i class="fa-solid fa-filter"></i>
+              </a>
+              </th> -->
+              <th scope="col"></th>
               <th scope="col left-align">Items</th>
 
               <th scope="col">Quantity</th>
@@ -40,89 +44,84 @@
           
           <tbody>
             {% for entry in entry_list %}
-            
+            <!-- prefer to put empty block in here but keep getting error messages -->
             <tr>
               {% if entry.star %}
-              <td>
-                <a href="{% url 'toggle_star' entry.id %}">
-                  <!-- <button type="submit" name="toggle_star" value="{{entry.id}}" class="btn-like"> -->
-                  <i class="fa-solid fa-star" style="color: gold"></i>
-                  <!-- </button> -->
-                </a>
-              </td>
+                <td>
+                  <a href="{% url 'toggle_star' entry.id %}">
+                    <!-- <button type="submit" name="toggle_star" value="{{entry.id}}" class="btn-like"> -->
+                    <i class="fa-solid fa-star" style="color: gold"></i>
+                    <!-- </button> -->
+                  </a>
+                </td>
               <!-- {{entry.id_ordering}} -->
               {% else %}
-              <td>
-                <a href="{% url 'toggle_star' entry.id %}">
-                  <!-- <button type="submit" name="toggle_star" value="{{entry.id}}" class="btn-like"> -->
-                  <i class="fa-regular fa-star" style="color: gold"></i>
-                  <!-- </button> -->
-                </a>
-              </td>
+                <td>
+                  <a href="{% url 'toggle_star' entry.id %}">
+                    <!-- <button type="submit" name="toggle_star" value="{{entry.id}}" class="btn-like"> -->
+                    <i class="fa-regular fa-star" style="color: gold"></i>
+                    <!-- </button> -->
+                  </a>
+                </td>
               <!-- <td><a href="home/{{entry.id}}"><i class="fa-regular fa-star"></i></a></td> -->
               {% endif %} 
               
               {% if entry.check_item_as_done %}
-              <th scope="row"></th>
-              <td class="text-left text-capitalize">
-                <strike> {{ entry.item_name }} </strike>
-              </td>
-
-              <td>{{entry.quantity}}</td>
-
-              <td>
-                <a href="{% url 'toggle_check' entry.id %}">
-                  <!-- <button type="submit" name="toggle_check" value="{{entry.id}}" class="btn-like"> -->
-                  <i class="fa-solid fa-square-check"></i>
-                  <!-- </button> -->
-                </a>
-              </td>
-              <td></td>
-              <td>
-                <a href="{% url 'delete' entry.id %}"
-                  ><i class="fa-solid fa-trash-can"></i> Delete</a
-                >
-              </td>
+                <th scope="row"></th>
+                <td class="text-left text-capitalize">
+                  <strike> {{ entry.item_name }} </strike>
+                </td>
+                <td>{{entry.quantity}}</td>
+                <td>
+                  <a href="{% url 'toggle_check' entry.id %}">
+                    <!-- <button type="submit" name="toggle_check" value="{{entry.id}}" class="btn-like"> -->
+                    <i class="fa-solid fa-square-check"></i>
+                    <!-- </button> -->
+                  </a>
+                </td>
+                <td></td>
+                <td>
+                  <a href="{% url 'delete' entry.id %}"
+                    ><i class="fa-solid fa-trash-can"></i> Delete</a
+                  >
+                </td>
 
               {% else %}
-              <th scope="row"></th>
-              <td class="text-left text-capitalize">
-                {{ entry.item_name }}
-                
-                <p
-                  class="text-capitalize font-italic text-wrap"
-                  style="width: 6rem"
-                >
-                  <a href="{% url 'note' entry.id %}"
-                    >
-                    <i class="fa-regular fa-message"></i> 
-                    </a>
-                    {{entry.notes}}
-                </p>
-              </td>
-              <td>{{entry.quantity}}</td>
-              <!-- <td><a href="home/{{entry.id}}"><i class="fa-regular fa-star"></i></a></td> -->
-              <td>
-                <a href="{% url 'toggle_check' entry.id %}">
-                  <!-- <button type="submit" name="toggle_check" value="{{entry.id}}" class="btn-like"> -->
-                  <i class="fa-regular fa-square"></i>
-                  <!-- </button> --> </a
-                ><a href="#"></a>
-              </td>
-              <td>
-                <a href="{% url 'edit' entry.id %}"
-                  ><i class="fa-solid fa-pencil"></i> Edit</a
-                >
-              </td>
+                <th scope="row"></th>
+                <td class="text-left text-capitalize">
+                  {{ entry.item_name }}
+                  
+                  <p
+                    class="text-capitalize font-italic text-wrap"
+                    style="width: 6rem"
+                  >
+                    <a href="{% url 'note' entry.id %}"
+                      >
+                      <i class="fa-regular fa-message"></i> 
+                      </a>
+                      {{entry.notes}}
+                  </p>
+                </td>
+                <td>{{entry.quantity}}</td>
+                <td>
+                  <a href="{% url 'toggle_check' entry.id %}">
+                    <!-- <button type="submit" name="toggle_check" value="{{entry.id}}" class="btn-like"> -->
+                    <i class="fa-regular fa-square"></i>
+                    <!-- </button> --> 
+                  </a>
+                  <!-- <a href="#"></a> -->
+                </td>
+                <td>
+                  <a href="{% url 'edit' entry.id %}">
+                    <i class="fa-solid fa-pencil"></i> Edit</a>
+                </td>
+                <!-- <td><a href="{% url 'note' entry.id %}"><i class="fa-regular fa-message"></i>Note</a><p class="text-capitalize font-italic text-wrap" style="width: 6rem;">{{entry.notes}}</p></td> -->
+                <td>
+                  <a href="{% url 'delete' entry.id %}">
+                    <i class="fa-solid fa-trash-can"></i> Delete</a>
+                </td>
 
-              <!-- <td><a href="{% url 'note' entry.id %}"><i class="fa-regular fa-message"></i>Note</a><p class="text-capitalize font-italic text-wrap" style="width: 6rem;">{{entry.notes}}</p></td> -->
-              <td>
-                <a href="{% url 'delete' entry.id %}"
-                  ><i class="fa-solid fa-trash-can"></i> Delete</a
-                >
-              </td>
-
-              <!-- consider replacing the checkbox icon with bootstrap's 
+                <!-- consider replacing the checkbox icon with bootstrap's 
                             <div class="custom-control custom-checkbox">
                             <input type="checkbox" class="custom-control-input" id="customCheck1">
                             <label class="custom-control-label" for="customCheck1">Check this custom checkbox</label>
@@ -131,9 +130,9 @@
               {% endif %}
             </tr>
             {% empty %}
-            <tr>
+              <tr>
               The Shopping list is currently empty.
-            </tr>
+              </tr>
             {% endfor %}
           </tbody>
         </table>
@@ -144,7 +143,8 @@
       <!-- <button type="button" class="btn btn-lg mb5"><a href="">Add a Note</a></button> -->
     </div>
     {% else %}
-    <!-- paginate_by: 3  -->
+    
+    <!-- if user is not authenticated -->
     <div class="table-responsive-sm">
       <table class="table">
         <tr></tr>
@@ -164,15 +164,10 @@
     </div>
   </div>
   <div class="row justify-content-center">
-    <p>
-      <a href="{% url 'account_signup' %}" class="card-link"> Register </a>or<a
-        href="{% url 'account_login' %}"
-        class="card-link"
-        >Login</a
-      >
-      to <i class="fa-solid fa-plus"></i> add to or
-      <i class="fa-solid fa-pencil"></i>edit The Shopping List
-    </p>
+    <p> Please <a href="{% url 'account_signup' %}" class="card-link"> 
+        Register </a>to use The Shopping List application.<br>
+        If you already have an account 
+        <a href="{% url 'account_login' %}" class="card-link">Login</a>.</p>
   </div>
   {% endif %}
 </div>

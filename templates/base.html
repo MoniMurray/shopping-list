@@ -60,6 +60,9 @@
                           <input class="form-control me-2" name="query" type="search" placeholder="Search" aria-label="Search">
                           <button class="btn btn-outline-success ml-1" type="submit">Search</button>
                         </form>
+                        <!-- <form method="GET">
+                          {{shoppingFilter.form}}
+                       </form> -->
                         {% else %}
                         <a class="nav-item nav-link {% if url_name == 'account_signup' %}active{% endif %} text-white"
                           href="{% url 'account_signup' %}">Register</a>
