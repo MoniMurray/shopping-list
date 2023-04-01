@@ -21,26 +21,11 @@ Please visit the live site via [this link](https://mym-shopping-list.herokuapp.c
 
 3.  [Design](#design)
 
-- Colour Scheme
-- Typography
-- Imagery
-- Wireframes
-
 4.  [Features](#features)
-
-- General Features on Each Page
-- Future Implementations
-- Accessibility
 
 5.  [Technologies](#technologies)
 
-- Languages Used
-- Frameworks, Libraries & Programs Used
-- Deployment & Local Development
-
 6. [Testing](#testing)
-
-- Link to [Testing.md](TESTING.md)
 
 7. [Deployment](#deployment)
 
@@ -97,8 +82,10 @@ Please follow this link to open my [AGILE.md](AGILE.md) file and read about how 
 
 **DESIGN**<a name="design"></a>
 
+
 I began my design of the database structure by creating an Entity Relationship Diagram, which can be viewed [here](assets/images/Shopping List ERD.png).  The Diagram helped me to consider what to include in each Model and the relationships between the models of the database.
  
+
 Colour Scheme
 
 The Shopping List colour scheme is designed to be crisp, clean, sophisticated.  I used [Coolors](https://coolors.co) to generate a colour palette.
@@ -121,10 +108,7 @@ Nanum Myeongjo is used for the header text on the site, Regular 400 weight. It i
 Caveat font is used for the shopping list items, SemiBold 600 weight. It is a cursive font and suits a traditional handwritten shopping list style.
 
 
-Imagery
-*Use this section to explain what sort of imagery you plan to use through your site*.
-
-**WIREFRAMES**
+Wireframes
 
 I created my wireframes using Balsamiq.
 
@@ -175,10 +159,8 @@ The Entity Relationship Model for the relational database was first created on p
 
 ![DIAGRAM!](static/images/wireframes/Shopping_List_ERD.png)
 
-**Features**<a name="features"></a>
 
-
-*This section can be used to explain what pages your site is made up of.*
+**FEATURES**<a name="features"></a>
 
 Home Page
 
@@ -240,8 +222,6 @@ Add Note
 ![Bespoke 403 Error page!](static/images/screenshots/403_page_screenshot.png)
 
 
-I then like to add a screenshot of each page of the site here, i use amiresponsive which allows me to grab an image of the site as it would be displayed on mobile, tablet and desktop, this helps to show the responsiveness of the site.
-
 Future Implementations
 
 What features would you like to implement in the future on your site? Would you like to add more pages, or create login functionality? Add these plans here.
@@ -256,7 +236,8 @@ Have you used icons and added aria-labels to enable screen readers to understand
 
 Code Institute have an amazing channel for all things accessibility (a11y-accessibility) I would highly recommend joining this channel as it contains a wealth of information about accessibility and what we can do as developers to be more inclusive.
 
-**Technologies Used**<a name="technologies"></a>
+
+**TECHNOLOGIES USED**<a name="technologies"></a>
 
 Languages Used
 
@@ -287,11 +268,11 @@ Frameworks, Libraries & Programs Used
 - Smartdraw - To create the Entity Relationship Model - ERD 2 Template.
 
 
-**Testing**<a name="testing"></a>
+**TESTING**<a name="testing"></a>
 
 Testing is documented in TESTING.md file [here](TESTING.md)
 
-**Credits**<a name="credits"></a>
+**CREDITS**<a name="credits"></a>
 
 This project is based on and borrows from the design of both the 'Hello Django' and the 'Django Blog' Walkthrough projects during the CI Module on FST Frameworks. 
 
@@ -313,14 +294,14 @@ Tutor Support helped me to understand how to create an inline view of a model wi
 Due to the requirment to have custom user messages throughout this project I could not use standard Django 403 error message to return an error to the users of The Shopping List as it was too generic.  Instead I created a [custom 403 template](https://stackoverflow.com/questions/31981239/django-custom-403-template) to relay a very simple but more elegant 403 forbidden error message where required.
 
 
-**Acknowledgments**
+Acknowledgments
 
-The CI Slack Community is a a resource I used almost as much as Google for this project, to bounce ideas, ask for advice, and seek guidance where code went awry.  
+The CI Slack Community is a resource I used almost as much as Google for this project! This community is so kind and generous with their collective and individual knowlege and I used them to bounce ideas off, ask for advice, and to seek guidance where code went awry.  
 
 CI Tutor Support were also a well-used resource for this project and I'm grateful to all the patient Tutors from whome I received a huge amount of reasurance and guidance.
 
 
-**Deployment**<a name="deployment"></a>
+**DEPLOYMENT**<a name="deployment"></a>
 
 The site is deployed using Heroku - [MYM Shopping List](https://mym-shopping-list.herokuapp.com/)
 

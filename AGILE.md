@@ -1,11 +1,19 @@
 **Agile Methodology**
 
+1. [User Stories](#user_stories)
+
+2. [User Acceptance Criteria](#acceptance_criteria)
+
+3. [MoSCoW Prioritisation](#moscow)
+
+4. [User Story Tasks](#user_tasks)
+
 I have used GitHub Projects to plan the Agile development of my project.  I created a new project in the Projects tab of my repository, named ['@MoniMurray's Shopping List Project'](https://github.com/users/MoniMurray/projects/6).  Within this Project I used a Kanban Board to track each User Story as I incrementally developed the MVP of the project.  
 
 This is a screenshot of the Kanban board in Projects.
 ![Kanban board in Projects!](static/images/screenshots/agile/kanban_board.png) 
 
-- User Stories
+**USER STORIES**<a name="user_stories"></a>
 
 A user story is a small, self-contained unit of development.  They are used to map the development progress of the project via a Kanban board.  I have used these units in my Project to incrementally achieve the MVP.  Each user story is based on a bespoke user story Template which is created in the Settings tab of my GitHub repository.
 
@@ -50,7 +58,7 @@ User Stories have been grouped and categorised into Epics using bespoke 'labels'
 
 
 
-- User Acceptance Criteria
+USER ACCEPTANCE CRITERIA<a name="acceptance_criteria"></a>
 
 I created a set of Acceptance Criteria for each User Story to set out a clear objective of what to achieve to complete each story.  The objective is broken down into steps, and in that way is a clear and measurable way of confirming the work on that user story is complete and it can be moved to 'Done':
 
@@ -69,6 +77,8 @@ I created a set of Acceptance Criteria for each User Story to set out a clear ob
 | As a logged in user I can add a comment to an item so that that item has more detail                            | \- I can click on the list item to open the Item;<br>\- I can click on Comment body field;<br>\- I can Add a comment;<br>\- I can 'Submit' to Save my comments and return to Home page.                                                                                                                                                                                                                                                                                        |
 | As a logged in user I can filter my shopping list by category so that I know where to shop.                     |                                                                                                                                                                                                                                                                                                                                                                                                                                                                                |
 | As a user I can view the shopping list.                                                                         | \- On the landing page I can see the shopping list;<br>\- If I am registered/logged in, I can see the expanded view shopping list;<br>\- If a new item is added to the shopping list I can see it on the list.                                                                                                                                                                                                                                                                 |
+
+MOSCOW PRIORITISATION<a name="moscow"></a>
 
 - Prioritisation of User Stories
 
@@ -94,7 +104,7 @@ I have used MoSCoW Prioritisation to assign a priority level to the User Stories
 | As a user I can view the shopping list.                                                                         | Must have   |
 | As I user I can see response messages to each action so that I know if they have been successful or not         | Should have |
 
-- User Story Tasks
+USER STORY TASKS<a name="user_tasks"></a>
 
 I have used the acceptance criteria steps to create tasks to facilitate the execution of each User Story.  Once these tasks for each User Story are complete and tested, the User Story is finished and is assigned as 'Done' in the Project Kanban.
 

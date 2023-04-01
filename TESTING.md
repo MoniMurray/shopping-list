@@ -12,24 +12,6 @@ CONTENTS
 
 2. [MANUAL TESTING](#manual testing)
 
-W3C Validator
-
-HTML
-CSS
-
-[CI Python Linter](https://pep8ci.herokuapp.com/)
-Lighthouse
-
-
-WAVE
-MANUAL TESTING
-
-Testing User Stories
-Full Testing
-BUGS
-
-Known Bugs
-Solved Bugs
 
 
 AUTOMATED TESTING<a name="automated testing"></a>
@@ -67,8 +49,6 @@ Lighthouse
 Lighthouse Testing is part of the Chrome Developer Tools. For more information on how to use this tool, please visit chrome Lighthouse.
 
 You will need to run the Lighthouse testing on each individual page of your site, for desktop as a minimum. If you have time it would be great to also add in the mobile testing.
-
-Lighthouse Testing
 
 WAVE
 👩🏻‍💻 View an example of a completed WAVE testing section here
@@ -127,6 +107,13 @@ Solved Bugs
 This is where all solved bugs go once squashed. List what the bug was, and how you managed to fix it. You can also include images/videos here if you wanted.
 
 MANUAL TESTING<a name="manual testing"></a>
+
+Testing User Stories
+Full Testing
+BUGS
+
+Known Bugs
+Solved Bugs
 
 Manual testing tests as follows:
 
