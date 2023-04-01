@@ -29,17 +29,7 @@ Please visit the live site via [this link](https://mym-shopping-list.herokuapp.c
 
 7. [Deployment](#deployment)
 
-- Local Development
-- How to Fork
-- How to Clone
-
-
 8. [Credits](#credits)
-
-- Code Used
-- Content
-- Media
-- Acknowledgments
 
 
 
@@ -119,26 +109,33 @@ Registration/Authentication
 The following are the Wireframes I created to represent how the Registration, Login and Logout user views will appear.
 
 Restricted view of Homepage to an unregistered user
+
 ![Restricted Homepage!](static/images/wireframes/Authentication-restricted-homepage-wireframe.png)
 
 User Registration form 
+
 ![form!](static/images/wireframes/Registration-form-wireframe.png)
 
 Registered user Login form 
+
 ![form!](static/images/wireframes/Login-form-wireframe.png)
 
 User Authentication Confirmed, with additional user functionality 
+
 ![Homepage expanded view!](static/images/wireframes/Authentication-confirmed-homepage-wireframe.png)
 
 CRUD
 
 Add Item form
+
 ![Add Item!](static/images/wireframes/Add-item-wireframe.png)
 
 Edit Item form
+
 ![Edit Item!](static/images/wireframes/Edit-item-wireframe.png)
 
 Delete Item Confirmation page
+
 ![Delete Item!](static/images/wireframes/Delete-item-user-clarification-msg-wireframe.png)
 
 User Messages Wireframes
@@ -161,6 +158,8 @@ The Entity Relationship Model for the relational database was first created on p
 
 
 **FEATURES**<a name="features"></a>
+
+The Shopping List is a useful tool for a User to update the shopping list wherever they are on their available device, to group shopping list items by category for ease of use when shopping, to see urgent items at a glance when in a hurry, and to easily toggle items off the list as they shop.
 
 Home Page
 
@@ -193,32 +192,41 @@ The bespoke footer contains a line of text "Made by Monica Murray for CI P4" wit
 Screenshots
 
 Landing page
+
 ![Home page before registration!]()
 
 ![Home page after login!]()
 
 Register Page
+
 ![Register page!](static/images/screenshots/register_screenshot.png)
 
 Login Page
+
 ![Login page!](static/images/screenshots/login_screenshot.png)
 
 Logout Page
+
 ![Logout Page](static/images/screenshots/logout_screenshot.png)
 
 Add Item to The Shopping List
+
 ![Add item to TSL!]()
 
 Edit Item on The Shopping List
+
 ![Edit item on TSL!]()
 
 Delete Item
-![Delete from TSL!]()
+
+![Delete from TSL!](static/images/screenshots/delete_screenshot.png)
 
 Add Note
+
 ![Add Note to item!]()
 
 403 Page
+
 ![Bespoke 403 Error page!](static/images/screenshots/403_page_screenshot.png)
 
 
