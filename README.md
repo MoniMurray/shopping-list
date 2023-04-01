@@ -101,9 +101,13 @@ I began my design of the database structure by creating an Entity Relationship D
  
 Colour Scheme
 
-The Shopping List colour scheme is designed to be crisp, clean, sophisticated.  I used [Coolors](https://coolors.co) to generate a ![colour palette!](static/images/coolorspalette.png). 
+The Shopping List colour scheme is designed to be crisp, clean, sophisticated.  I used [Coolors](https://coolors.co) to generate a colour palette.
 
-These colours were chosen based on a possible homepage image I used during early development of a ![personal organiser!](static/images/Organiser_image.jpg) which looked effortlessly organised and calming.
+![colour palette!](static/images/coolorspalette.png). 
+
+These colours were chosen based on a possible homepage image I used during early development of a personal organiser which looked effortlessly organised and calming.
+
+![personal organiser!](static/images/Organiser_image.jpg) .
 
 
 Typography
@@ -174,12 +178,67 @@ The Entity Relationship Model for the relational database was first created on p
 **Features**<a name="features"></a>
 
 
-
 *This section can be used to explain what pages your site is made up of.*
+
+Home Page
+
+On first arriving to the site the user is presented with an uncluttered landing page with simple organiser image.  
+
+All functionality comes from the Logged In Home page.  A user can add a new shopping list item to their list, toggle the star on/off to mark the item as urgent, toggle the checkbox on/off to mark an item as done, add a note to the item, and also edit and delete an item if the logged in user added the item to the list.  Bespoke pages for following are launched from the Home page:
+
+- Register
+- Login
+- Logout
+- Add item
+- Edit item
+- Delete item
+- Add note
+- 403 Error page.
 
 General features on each page
 
-If there is a feature that appears on all pages of your site, include it here. Examples of what to include would the the navigation, a footer and a favicon.
+The Navigation Bar 
+
+Pre-Registration the Navigation bar contains three links - Home, Registration and Login.
+
+After user has logged in, the Navigation bar changes to contain Home, Logout and a Search bar.
+
+Footer
+
+The bespoke footer contains a line of text "Made by Monica Murray for CI P4" with an external link to my GitHub profile. The footer also contains external links to Facebook, Instagram and Twitter.
+
+
+Screenshots
+
+Landing page
+![Home page before registration!]()
+
+![Home page after login!]()
+
+Register Page
+![Register page!]()
+
+Login Page
+![Login page!]()
+
+Logout Page
+![Logout Page]()
+
+Add Item to The Shopping List
+![Add item to TSL!]()
+
+Edit Item on The Shopping List
+![Edit item on TSL!]()
+
+Delete Item
+![Delete from TSL!]()
+
+Add Note
+![Add Note to item!]()
+
+403 Page
+![Bespoke 403 Error page!](static/images/screenshots/403_page_screenshot.png)
+
 
 I then like to add a screenshot of each page of the site here, i use amiresponsive which allows me to grab an image of the site as it would be displayed on mobile, tablet and desktop, this helps to show the responsiveness of the site.
 

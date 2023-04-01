@@ -56,7 +56,7 @@
                         </div>
                   </div>
               </div>
-                        <form class="d-flex" role="search" method="GET" action="{% url 'home' %}">
+                        <form class="d-inline-flex" role="search" method="GET" action="{% url 'home' %}">
                           <input class="form-control me-2" name="query" type="search" placeholder="Search" aria-label="Search">
                           <button class="btn btn-outline-success ml-1" type="submit">Search</button>
                         </form>
@@ -120,18 +120,21 @@
 
       <!-- footer -->
 
-      <footer class="footer mt-auto py-3 light-bg sticky">
+      <footer class="footer mt-auto py-3 light-bg sticky bg-dark">
 
-        <p class="m-0 text-center text-dark">Made by Monica Murray for CI P4</p>
-        <p class="m-0 text-center text-dark">Follow me: <a href="https://www.facebook.com" target="_blank"
+        <p class="m-0 text-center text-white">
+          Made by Monica Murray for CI P4 
+          <a href="https://github.com/MoniMurray" target="_blank" rel="noopener"
+          aria-label="Visit my Github profile to see more projects (Opens a new browser page)">
+          <i class="fa-brands fa-github"></i></a></p>
+        <p class="m-0 text-center text-white">Follow me: <a href="https://www.facebook.com" target="_blank"
             rel="noopener" aria-label="Visit my Facebook page (Opens a new browser page)"><i
               class="fa-brands fa-facebook"></i></a>
           <a href="https://www.instagram.com" target="_blank" rel="noopener"
             aria-label="Visit my Instagram page (Opens a new browser page)"><i class="fa-brands fa-instagram"></i></a>
           <a href="https://www.twitter.com" target="_blank" rel="noopener"
             aria-label="Visit my Twitter page (Opens a new browser page)"><i class="fa-brands fa-twitter"></i></a>
-           <a href="https://github.com/MoniMurray" target="_blank" rel="noopener"
-            aria-label="Visit my Github profile to see more projects (Opens a new browser page)"><i class="fa-brands fa-github"></i></a>
+           
 
       </footer>
 
