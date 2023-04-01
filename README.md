@@ -216,13 +216,13 @@ Landing page
 ![Home page after login!]()
 
 Register Page
-![Register page!]()
+![Register page!](static/images/screenshots/register_screenshot.png)
 
 Login Page
-![Login page!]()
+![Login page!](static/images/screenshots/login_screenshot.png)
 
 Logout Page
-![Logout Page]()
+![Logout Page](static/images/screenshots/logout_screenshot.png)
 
 Add Item to The Shopping List
 ![Add item to TSL!]()

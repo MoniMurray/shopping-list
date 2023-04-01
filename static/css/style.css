@@ -2,10 +2,9 @@
 
 
 body {
-    background-color: purple;
-    
+    background-color: #fff;
     font-family: 'Nanum Myeongjo', 'Roboto', sans-serif;
-    color: bright pink;
+    color: #fff;
     text-align: center;
     font-weight: 300;
 }
@@ -13,7 +12,6 @@ body {
 .heading {
     font-family: 'Bona Nova', sans-serif;
     text-align: center;
-    /* font-size: large; */
     font-weight: 300;
 }
 
@@ -30,12 +28,14 @@ th .col {
 /* .card-body {
     /* background-image: url(..images/organiser_image.jpg) no-repeat
     center center; */
-    color: blue;
-} */
+    /* color: blue;
+} */ 
 
 /* from Dee Mc's YouTube tutorial on Recipe site creation  */
 .active {
     border-bottom: 2px solid white;
+    /* text-decoration: underline 2px solid white; */
+      
     font-weight: 500;
 }
 
@@ -44,7 +44,7 @@ tbody {
     overflow-y: scroll;
 }
 
-// from Bootstrap
+/* from Bootstrap */
 
 // Small devices (landscape phones, 576px and up)
 @media (min-width: 576px) { ... }

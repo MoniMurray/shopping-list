@@ -22,6 +22,9 @@
    </form> -->
     <div class="table-responsive-sm pt-5">
       <h1>{{user.username}}'s List</h1>
+      <button type="button" class="btn btn-lg mb5">
+        <a href="{% url 'add' %}">Add Item</a>
+      </button>
       <div style="height: 500px; overflow-y: scroll">
         <table class="table">
           <thead>
@@ -130,9 +133,9 @@
           </tbody>
         </table>
       </div>
-      <button type="button" class="btn btn-lg mb5">
+      <!-- <button type="button" class="btn btn-lg mb5">
         <a href="{% url 'add' %}">Add Item</a>
-      </button>
+      </button> -->
       <!-- <button type="button" class="btn btn-lg mb5"><a href="">Add a Note</a></button> -->
     </div>
     {% else %}
