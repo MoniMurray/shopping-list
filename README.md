@@ -234,6 +234,8 @@ Future Implementations
 
 What features would you like to implement in the future on your site? Would you like to add more pages, or create login functionality? Add these plans here.
 
+Future features of the application would be to add additional organiser functions to plan calendar events, holidays and finances with links to these features added to Navigation and launching as seperate features for the Registered User.
+
 Accessibility
 
 Be an amazing developer and get used to thinking about accessibility in all of your projects!
