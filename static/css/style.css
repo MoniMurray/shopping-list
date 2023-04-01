@@ -17,12 +17,8 @@ body {
 
 h1, h2, h3, h4, h5, h6 {
     font-family: 'Roboto', sans-serif;
-    font-weight: 300;
-}
-
-th .col {
-    font-family: 'Roboto', sans-serif;
-    font-weight: 300;
+    color: #4b4f58;
+    font-weight: 500;
 }
 
 /* .card-body {
@@ -33,9 +29,7 @@ th .col {
 
 /* from Dee Mc's YouTube tutorial on Recipe site creation  */
 .active {
-    border-bottom: 2px solid white;
-    /* text-decoration: underline 2px solid white; */
-      
+    border-bottom: 2px solid white;      
     font-weight: 500;
 }
 
@@ -47,10 +41,27 @@ tbody {
 /* from Bootstrap */
 
 // Small devices (landscape phones, 576px and up)
-@media (min-width: 576px) { ... }
+@media (min-width: 576px) { 
+    .image-container {
+        background: url(../kat-love-KGd047jNsn0-unsplash.jpg) no-repeat center center;
+        height: 100%;
+    
+        background-color: #fff;
+        background-size: cover;
+    }  
+
+}
 
 // Medium devices (tablets, 768px and up)
-@media (min-width: 768px) { ... }
+@media (min-width: 768px) { 
+    .image-container {
+        background: url(../Organiser_image.jpg) no-repeat center center;
+        height: 100%;
+    
+        background-color: #fff;
+        background-size: cover;
+    }    
+}
 
 // Large devices (desktops, 992px and up)
 @media (min-width: 992px) { ... }
@@ -58,13 +69,7 @@ tbody {
 // Extra large devices (large desktops, 1200px and up)
 @media (min-width: 1200px) { ... }
 
-/* .image-container {
-    background: url(../organiser_image.jpg) no-repeat center center;
-    height: 100%;
 
-    background-color: #fff;
-    background-size: cover;
-} */
 
 .list-group-item {
     border: none;
