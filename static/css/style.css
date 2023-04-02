@@ -15,9 +15,15 @@ body {
     font-weight: 300;
 }
 
-h1, h2, h3, h4, h5, h6 {
+h1, h2, h3, h4, h5, h6, p {
     font-family: 'Roboto', sans-serif;
     color: #4b4f58;
+    font-weight: 500;
+}
+
+.form-group {
+    font-family: 'Roboto', sans-serif;
+    color: black;
     font-weight: 500;
 }
 

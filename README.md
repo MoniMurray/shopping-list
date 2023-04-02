@@ -165,7 +165,11 @@ Home Page
 
 On first arriving to the site the user is presented with an uncluttered landing page with simple organiser image.  
 
-All functionality comes from the Logged In Home page.  A user can add a new shopping list item to their list, toggle the star on/off to mark the item as urgent, toggle the checkbox on/off to mark an item as done, add a note to the item, and also edit and delete an item if the logged in user added the item to the list.  Bespoke pages for following are launched from the Home page:
+All functionality comes from the Logged In Home page.  A user can add a new shopping list item to their list, toggle the star on/off to mark the item as urgent, toggle the checkbox on/off to mark an item as done, add a note to the item, and also edit and delete an item if the logged in user added the item to the list.  
+
+The contents of The Shopping List, when there are any, are displayed in a table row under headings.
+
+Bespoke pages for following are launched from the Home page:
 
 - Register
 - Login

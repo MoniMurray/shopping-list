@@ -99,17 +99,21 @@ class NoteView(CreateView):
     # list item name (fk onetoonefield) and add our note to
     # the body field.  When we click submit, we should be returned to
     # the index.html template
-    # item = get_object_or_404(Entry, id=item_id)
+    
     model = Note
     template_name = 'note.html'
     fields = ['item', 'user', 'body',]
     # fields = ['item', 'body',]
     # pk_url_kwarg = 'pk'
+    
     success_url = reverse_lazy('home')
+
+    # def note_entry(self, item_id):
+    #     entry = Entry.objects.get(self.request, id=item_id)
 
 
 class Delete(UserPassesTestMixin, DeleteView):
-    # CRUD - Target the entry with the pk again
+    # CRUD - Target the entry with the pk again to Delete Item
 
     model = Entry
     pk_url_kwarg = 'pk'
