@@ -11,6 +11,7 @@ from django.contrib import messages
 from django.db.models import Q
 from django.contrib.auth.models import User
 from django.contrib.auth.mixins import UserPassesTestMixin
+from django.contrib.auth.decorators import login_required
 
 CATEGORY_CHOICES = [
     ('a', 'Fresh'),
@@ -25,6 +26,14 @@ CATEGORY_CHOICES = [
     ('j', 'Alcohol')
 ]
 
+# https://stackoverflow.com/questions/1606093/django-limit-users-to-edit-only-their-own-information
+@login_required
+def edit_info(request, username=''):
+    if request.user.username == username:
+        return render(request, 'index.html')
+    else:
+        return render(request, '403.html')
+
 # Create your views here.
 class EntryList(generic.ListView):
 
@@ -33,6 +42,8 @@ class EntryList(generic.ListView):
     # queryset = Entry.objects.filter(category__in='category')
     template_name = 'index.html'
     paginate_by = 100
+
+    
 
     def get_queryset(self, **kwargs):
         search = self.request.GET.get('query')
