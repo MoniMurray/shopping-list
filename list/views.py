@@ -10,8 +10,9 @@ from django.urls import reverse_lazy
 from django.contrib import messages
 from django.db.models import Q
 from django.contrib.auth.models import User
-from django.contrib.auth.mixins import UserPassesTestMixin
+from django.contrib.auth.mixins import LoginRequiredMixin, UserPassesTestMixin
 from django.contrib.auth.decorators import login_required
+
 
 CATEGORY_CHOICES = [
     ('a', 'Fresh'),
@@ -26,44 +27,43 @@ CATEGORY_CHOICES = [
     ('j', 'Alcohol')
 ]
 
-# https://stackoverflow.com/questions/1606093/django-limit-users-to-edit-only-their-own-information
-@login_required
-def edit_info(request, username=''):
-    if request.user.username == username:
-        return render(request, 'index.html')
-    else:
-        return render(request, '403.html')
 
-# Create your views here.
-class EntryList(generic.ListView):
+@login_required(login_url='/account/login.html')
+def get_context_data(self, **kwargs):
+    profile = Profile.objects.get(user=self.kwargs['pk'])
+    context = {
+        'profile': profile,
+        'form': ProfileForm(instance=profile)
+    }
+    return context
 
+
+class EntryList(LoginRequiredMixin, generic.ListView):
+           
     model = Entry
     queryset = Entry.objects.all()
-    # queryset = Entry.objects.filter(category__in='category')
+    # queryset = Entry.objects.filter(user=self.request.user)
     template_name = 'index.html'
     paginate_by = 100
 
-    
-
     def get_queryset(self, **kwargs):
+        queryset = Entry.objects.filter(user=self.request.user)
         search = self.request.GET.get('query')
         if search:
-            entries = self.model.objects.filter(
+            # entries = self.model.objects.filter(
+            queryset = queryset.filter(
                 Q(category__icontains=search)|Q(item_name__icontains=search)|
                 Q(category__in=[choice[0] for choice in CATEGORY_CHOICES if choice[1].lower().startswith(search.lower())])
-                
+
             )
-        else:
-            entries = self.model.objects.all()
-            # messages.info(self.request, 'Not on The Shopping List.')
 
-        return entries
+        return queryset
 
-    def index(request):
-        entries = Entry.objects.all()
-        shoppingFilter = EntryFilter(request.GET, queryset=entries)
-        entries = shoppingFilter.qs
-        return render(request, 'base.html', {'filter': shoppingFilter})
+    # def index(request):
+    #     entries = Entry.objects.all()
+    #     shoppingFilter = EntryFilter(request.GET, queryset=entries)
+    #     entries = shoppingFilter.qs
+    #     return render(request, 'base.html', {'filter': shoppingFilter})
 
 
 class AddView(FormView):
