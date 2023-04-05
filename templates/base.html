@@ -27,10 +27,14 @@
     <title>THE SHOPPING LIST</title>
 </head>
 
+<!-- Content -->
 <body class="dark-bg">
 
     <!-- navigation -->
     <header>
+
+      <!-- Checks whether the current url name is being used and if it is
+        turn on the active class to underline that navigation link name -->
       {% with request.resolver_match.url_name as url_name %}
                 
           <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
@@ -45,6 +49,11 @@
                     <div class="navbar-nav">
                       <a class="nav-item nav-link {% if url_name == 'home' %}active{% endif %} text-white"
                         href="{% url 'home' %}">Home <span class="sr-only">(current)</span></a>
+
+                        <!-- Checks that a registered user is logged in 
+                        and changes navigation bar content to include 
+                        Logout and Search bar-->
+
                       {% if user.is_authenticated %}
                         <a class="nav-item nav-link {% if url_name == 'account_logout' %}active{% endif %} text-white"
                           href="{% url 'account_logout' %}">Logout</a>
@@ -56,9 +65,9 @@
                           <input class="form-control me-2" name="query" type="search" placeholder="Search" aria-label="Search">
                           <button class="btn btn-outline-success ml-1" type="submit">Search</button>
                         </form>
-                        <!-- <form method="GET">
-                          {{shoppingFilter.form}}
-                       </form> -->
+                        
+                        <!-- Else navigation bar contains only Register 
+                          and Login to prevent unauthorised users proceeding -->
                         {% else %}
                         <a class="nav-item nav-link {% if url_name == 'account_signup' %}active{% endif %} text-white"
                           href="{% url 'account_signup' %}">Register</a>
@@ -74,6 +83,7 @@
             </div>
           </nav>  
       {% endwith %}
+
       <!-- heading -->
       <div class="heading-sm text-center">
         <h1>
@@ -116,25 +126,26 @@
 
       <!-- footer -->
 
-      <footer class="footer mt-auto py-3 light-bg sticky bg-dark">
+      <footer class="footer mt-auto py-4 light-bg bg-dark">
 
         <p class="m-0 text-center text-white">
           Made by Monica Murray for CI P4 
           <a href="https://github.com/MoniMurray/shopping-list" target="_blank" rel="noopener"
           aria-label="Visit my Github profile to see more about this project (Opens a new browser page)">
-          <i class="fa-brands fa-github"></i></a></p>
+          <i class="fa-brands fa-github pl-1"></i></a></p>
         <p class="m-0 text-center text-white">Follow me: <a href="https://www.facebook.com" target="_blank"
             rel="noopener" aria-label="Visit my Facebook page (Opens a new browser page)"><i
-              class="fa-brands fa-facebook"></i></a>
+              class="fa-brands fa-facebook pl-2"></i></a>
           <a href="https://www.instagram.com" target="_blank" rel="noopener"
-            aria-label="Visit my Instagram page (Opens a new browser page)"><i class="fa-brands fa-instagram"></i></a>
+            aria-label="Visit my Instagram page (Opens a new browser page)"><i class="fa-brands fa-instagram pl-2"></i></a>
           <a href="https://www.twitter.com" target="_blank" rel="noopener"
-            aria-label="Visit my Twitter page (Opens a new browser page)"><i class="fa-brands fa-twitter"></i></a>
+            aria-label="Visit my Twitter page (Opens a new browser page)"><i class="fa-brands fa-twitter pl-2"></i></a>
            
 
       </footer>
 
-      <!-- Javascript to automatically dismiss messages after a 3 second delay -->
+      <!-- Use Javascript to automatically dismiss flash success 
+        messages after a 3 second delay -->
 
       <script>
         setTimeout(function () {

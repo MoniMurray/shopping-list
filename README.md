@@ -307,6 +307,8 @@ Tutor Support helped me to understand how to create an inline view of a model wi
 
 Due to the requirment to have custom user messages throughout this project I could not use standard Django 403 error message to return an error to the users of The Shopping List as it was too generic.  Instead I created a [custom 403 template](https://stackoverflow.com/questions/31981239/django-custom-403-template) to relay a very simple but more elegant 403 forbidden error message where required.
 
+Fixing the footer to the bottom of the page was achieved using [this SO link](https://stackoverflow.com/questions/10099422/flushing-footer-to-bottom-of-the-page-twitter-bootstrap)
+
 
 Acknowledgments
 

@@ -1,5 +1,8 @@
   @import url('https://fonts.googleapis.com/css2?family=Bona+Nova:wght@700&family=Nanum+Myeongjo&family=Roboto:wght@100&display=swap');
 
+html, body {
+    height: 100%;
+}
 
 body {
     background-color: #fff;
@@ -7,6 +10,8 @@ body {
     color: #fff;
     text-align: center;
     font-weight: 300;
+    display: flex;
+    flex-direction: column;
 }
 
 .heading {
@@ -21,19 +26,15 @@ h1, h2, h3, h4, h5, h6, p {
     font-weight: 500;
 }
 
+
 .form-group {
     font-family: 'Roboto', sans-serif;
     color: black;
     font-weight: 500;
 }
 
-/* .card-body {
-    /* background-image: url(..images/organiser_image.jpg) no-repeat
-    center center; */
-    /* color: blue;
-} */ 
 
-/* from Dee Mc's YouTube tutorial on Recipe site creation  */
+/* Target the active class to underline the active page in the Nav bar*/
 .active {
     border-bottom: 2px solid white;      
     font-weight: 500;
@@ -44,9 +45,19 @@ tbody {
     overflow-y: scroll;
 }
 
+/* footer */
+
+.footer {
+    clear: both;
+    position: relative;
+    margin-top: -100px; 
+    height: 100px;
+  } 
+
+  
 /* from Bootstrap */
 
-// Small devices (landscape phones, 576px and up)
+/* Small devices (landscape phones, 576px and up) */
 @media (min-width: 576px) { 
     .image-container {
         background: url(../kat-love-KGd047jNsn0-unsplash.jpg) no-repeat center center;
@@ -58,10 +69,10 @@ tbody {
 
 }
 
-// Medium devices (tablets, 768px and up)
+/* Medium devices (tablets, 768px and up) */
 @media (min-width: 768px) { 
     .image-container {
-        background: url(../Organiser_image.jpg) no-repeat center center;
+        background: url(../organiser_image.jpg) no-repeat center center;
         height: 100%;
     
         background-color: #fff;
@@ -69,10 +80,10 @@ tbody {
     }    
 }
 
-// Large devices (desktops, 992px and up)
+/* Large devices (desktops, 992px and up) */
 @media (min-width: 992px) { ... }
 
-// Extra large devices (large desktops, 1200px and up)
+/* Extra large devices (large desktops, 1200px and up) */
 @media (min-width: 1200px) { ... }
 
 
@@ -80,3 +91,4 @@ tbody {
 .list-group-item {
     border: none;
 }
+
