@@ -32,7 +32,7 @@ class Entry(models.Model):
 
     # set attributes for List items Table
     item_name = models.CharField(
-        max_length=60, null=False, blank=False, unique=True)
+        max_length=60, null=False, blank=False)
     quantity = models.IntegerField(
         choices=QUANTITY_CHOICES, default='1')
     star = models.BooleanField(default=False)

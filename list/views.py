@@ -52,6 +52,7 @@ class EntryList(LoginRequiredMixin, generic.ListView):
     def get_queryset(self, **kwargs):
         queryset = Entry.objects.filter(user=self.request.user)
         search = self.request.GET.get('query')
+        print(queryset)
         if search:
             # entries = self.model.objects.filter(
             queryset = queryset.filter(
