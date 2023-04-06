@@ -46,6 +46,9 @@ class EntryList(LoginRequiredMixin, generic.ListView):
     template_name = 'index.html'
     paginate_by = 100
 
+    def test_func(self):
+        return self.request.user == self.get_object().user
+
     def get_queryset(self, **kwargs):
         queryset = Entry.objects.filter(user=self.request.user)
         search = self.request.GET.get('query')

@@ -19,7 +19,7 @@
     <!-- If a user is authorised, display their Shopping List
     items in a table with each item row containing additional features -->
     
-    {% if user.is_authenticated %}
+  {% if user.is_authenticated %}
    
     <div class="table-responsive-sm table-bordered pt-1">
       <h1>{{user.username}}'s List</h1>
@@ -141,10 +141,11 @@
       </div>
 
     </div>
-    <!-- {% else %}
+
+    {% else %}
     
     if user is not authenticated 
-    <div class="table-responsive-sm">
+    <!-- <div class="table-responsive-sm">
       <table class="table">
         <tr></tr>
 
@@ -159,15 +160,16 @@
           The Shopping list is currently empty.
         </tr>
         {% endfor %}
-      </table>
+      </table> 
+    </div> -->
     </div>
-  </div>
-  <div class="row justify-content-center">
+    <!-- <div class="row justify-content-center">
     <p> Please <a href="{% url 'account_signup' %}" class="card-link"> 
         Register </a>to use The Shopping List application.<br>
         If you already have an account 
         <a href="{% url 'account_login' %}" class="card-link">Login</a>.</p>
-  </div> -->
+    </div> -->
+  </div>
   {% endif %}
 </div>
 {% endblock %}
