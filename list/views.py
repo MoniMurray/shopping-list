@@ -41,7 +41,7 @@ def get_context_data(self, **kwargs):
 class EntryList(LoginRequiredMixin, generic.ListView):
            
     model = Entry
-    queryset = Entry.objects.all()
+    # queryset = Entry.objects.all()
     # queryset = Entry.objects.filter(user=self.request.user)
     template_name = 'index.html'
     paginate_by = 100
