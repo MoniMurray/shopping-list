@@ -186,3 +186,8 @@ List (or put in a table) all known bugs on your site here as soon as you find th
 
 Solved Bugs
 👩🏻‍💻View an example of a completed bugs section here
+
+|   | Bug Reported                                                                                                                                                                                                                              | Fixed Y/N | Fix                                                                                                                                          |
+| - | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | --------- | -------------------------------------------------------------------------------------------------------------------------------------------- |
+| 1 | In live testing, multiple users successfully registered and logged in, but reported that they could see items on their shopping list which they had not entered themselves. All registered users' items were being returned to all users. | Y         | Add LoginRequiredMixin from django.contrib.auth.mixins and pass as a parameter into the EntryList view.                                      |
+| 2 | In live testing, users reported having error 'Entry with this item name already exists' appearing under the Item name field in Add Item form when they did not have an item with the same name in their Shopping List.                    | Y         | Remove unique=True from the item_name field in Entry model as it is stopping additional items with the same name being added to the database |
