@@ -73,24 +73,7 @@ tbody {
   
 /* from Bootstrap */
 
-/* Small devices (landscape phones, 576px and up) */
-/* @media screen and (max-width: 600px) {
-    table thead {
-      display: none;
-    }
-    table td {
-      display: flex;
-      flex-direction: row;
-    }
-    
-    table td::before {
-      content: attr(label);
-      font-weight: bold;
-      /* width: 120px;
-      min-width: 120px; */
-    /* }
-  } */ 
-
+/* Small devices  */
   @media screen and (max-width: 600px) {
     table {width:100%;}
     thead {display: none;}

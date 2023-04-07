@@ -307,7 +307,9 @@ Tutor Support helped me to understand how to create an inline view of a model wi
 
 Due to the requirment to have custom user messages throughout this project I could not use standard Django 403 error message to return an error to the users of The Shopping List as it was too generic.  Instead I created a [custom 403 template](https://stackoverflow.com/questions/31981239/django-custom-403-template) to relay a very simple but more elegant 403 forbidden error message where required.
 
-Fixing the footer to the bottom of the page was achieved using [this SO link](https://stackoverflow.com/questions/10099422/flushing-footer-to-bottom-of-the-page-twitter-bootstrap)
+Fixing the footer to the bottom of the page was achieved using [this SO link](https://stackoverflow.com/questions/10099422/flushing-footer-to-bottom-of-the-page-twitter-bootstrap).
+
+In order to make my table responsive at small screen sizes I added a CSS breakpoint to screens with a max-width of 600px to hide the row of table headers, and display the table rows as table columns instead, removing the need for horizontal scrolling for the application user.  I used javascript to look for heading cells in a thead element, and reassign them as HTML attributes to data cells in a tbody element. Using the breakpoint in CSS, I hide the row of table headers, rearrange the table rows into columns, and add the content of the rows to each data cell.  I used the code in this [wpDataTables article](https://wpdatatables.com/how-to-make-a-table-responsive/).
 
 
 Acknowledgments
