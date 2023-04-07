@@ -12,7 +12,6 @@ body {
     font-weight: 300;
     display: flex;
     flex-direction: column;
-    padding-bottom: 150px;
 }
 
 .heading {
@@ -23,17 +22,31 @@ body {
 
 h1, h2, h3, h4, h5, h6, p {
     font-family: 'Roboto', sans-serif;
-    color: #4b4f58;
-    font-weight: 500;
+    color: black;
+    font-weight: 700;
 }
 
 
 .form-group {
     font-family: 'Roboto', sans-serif;
     color: black;
-    font-weight: 500;
+    font-weight: 700;
 }
 
+a.link {
+    font-weight: 800;
+}
+
+.font-italic {
+    font-size: smaller;
+}
+
+img {
+    aspect-ratio: auto 640/360;
+    /* height: auto;
+    width: 100%; */
+
+}
 
 /* Target the active class to underline the active page in the Nav bar*/
 .active {
@@ -61,16 +74,35 @@ tbody {
 /* from Bootstrap */
 
 /* Small devices (landscape phones, 576px and up) */
-@media (min-width: 576px) { 
-    .image-container {
-        background: url(../kat-love-KGd047jNsn0-unsplash.jpg) no-repeat center center;
-        height: 100%;
+/* @media screen and (max-width: 600px) {
+    table thead {
+      display: none;
+    }
+    table td {
+      display: flex;
+      flex-direction: row;
+    }
     
-        background-color: #fff;
-        background-size: cover;
-    }  
+    table td::before {
+      content: attr(label);
+      font-weight: bold;
+      /* width: 120px;
+      min-width: 120px; */
+    /* }
+  } */ 
 
-}
+  @media screen and (max-width: 600px) {
+    table {width:100%;}
+    thead {display: none;}
+    tr:nth-of-type(2n) {background-color: inherit;}
+    tr td:first-child {background: #f0f0f0; font-weight:bold;font-size:1.3em;}
+    tbody td {display: block;  text-align:center;}
+    tbody td:before { 
+        content: attr(data-th); 
+        display: block;
+        text-align:center;  
+    }
+ }
 
 /* Medium devices (tablets, 768px and up) */
 @media (min-width: 768px) { 
@@ -84,10 +116,10 @@ tbody {
 }
 
 /* Large devices (desktops, 992px and up) */
-@media (min-width: 992px) { ... }
+/* @media (min-width: 992px) { ... } */
 
 /* Extra large devices (large desktops, 1200px and up) */
-@media (min-width: 1200px) { ... }
+/* @media (min-width: 1200px) { ... } */
 
 
 

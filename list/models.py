@@ -25,8 +25,6 @@ QUANTITY_CHOICES = [
     (5, '5')
 ]
 
-# Create your models here.
-
 
 class Entry(models.Model):
 
@@ -53,7 +51,6 @@ class Entry(models.Model):
 class Note(models.Model):
 
     # set attributes for Notes Table
-
     item = models.OneToOneField(
         Entry, on_delete=models.CASCADE, related_name='notes')
     user = models.ForeignKey(User, on_delete=models.CASCADE)
@@ -61,6 +58,5 @@ class Note(models.Model):
     added_on = models.DateTimeField(auto_now_add=True)
 
     # helper method
-
     def __str__(self):
         return self.body

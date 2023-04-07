@@ -7,7 +7,7 @@
 <div class="image-container mt-3">
   <img
     src="{% static 'images/tamanna-rumee-eD1RNYzzUxc-unsplash (1) (1).jpg' %}"
-    class="img-fluid"
+    class="img-fluid" width="auto" height="auto"
     alt="The Shopping List and Organiser landing image"
   />
   
@@ -95,7 +95,7 @@
 
               {% else %}
                 <!-- add a Note to the Shopping list item -->
-                <td class="text-left text-capitalize">
+                <td class="text-capitalize">
                   {{ entry.item_name }}
                   
                   <p
@@ -104,7 +104,7 @@
                   >
                     <a href="{% url 'note' entry.id %}"
                       >
-                      <i class="fa-regular fa-message"></i> 
+                      <i class="fa-regular fa-message text-center"></i> 
                       </a>
                       {{entry.notes}}
                   </p>
@@ -144,7 +144,7 @@
 
     {% else %}
     
-    if user is not authenticated 
+    <!-- if user is not authenticated  -->
     <!-- <div class="table-responsive-sm">
       <table class="table">
         <tr></tr>
