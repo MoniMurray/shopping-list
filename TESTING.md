@@ -8,9 +8,9 @@ Add an image of the finished site here. I like to use amiresponsive to get an im
 
 CONTENTS
 
-1. [AUTOMATED TESTING](#automated testing)
+1. [AUTOMATED TESTING](#automated_testing)
 
-2. [MANUAL TESTING](#manual testing)
+2. [MANUAL TESTING](#manual_testing)
 
 
 
@@ -106,14 +106,8 @@ Solved Bugs
 
 This is where all solved bugs go once squashed. List what the bug was, and how you managed to fix it. You can also include images/videos here if you wanted.
 
+
 MANUAL TESTING<a name="manual testing"></a>
-
-Testing User Stories
-Full Testing
-BUGS
-
-Known Bugs
-Solved Bugs
 
 Manual testing tests as follows:
 
@@ -125,11 +119,9 @@ Manual testing tests as follows:
 
 
 Testing User Stories
-👩🏻‍💻 View an example of a completed user stories testing section here
 
 This is where I tested the User Stories I created and listed in [AGILE.md](AGILE.md) against my application. I have used the User Stories table for this Test Case list, the Acceptance Criteria Tasks are repurposed to become the Tests.
 
-*insert Manual Testing table*
 
 | User Story                                                                                                      | Test Number | Manual Test Expected result list                                                                                                                                                                                                                                                                                                              | Test P/F |
 | --------------------------------------------------------------------------------------------------------------- | ----------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | -------- |
@@ -185,9 +177,9 @@ Known Bugs
 List (or put in a table) all known bugs on your site here as soon as you find them. This will prevent you from forgetting any at the end. Some (if not all) of these bugs will hopefully make their way over to the next section, solved bugs, as you progress through your project.
 
 Solved Bugs
-👩🏻‍💻View an example of a completed bugs section here
+
 
 |   | Bug Reported                                                                                                                                                                                                                              | Fixed Y/N | Fix                                                                                                                                          |
 | - | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | --------- | -------------------------------------------------------------------------------------------------------------------------------------------- |
-| 1 | In live testing, multiple users successfully registered and logged in, but reported that they could see items on their shopping list which they had not entered themselves. All registered users' items were being returned to all users. | Y         | Add LoginRequiredMixin from django.contrib.auth.mixins and pass as a parameter into the EntryList view.                                      |
+| 1 | In live testing, multiple users successfully registered and logged in, but reported that they could see items on their shopping list which they had not entered themselves. All registered users' items were being returned to all users. | Y         | Add LoginRequiredMixin from django.contrib.auth.mixins and pass as a parameter into the EntryList class-based view.                                      |
 | 2 | In live testing, users reported having error 'Entry with this item name already exists' appearing under the Item name field in Add Item form when they did not have an item with the same name in their Shopping List.                    | Y         | Remove unique=True from the item_name field in Entry model as it is stopping additional items with the same name being added to the database |
