@@ -5,7 +5,6 @@ from django.views.generic.edit import (
 from django.http import HttpResponseRedirect
 from .models import Entry, Note
 from .forms import AddForm, NoteForm
-from .filters import EntryFilter
 from django.urls import reverse_lazy
 from django.contrib import messages
 from django.db.models import Q
@@ -39,10 +38,8 @@ def get_context_data(self, **kwargs):
 
 
 class EntryList(LoginRequiredMixin, generic.ListView):
-           
+
     model = Entry
-    # queryset = Entry.objects.all()
-    # queryset = Entry.objects.filter(user=self.request.user)
     template_name = 'index.html'
     paginate_by = 100
 
@@ -54,27 +51,21 @@ class EntryList(LoginRequiredMixin, generic.ListView):
         search = self.request.GET.get('query')
         print(queryset)
         if search:
-            # entries = self.model.objects.filter(
             queryset = queryset.filter(
-                Q(category__icontains=search)|Q(item_name__icontains=search)|
-                Q(category__in=[choice[0] for choice in CATEGORY_CHOICES if choice[1].lower().startswith(search.lower())])
+                Q(category__icontains=search) |
+                Q(item_name__icontains=search) |
+                Q(category__in=[
+                    choice[0] for choice in CATEGORY_CHOICES if
+                    choice[1].lower().startswith(search.lower())])
 
             )
 
         return queryset
 
-    # def index(request):
-    #     entries = Entry.objects.all()
-    #     shoppingFilter = EntryFilter(request.GET, queryset=entries)
-    #     entries = shoppingFilter.qs
-    #     return render(request, 'base.html', {'filter': shoppingFilter})
-
 
 class AddView(FormView):
     # CRUD - Create a new shopping list entry using the fields from Entry model
 
-    # model = Entry
-    # entries = Entry.objects.filter()
     template_name = 'add_to_list.html'
     form_class = AddForm
     success_url = reverse_lazy('home')
@@ -114,17 +105,33 @@ class NoteView(CreateView):
     # list item name (fk onetoonefield) and add our note to
     # the body field.  When we click submit, we should be returned to
     # the index.html template
-    
+
     model = Note
     template_name = 'note.html'
-    fields = ['item', 'user', 'body',]
+    form_class = NoteForm
+    pk_url_kwarg = 'pk'
+    # fields = ['item', 'user', 'body',]
     # fields = ['item', 'body',]
-    # pk_url_kwarg = 'pk'
-    
+
     success_url = reverse_lazy('home')
+
+    def form_valid(self, form):
+        pk_url_kwarg = 'pk'
+        post = self.get_object()
+        form.instance.post = post
+        form.instance.name = self.request.user
+        form.save()
+        return super().form_valid(form)
 
     # def note_entry(self, item_id):
     #     entry = Entry.objects.get(self.request, id=item_id)
+
+    # def form_valid(self, form):
+    #     # form = form.save(commit=False)
+    #     form.user = User.objects.get(id=self.request.user.id)
+    #     messages.success(self.request, 'Note Added successfully.')
+    #     form.save()
+    #     return super().form_valid(form)
 
 
 class Delete(UserPassesTestMixin, DeleteView):

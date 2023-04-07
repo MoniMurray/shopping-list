@@ -351,6 +351,8 @@ Fixing the footer to the bottom of the page was achieved using [this SO link](ht
 
 In order to make my table responsive at small screen sizes I added a CSS breakpoint to screens with a max-width of 600px to hide the row of table headers, and display the table rows as table columns instead, removing the need for horizontal scrolling for the application user.  I used javascript to look for heading cells in a thead element, and reassign them as HTML attributes to data cells in a tbody element. Using the breakpoint in CSS, I hide the row of table headers, rearrange the table rows into columns, and add the content of the rows to each data cell.  I used the code in this [wpDataTables article](https://wpdatatables.com/how-to-make-a-table-responsive/).
 
+Searching for items on The Shopping List and filtering the list by category is an important feature in my design.  When researching the way to use Django's filter method I Googled and found [this django filter package article](https://www.codechit.com/django-filter-search-form-guide/) which initially I thought would be very useful, until I realised that I could extend the filter method I was already using in my application to display the current logged in user's list.  As as result the django filter package was installed but not subsequently used.
+
 
 Acknowledgments
 
