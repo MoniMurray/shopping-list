@@ -41,7 +41,7 @@ a.link {
     font-size: smaller;
 }
 
-img {
+img .img-fluid {
     aspect-ratio: auto 640/360;
     /* height: auto;
     width: 100%; */

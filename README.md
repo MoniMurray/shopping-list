@@ -9,7 +9,10 @@ User's Goal
 
 - A User wants response messages to their actions, sucessful or unsuccessful.
 
-*Add an image of the finished site here. I like to use amiresponsive to get an image of my site on all device sizes, and amiresponsive allows you to click links on the page and scroll, so each device can show a different element of your site.*
+An image of the finished site generated from [Amiresponsive](https://ui.dev/amiresponsive?url=https://8000-monimurray-shoppinglist-wasy52ssiii.ws-eu93.gitpod.io/).
+
+![Amiresponsive](static/images/screenshots/amiresponsive_screenshot.png) 
+
 
 Please visit the live site via [this link](https://mym-shopping-list.herokuapp.com/).
 
@@ -84,7 +87,7 @@ The Shopping List colour scheme is designed to be crisp, clean, sophisticated.  
 
 These colours were chosen based on a possible homepage image I used during early development of a personal organiser which looked effortlessly organised and calming.
 
-![personal organiser!](static/images/Organiser_image.jpg) .
+![personal organiser!](static/images/organiser_image.jpg) .
 
 
 Typography
@@ -93,16 +96,14 @@ Google Fonts was used for the following fonts:
 
 Roboto is used as a traditional, backup font.
 
-Nanum Myeongjo is used for the header text on the site, Regular 400 weight. It is a sans-serif font.
+Roboto is used for the header text on the site, 700 weight. It is a sans-serif font.
 
-Caveat font is used for the shopping list items, SemiBold 600 weight. It is a cursive font and suits a traditional handwritten shopping list style.
+Nanum Myeongjo font is used for the shopping list items, 300 weight. It is a lighter font and font-weight and suits a traditional handwritten shopping list style.
 
 
 Wireframes
 
-I created my wireframes using Balsamiq.
-
-Early UX Design Wireframe images
+I created my wireframes using Balsamiq to create the early UX Design Wireframe images.
 
 Registration/Authentication
 
@@ -159,20 +160,22 @@ The Entity Relationship Model for the relational database was first created on p
 
 **FEATURES**<a name="features"></a>
 
-The Shopping List is a useful tool for a User to update the shopping list wherever they are on their available device, to group shopping list items by category for ease of use when shopping, to see urgent items at a glance when in a hurry, and to easily toggle items off the list as they shop.
+The Shopping List is a useful tool for a User to create and update their shopping list wherever they are on their available device.  The User can group shopping list items by category for ease of use when shopping, can see urgent items at a glance when in a hurry, and can easily toggle items off the list as they shop.
+
 
 Landing Page
 
-On first arriving to the site the user is presented with an uncluttered Login page with simple instruction to the user to Login to access the features of the application, or if not yet Registered there is a link for a user to follow in order to Register with an account.  
+On first arriving to the site the user is presented with an uncluttered Login page with simple instruction to the user to Login to access the features of the application.  If the User is not yet Registered, there is a link in the text and also in the navigation bar for a new user to follow in order to Register for an account.  
 
 Bespoke pages for following are launched from the navigation bar on the Landing page:
 
 - Register
 - Login
 
+
 Home Page
 
-All features and functionality for the application comes from the logged in 'Home' page.  On the 'Home' page, a user can add a new shopping list item to their list, toggle the star on/off to mark the item as urgent, toggle the checkbox on/off to mark an item as done, add a note to the item, and also edit and delete an item.  
+Following Registration or Login, all features and functionality for the application are contained in the 'Home' page.  On the 'Home' page, a user can add a new shopping list item to their list, toggle the gold star on/off to mark the item as urgent, toggle the checkbox on/off to mark an item as done, add a note to the item using the note icon, and also edit and delete an item using the edit and delete icons.  
 
 The contents of The Shopping List, when there are any, are displayed in a table on the 'Home' page.
 
@@ -186,30 +189,37 @@ Bespoke pages for following are launched from the Home page:
 - Add note
 - 403 Error page.
 
+
 General features on each page
 
-The Navigation Bar 
+- The Navigation Bar 
 
 Pre-Registration the Navigation bar contains two links - Registration and Login.
 
 After user has logged in, the Navigation bar changes to contain Home, Logout and a Search feature.
 
-Search Feature
+- Search Feature
 
-A User can search The Shopping List by names of items or by Category of items and the item or items will be returned to the user in the table.
+A User can search The Shopping List by the name of an item or by Category of items and that item or items will be returned to the user in the table.
 
-Footer
+- Footer
 
 The bespoke footer contains a line of text "Made by Monica Murray for CI P4" with an external link to my GitHub profile. The footer also contains external links to Facebook, Instagram and Twitter.
 
 
 Screenshots
 
-Login Page, small screen and large screen navigation view
+Login Page, small screen navigation view. 
 
 ![Login page!](static/images/screenshots/login_screenshot.png)
 
+Login Page, large screen navigation view.
+
 ![Login large screen page!](static/images/screenshots/login_large_screen_screenshot.png)
+
+Login Page, flash success message.
+
+![Login flash success message](static/images/screenshots/flash_login_success_screenshot.png)
 
 Register Page
 
@@ -217,11 +227,15 @@ Register Page
 
 Home Page
 
-![Home page after login!]()
+![Home page after login!](static/images/screenshots/home_page_screenshot.png)
 
 Logout Page
 
 ![Logout Page](static/images/screenshots/logout_screenshot.png)
+
+Logout Page, flash success message.
+
+![Logout flash success message](static/images/screenshots/flash_logout_success_screenshot.png)
 
 Search Function
 
@@ -231,13 +245,25 @@ Add Item to The Shopping List
 
 ![Add item to TSL!](static/images/screenshots/add_item_screenshot.png)
 
+Add Item, flash success message
+
+![Add Item flash success message](static/images/screenshots/flash_add_success_screenshot.png)
+
 Edit Item on The Shopping List
 
 ![Edit item on TSL!](static/images/screenshots/edit_item_screenshot.png)
 
+Edit Item, flash success message
+
+![Edit Item flash success message](static/images/screenshots/flash_edit_success_screenshot.png)
+
 Delete Item
 
 ![Delete from TSL!](static/images/screenshots/delete_screenshot.png)
+
+Scroll table list
+
+![Scroll table list](static/images/screenshots/scroll_table_list_screenshot.png)
 
 Add Note
 
