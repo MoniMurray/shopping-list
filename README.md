@@ -9,7 +9,7 @@ User's Goal
 
 - A User wants response messages to their actions, sucessful or unsuccessful.
 
-An image of the finished site generated from [Amiresponsive](https://ui.dev/amiresponsive?url=https://8000-monimurray-shoppinglist-wasy52ssiii.ws-eu93.gitpod.io/).
+An image of the finished site generated from [Amiresponsive](https://ui.dev/amiresponsive?url=https://8000-monimurray-shoppinglist-wasy52ssiii.ws-eu93.gitpod.io/) which displays the application at four screen size breakpoints.
 
 ![Amiresponsive](static/images/screenshots/amiresponsive_screenshot.png) 
 
@@ -36,15 +36,16 @@ Please visit the live site via [this link](https://mym-shopping-list.herokuapp.c
 
 
 
+
 **USER EXPERIENCE (UX) DESIGN**<a name="ux"></a>
 
 - Strategy
 
-Our user is looking for a efficient convenient means of maintaining a shopping list, having it to hand when shopping, and sharing it with household members. Branding should be clean, uncluttered, without distraction, but not sparse.  The features are created with user ease of use in mind.
+Our user is looking for an efficient and convenient means of maintaining a shopping list, having it to hand when shopping, being able to filter by category. Branding should be clean, uncluttered, without distraction, but not sparse.  The features are created with user ease of use in mind.
 
 - Scope
 
-A simple, uncomplicated, uncluttered shopping list is the Minimum Viable Product (MVP). Features are: 
+A simple, uncomplicated, uncluttered shopping list with the following features is the Minimum Viable Product (MVP): 
 
     - Responsive design,
     - Minimum one-page custom HTML and CSS webpage,
@@ -56,17 +57,17 @@ The six-week deadline is fixed and the timeline is tight.  MVP is priority.
 
 - Structure
 
-User will only have access to features and functionality following registration and login and has restricted shopping list view until successful login.  Registration and Login links are on the Nav bar and also on a reminder text paragraph underneath the restricted shopping list.  Successful login expands Home page view and returns an authenticated view of Shopping list, with add, edit, star, filter and delete features.  Logout feature is automatic following successful login and appears on Nav bar.  Logout returns the user to restricted list view.
+User will only have access to features and functionality following registration.  Registration and Login links are on the Nav bar and also on a reminder text paragraph on the Landing page.  Successful login expands to a 'Home' page view and returns an authenticated view of Shopping list, with add, edit, delete, toggling, and search features.  Logout feature is automatic following successful login and appears on navigation bar.  Logout returns the user to Login page.
 
 - Skeleton
 
-Visual iconography for ease of use, repeated on each page in the same location where appropriate.  A user will be familiar with clicking on icons to perform an action, this app will conform with this convention.  Uncluttered, simple UI. Use of wireframes to confirm the important information is seen first and to ensure labels, navigation and arrangement will make sense to the user.
+Visual icon employed for ease of use, repeated on each page in the same location where appropriate.  A user will be familiar with clicking on icons to perform an action, this app will conform with this convention.  Uncluttered, simple UI. Use of wireframes to confirm the important information is seen first and to ensure labels, navigation and arrangement will make sense to the user.
 
 - Surface
 
-Colours will be crisp, clean, sophisticated.  Black on white, cool clean colour palette.  White background #ffffff, dark grey text #4b4f58, list container colour rgba (240, 251, 247, 1) or #f3f4f6.  Fonts will follow the clean, uncluttered scope with Roboto, Caveat Semi-bold 600, Nanum Myeongjo Regular 400 in combination look sleak and are easy to read on all devices.
+Colours will be crisp, clean, sophisticated.  Black on white, cool clean colour palette.  White background #ffffff, dark grey #4b4f58 or black text for accessibility, list container colour rgba (240, 251, 247, 1), #f3f4f6 or black.  Fonts will follow the clean, uncluttered scope with Roboto, Caveat, Nanum Myeongjo in combination look sleak and are easy to read on all devices.
 
-The User's interaction with this application should be easy and natural.  Use of icons will make actions like add, edit and delete intuitive. Efficient use of response messages will confirm successful actions to the user, with unsuccessful action messages easy to understand.
+The User's interaction with this responsive application should be easy and natural.  Use of icons will make actions like edit and delete intuitive. Efficient use of response messages will confirm successful actions to the user, with unsuccessful action messages easy to understand.
 
 **AGILE METHODOLOGY**<a name="agile"></a>
 
@@ -76,7 +77,7 @@ Please follow this link to open my [AGILE.md](AGILE.md) file and read about how 
 **DESIGN**<a name="design"></a>
 
 
-I began my design of the database structure by creating an Entity Relationship Diagram, which can be viewed [here](assets/images/Shopping List ERD.png).  The Diagram helped me to consider what to include in each Model and the relationships between the models of the database.
+I began my design of the database structure by creating an Entity Relationship Diagram, which can be viewed [here](static/images/wireframes/Shopping_List_ERD.png).  The Diagram helped me to consider what to include in each Model and the relationships between the models of the database.
  
 
 Colour Scheme
@@ -85,7 +86,7 @@ The Shopping List colour scheme is designed to be crisp, clean, sophisticated.  
 
 ![colour palette!](static/images/coolorspalette.png). 
 
-These colours were chosen based on a possible homepage image I used during early development of a personal organiser which looked effortlessly organised and calming.
+These colours were chosen based on a possible homepage image I used during early development of a personal organiser which employed a colour palette which was cool and calming.
 
 ![personal organiser!](static/images/organiser_image.jpg) .
 
@@ -105,7 +106,7 @@ Wireframes
 
 I created my wireframes using Balsamiq to create the early UX Design Wireframe images.
 
-Registration/Authentication
+- Registration/Authentication
 
 The following are the Wireframes I created to represent how the Registration, Login and Logout user views will appear.
 
@@ -125,7 +126,7 @@ User Authentication Confirmed, with additional user functionality
 
 ![Homepage expanded view!](static/images/wireframes/Authentication-confirmed-homepage-wireframe.png)
 
-CRUD
+- CRUD
 
 Add Item form
 
@@ -139,7 +140,7 @@ Delete Item Confirmation page
 
 ![Delete Item!](static/images/wireframes/Delete-item-user-clarification-msg-wireframe.png)
 
-User Messages Wireframes
+- User Messages Wireframes
 
 These messages will be presented to the User as Flash messages which will automatically close after 3 seconds.
 
@@ -217,13 +218,13 @@ Login Page, large screen navigation view.
 
 ![Login large screen page!](static/images/screenshots/login_large_screen_screenshot.png)
 
-Login Page, flash success message.
-
-![Login flash success message](static/images/screenshots/flash_login_success_screenshot.png)
-
 Register Page
 
 ![Register page!](static/images/screenshots/register_screenshot.png)
+
+Home Page, flash successful login message.
+
+![Login flash success message](static/images/screenshots/flash_login_success_screenshot.png)
 
 Home Page
 
@@ -274,11 +275,11 @@ Add Note
 ![Bespoke 403 Error page!](static/images/screenshots/403_page_screenshot.png)
 
 
+
 Future Implementations
 
-What features would you like to implement in the future on your site? Would you like to add more pages, or create login functionality? Add these plans here.
-
 Future features of the application would be to add additional organiser functions to plan calendar events, holidays and finances with links to these features added to Navigation and launching as seperate features for the Registered User.
+
 
 Accessibility
 
@@ -286,9 +287,7 @@ Be an amazing developer and get used to thinking about accessibility in all of y
 
 This is the place to make a note of anything you have done with accessibility in mind. Some examples include:
 
-Have you used icons and added aria-labels to enable screen readers to understand these? Have you ensured your site meets the minimum contrast requirements? Have you chosen fonts that are dyslexia/accessible friendly?
-
-Code Institute have an amazing channel for all things accessibility (a11y-accessibility) I would highly recommend joining this channel as it contains a wealth of information about accessibility and what we can do as developers to be more inclusive.
+I have used [fontawesome](https://fontawesome.com/search?q=checkbox&o=r&m=free) icons in my application and to each icon I have added aria-labels to enable screen readers to understand them.  I have endeavored to ensure the application meets the minimum contrast requirements between background and text colours.  I have chosen font sizes and type that are dyslexia/accessible friendly, for example there are no buttons or text that are in all capitals.
 
 
 **TECHNOLOGIES USED**<a name="technologies"></a>
@@ -338,18 +337,19 @@ On the CI Slack Community I saw a reference to [this YouTube video](https://www.
 
 I found Dee Mc's YouTube videos on creating a [Django Recipe Sharing tutorial](https://www.youtube.com/watch?v=E9eWdZTpiGA&list=PLXuTq6OsqZjbCSfiLNb2f1FOs8viArjWy&index=4) useful to solidify what had been taught on the FSF Django module as she explained similar aspects in a different way that made sense to me.  For example, Dee Mc uses Django to load static files such as style.css using the curly braces syntax which I am already using for all href links throughout the project, and once I saw this it made perfect sense to extend this syntax to use within the head tags of of my templates.  Another conditional statement used on this Recipe Sharing tutorial was the one adding the 'active' class to the navigation bar which I also included in this Project.
 
+- when I researched how to fix the Login bug which is documented in my [TESTING.md](TESTING.md) file under 'Manual Testing', I once again found this tutorial particularly useful in its explanation of Mixins and how and where to apply them.
+
 Reverse_lazy tool was referenced in [this YouTube video](https://www.youtube.com/watch?v=RwWhQTSV44Q) which is a tool I imported from django.urls and used in my Create function to return the user to the home page upon successfully adding a new item to the shopping list.
 
 Though ultimately not an ideal fix to how to scroll my user's shopping list, [this Stack Overflow](https://stackoverflow.com/questions/21168521/table-fixed-header-and-scrollable-body) question and the answers provided helped me to troubleshoot how to best display the shopping list in a table.
 
+In order to make my table responsive at small screen sizes I added a CSS breakpoint to screens with a max-width of 600px to hide the row of table headers, and display the table rows as table columns instead, removing the need for horizontal scrolling for the application user.  I used Javascript to look for heading cells in a thead element, and reassign them as HTML attributes to data cells in a tbody element. Using the breakpoint in CSS, I hide the row of table headers, rearrange the table rows into columns, and add the content of the rows to each data cell.  I used the code in this [wpDataTables article](https://wpdatatables.com/how-to-make-a-table-responsive/) to achieve this responsiveness.
+
 Tutor Support helped me to understand how to create an inline view of a model within the Admin section by sharing [this letscodemore link](https://www.letscodemore.com/blog/django-inline-admin-with-examples/).
 
-
-Due to the requirment to have custom user messages throughout this project I could not use standard Django 403 error message to return an error to the users of The Shopping List as it was too generic.  Instead I created a [custom 403 template](https://stackoverflow.com/questions/31981239/django-custom-403-template) to relay a very simple but more elegant 403 forbidden error message where required.
+Due to the requirment to have custom user messages throughout this project I could not use standard Django 403 error message to return an error to the users of The Shopping List as it was too generic.  Instead I created a [custom 403 template](https://stackoverflow.com/questions/31981239/django-custom-403-template) to relay a very simple but more elegant 403 forbidden error message where required.  It may never be needed, but will maintain the Users connection with the application if it is.
 
 Fixing the footer to the bottom of the page was achieved using [this SO link](https://stackoverflow.com/questions/10099422/flushing-footer-to-bottom-of-the-page-twitter-bootstrap).
-
-In order to make my table responsive at small screen sizes I added a CSS breakpoint to screens with a max-width of 600px to hide the row of table headers, and display the table rows as table columns instead, removing the need for horizontal scrolling for the application user.  I used javascript to look for heading cells in a thead element, and reassign them as HTML attributes to data cells in a tbody element. Using the breakpoint in CSS, I hide the row of table headers, rearrange the table rows into columns, and add the content of the rows to each data cell.  I used the code in this [wpDataTables article](https://wpdatatables.com/how-to-make-a-table-responsive/).
 
 Searching for items on The Shopping List and filtering the list by category is an important feature in my design.  When researching the way to use Django's filter method I Googled and found [this django filter package article](https://www.codechit.com/django-filter-search-form-guide/) which initially I thought would be very useful, until I realised that I could extend the filter method I was already using in my application to display the current logged in user's list.  As as result the django filter package was installed but not subsequently used.
 
@@ -358,7 +358,7 @@ Acknowledgments
 
 The CI Slack Community is a resource I used almost as much as Google for this project! This community is so kind and generous with their collective and individual knowlege and I used them to bounce ideas off, ask for advice, and to seek guidance where code went awry.  
 
-CI Tutor Support were also a well-used resource for this project and I'm grateful to all the patient Tutors from whome I received a huge amount of reasurance and guidance.
+CI Tutor Support were also a well-used resource for this project and I'm grateful to all the patient Tutors from whom I received a huge amount of reasurance and guidance.
 
 
 **DEPLOYMENT**<a name="deployment"></a>

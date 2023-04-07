@@ -57,7 +57,7 @@
                 <td>
                   <a href="{% url 'toggle_star' entry.id %}">
                     <!-- <button type="submit" name="toggle_star" value="{{entry.id}}" class="btn-like"> -->
-                    <i class="fa-solid fa-star" style="color: gold"></i>
+                    <i class="fa-solid fa-star" aria-label="star icon" style="color: gold"></i>
                     <!-- </button> -->
                   </a>
                 </td>
@@ -66,7 +66,7 @@
                 <td>
                   <a href="{% url 'toggle_star' entry.id %}">
                     <!-- <button type="submit" name="toggle_star" value="{{entry.id}}" class="btn-like"> -->
-                    <i class="fa-regular fa-star" style="color: gold"></i>
+                    <i class="fa-regular fa-star" aria-label="star icon" style="color: gold"></i>
                     <!-- </button> -->
                   </a>
                 </td>
@@ -83,14 +83,14 @@
                 <td>
                   <a href="{% url 'toggle_check' entry.id %}">
                     
-                    <i class="fa-solid fa-square-check"></i>
+                    <i class="fa-solid fa-square-check" aria-label="checkbox icon"></i>
                     
                   </a>
                 </td>
                 <td></td>
                 <td>
                   <a href="{% url 'delete' entry.id %}"
-                    ><i class="fa-solid fa-trash-can"></i> Delete</a>
+                    ><i class="fa-solid fa-trash-can" aria-label="trash-can icon"></i> Delete</a>
                 </td>
 
               {% else %}
@@ -104,7 +104,7 @@
                   >
                     <a href="{% url 'note' entry.id %}"
                       >
-                      <i class="fa-regular fa-message text-center"></i> 
+                      <i class="fa-regular fa-message text-center" aria-label="note icon"></i> 
                       </a>
                       {{entry.notes}}
                   </p>
@@ -112,14 +112,14 @@
                 <td>{{entry.quantity}}</td>
                 <td>
                   <a href="{% url 'toggle_check' entry.id %}">
-                    <i class="fa-regular fa-square"></i> 
+                    <i class="fa-regular fa-square" aria-label="checkbox icon"></i> 
                   </a>
                 </td>
 
                 <!-- Edit the Shopping list item, target by it's id -->
                 <td>
                   <a href="{% url 'edit' entry.id %}">
-                    <i class="fa-solid fa-pencil"></i> Edit</a>
+                    <i class="fa-solid fa-pencil" aria-label="pencil icon"></i> Edit</a>
                 </td>
                 <!-- <td><a href="{% url 'note' entry.id %}"><i class="fa-regular fa-message"></i>Note</a><p class="text-capitalize font-italic text-wrap" style="width: 6rem;">{{entry.notes}}</p></td> -->
                 
