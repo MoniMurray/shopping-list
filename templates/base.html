@@ -48,14 +48,15 @@
                   </button>
                   <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
                     <div class="navbar-nav">
-                      <a class="nav-item nav-link {% if url_name == 'home' %}active{% endif %} text-white"
-                        href="{% url 'home' %}">Home <span class="sr-only">(current)</span></a>
+                      
 
                         <!-- Checks that a registered user is logged in 
                         and changes navigation bar content to include 
                         Logout and Search bar-->
 
                       {% if user.is_authenticated %}
+                        <a class="nav-item nav-link {% if url_name == 'home' %}active{% endif %} text-white"
+                          href="{% url 'home' %}">Home <span class="sr-only">(current)</span></a>
                         <a class="nav-item nav-link {% if url_name == 'account_logout' %}active{% endif %} text-white"
                           href="{% url 'account_logout' %}">Logout</a>
                         

@@ -161,19 +161,25 @@ The Entity Relationship Model for the relational database was first created on p
 
 The Shopping List is a useful tool for a User to update the shopping list wherever they are on their available device, to group shopping list items by category for ease of use when shopping, to see urgent items at a glance when in a hurry, and to easily toggle items off the list as they shop.
 
-Home Page
+Landing Page
 
-On first arriving to the site the user is presented with an uncluttered landing page with simple organiser image.  
+On first arriving to the site the user is presented with an uncluttered Login page with simple instruction to the user to Login to access the features of the application, or if not yet Registered there is a link for a user to follow in order to Register with an account.  
 
-All functionality comes from the Logged In Home page.  A user can add a new shopping list item to their list, toggle the star on/off to mark the item as urgent, toggle the checkbox on/off to mark an item as done, add a note to the item, and also edit and delete an item if the logged in user added the item to the list.  
-
-The contents of The Shopping List, when there are any, are displayed in a table row under headings.
-
-Bespoke pages for following are launched from the Home page:
+Bespoke pages for following are launched from the navigation bar on the Landing page:
 
 - Register
 - Login
+
+Home Page
+
+All features and functionality for the application comes from the logged in 'Home' page.  On the 'Home' page, a user can add a new shopping list item to their list, toggle the star on/off to mark the item as urgent, toggle the checkbox on/off to mark an item as done, add a note to the item, and also edit and delete an item.  
+
+The contents of The Shopping List, when there are any, are displayed in a table on the 'Home' page.
+
+Bespoke pages for following are launched from the Home page:
+
 - Logout
+- Search function
 - Add item
 - Edit item
 - Delete item
@@ -184,9 +190,13 @@ General features on each page
 
 The Navigation Bar 
 
-Pre-Registration the Navigation bar contains three links - Home, Registration and Login.
+Pre-Registration the Navigation bar contains two links - Registration and Login.
 
-After user has logged in, the Navigation bar changes to contain Home, Logout and a Search bar.
+After user has logged in, the Navigation bar changes to contain Home, Logout and a Search feature.
+
+Search Feature
+
+A User can search The Shopping List by names of items or by Category of items and the item or items will be returned to the user in the table.
 
 Footer
 
@@ -195,31 +205,35 @@ The bespoke footer contains a line of text "Made by Monica Murray for CI P4" wit
 
 Screenshots
 
-Landing page
+Login Page, small screen and large screen navigation view
 
-![Home page before registration!]()
+![Login page!](static/images/screenshots/login_screenshot.png)
 
-![Home page after login!]()
+![Login large screen page!](static/images/screenshots/login_large_screen_screenshot.png)
 
 Register Page
 
 ![Register page!](static/images/screenshots/register_screenshot.png)
 
-Login Page
+Home Page
 
-![Login page!](static/images/screenshots/login_screenshot.png)
+![Home page after login!]()
 
 Logout Page
 
 ![Logout Page](static/images/screenshots/logout_screenshot.png)
 
+Search Function
+
+![Search Function](static/images/screenshots/search_function_screenshot.png)
+
 Add Item to The Shopping List
 
-![Add item to TSL!]()
+![Add item to TSL!](static/images/screenshots/add_item_screenshot.png)
 
 Edit Item on The Shopping List
 
-![Edit item on TSL!]()
+![Edit item on TSL!](static/images/screenshots/edit_item_screenshot.png)
 
 Delete Item
 
