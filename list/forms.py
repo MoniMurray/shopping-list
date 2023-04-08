@@ -14,4 +14,4 @@ class NoteForm(forms.ModelForm):
     """Form to add a Note to an item on the user's shopping list"""
     class Meta:
         model = Note
-        fields = ('item', 'body',)
+        fields = ('body',)

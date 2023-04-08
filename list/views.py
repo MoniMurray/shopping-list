@@ -98,40 +98,32 @@ class EditView(UserPassesTestMixin, UpdateView):
         return super(EditView, self).form_valid(form)
 
 
-class NoteView(CreateView):
-    # get an instance of the shopping list item with an id equal to the
-    # one that was clicked in the index.html template but
-    # call the note.html template having populated it with the shopping
-    # list item name (fk onetoonefield) and add our note to
-    # the body field.  When we click submit, we should be returned to
-    # the index.html template
+# get an instance of the shopping list item with an id equal to the
+# one that was clicked in the index.html template but
+# call the note.html template having populated it with the shopping
+# list item name and add our note to the body field, return to 'Home'
 
-    model = Note
-    template_name = 'note.html'
-    form_class = NoteForm
-    pk_url_kwarg = 'pk'
-    # fields = ['item', 'user', 'body',]
-    # fields = ['item', 'body',]
-
-    success_url = reverse_lazy('home')
-
-    def form_valid(self, form):
-        pk_url_kwarg = 'pk'
-        post = self.get_object()
-        form.instance.post = post
-        form.instance.name = self.request.user
-        form.save()
-        return super().form_valid(form)
-
-    # def note_entry(self, item_id):
-    #     entry = Entry.objects.get(self.request, id=item_id)
-
-    # def form_valid(self, form):
-    #     # form = form.save(commit=False)
-    #     form.user = User.objects.get(id=self.request.user.id)
-    #     messages.success(self.request, 'Note Added successfully.')
-    #     form.save()
-    #     return super().form_valid(form)
+def add_note(request, item_id):
+    entry = get_object_or_404(Entry, id=item_id)
+    if request.method == "POST":
+        form = NoteForm(request.POST)
+        if form.is_valid():
+            instance = form.save(commit=False)
+            try:
+                entry = Entry.objects.get(id=item_id)
+            except Entry.DoesNotExist:
+                pass
+            instance.item = entry
+            instance.user = request.user
+            instance.save()
+            return redirect('home')
+    else:
+        form = NoteForm()
+    context = {
+        'entry': entry,
+        'form': form
+    }
+    return render(request, 'note.html', context)
 
 
 class Delete(UserPassesTestMixin, DeleteView):
