@@ -1,28 +1,26 @@
-{% extends 'base.html' %} 
-{% load static %} 
+{% extends 'base.html' %}
+{% load static %}
 
 {% block content %}
 
 <!-- Shopping List Image -->
 <div class="image-container mt-3">
-  <img
-    src="{% static 'images/tamanna-rumee-eD1RNYzzUxc-unsplash (1) (1).jpg' %}"
-    class="img-fluid" width="auto" height="auto"
-    alt="The Shopping List and Organiser landing image"
-  />
-  
+  <img src="{% static 'images/shopping_list_image_of_shopping_bags.jpg' %}" class="img-fluid" width="auto"
+    height="auto" alt="" />
+
 </div>
 
 <div class="card-body justify-content-center">
   <div class="row justify-content-center">
-    
+
     <!-- If a user is authorised, display their Shopping List
     items in a table with each item row containing additional features -->
-    
-  {% if user.is_authenticated %}
-   
+
+    {% if user.is_authenticated %}
+
     <div class="table-responsive-sm table-bordered pt-1">
       <h1>{{user.username}}'s List</h1>
+
       <!-- Add a shopping list item -->
       <button type="button" class="btn btn-lg mb-1">
         <a href="{% url 'add' %}">Add Item</a>
@@ -32,11 +30,11 @@
       <div style="max-width: 100%; max-height: 400px; overflow-y: scroll">
         <table class="table">
 
-          <!-- table heading row -->
+          <!-- Table heading row -->
           <thead>
             <tr>
               <th scope="col" class="w-auto"></th>
-              <th scope="col"class="w-50">Items</th>
+              <th scope="col" class="w-50">Items</th>
 
               <th scope="col" class="w-auto">Quantity</th>
               <th scope="col" class="w-auto">Done</th>
@@ -44,97 +42,90 @@
               <th scope="col" class="w-auto">Delete</th>
             </tr>
           </thead>
-          
-          <!-- table body containing each shopping list item in its
-          own row -->
+
+          <!-- Table body containing a shopping list item and it's 
+            features in its own table row -->
           <tbody>
             {% for entry in entry_list %}
-            <!-- prefer to put empty block in here but keep getting error messages -->
+            
             <tr>
 
-              <!-- Toggle Star on/off -->
+              <!-- Toggle Star on/off to mark item Urgent -->
               {% if entry.star %}
-                <td>
-                  <a href="{% url 'toggle_star' entry.id %}">
-                    <!-- <button type="submit" name="toggle_star" value="{{entry.id}}" class="btn-like"> -->
-                    <i class="fa-solid fa-star" aria-label="star icon" style="color: gold"></i>
-                    <!-- </button> -->
-                  </a>
-                </td>
-              <!-- {{entry.id_ordering}} -->
-              {% else %}
-                <td>
-                  <a href="{% url 'toggle_star' entry.id %}">
-                    <!-- <button type="submit" name="toggle_star" value="{{entry.id}}" class="btn-like"> -->
-                    <i class="fa-regular fa-star" aria-label="star icon" style="color: gold"></i>
-                    <!-- </button> -->
-                  </a>
-                </td>
-              <!-- <td><a href="home/{{entry.id}}"><i class="fa-regular fa-star"></i></a></td> -->
-              {% endif %} 
+              <td>
+                <a href="{% url 'toggle_star' entry.id %}">
+                  <i class="fa-solid fa-star" aria-label="star icon" style="color: gold"></i>
+                </a>
+              </td>
               
-              <!-- Toggle Mark item off as done  -->
+              {% else %}
+              <td>
+                <a href="{% url 'toggle_star' entry.id %}">
+                  <i class="fa-regular fa-star" aria-label="star icon" style="color: gold"></i>
+                </a>
+              </td>
+              
+              {% endif %}
+
+              <!-- Toggle on/off Mark item as Done  -->
               {% if entry.check_item_as_done %}
-                
-                <td class="text-capitalize">
-                  <strike> {{ entry.item_name }} </strike>
-                </td>
-                <td>{{entry.quantity}}</td>
-                <td>
-                  <a href="{% url 'toggle_check' entry.id %}">
-                    
-                    <i class="fa-solid fa-square-check" aria-label="checkbox icon"></i>
-                    
-                  </a>
-                </td>
-                <td></td>
-                <td>
-                  <a href="{% url 'delete' entry.id %}"
-                    ><i class="fa-solid fa-trash-can" aria-label="trash-can icon"></i> Delete</a>
-                </td>
+
+              <td class="text-capitalize">
+                <strike> {{ entry.item_name }} </strike>
+              </td>
+              <td>{{entry.quantity}}</td>
+              <td>
+                <a href="{% url 'toggle_check' entry.id %}">
+
+                  <i class="fa-solid fa-square-check" aria-label="checkbox icon"></i>
+
+                </a>
+              </td>
+              <td></td>
+              <td>
+                <a href="{% url 'delete' entry.id %}"><i class="fa-solid fa-trash-can" aria-label="trash-can icon"></i>
+                  Delete</a>
+              </td>
 
               {% else %}
-                <!-- add a Note to the Shopping list item -->
-                <td class="text-capitalize">
-                  {{ entry.item_name }}
-                  
-                  <p
-                    class="text-capitalize font-italic text-wrap"
-                    style="width: 6rem"
-                  >
-                    <a href="{% url 'note' entry.id %}"
-                      >
-                      <i class="fa-regular fa-message text-center" aria-label="note icon"></i> 
-                      </a>
-                      {{entry.notes}}
-                  </p>
-                </td>
-                <td>{{entry.quantity}}</td>
-                <td>
-                  <a href="{% url 'toggle_check' entry.id %}">
-                    <i class="fa-regular fa-square" aria-label="checkbox icon"></i> 
-                  </a>
-                </td>
+              <!-- add a Note to a Shopping list item -->
+              <td class="text-capitalize">
+                {{ entry.item_name }}
 
-                <!-- Edit the Shopping list item, target by it's id -->
-                <td>
-                  <a href="{% url 'edit' entry.id %}">
-                    <i class="fa-solid fa-pencil" aria-label="pencil icon"></i> Edit</a>
-                </td>
-                <!-- <td><a href="{% url 'note' entry.id %}"><i class="fa-regular fa-message"></i>Note</a><p class="text-capitalize font-italic text-wrap" style="width: 6rem;">{{entry.notes}}</p></td> -->
-                
-                <!-- Delete the Shopping list item, target by it's id -->
-                <td>
-                  <a href="{% url 'delete' entry.id %}">
-                    <i class="fa-solid fa-trash-can"></i> Delete</a>
-                </td>
+                <p class="text-capitalize font-italic text-wrap" style="width: 6rem">
+                  <a href="{% url 'note' entry.id %}">
+                    <i class="fa-regular fa-message text-center" aria-label="note icon"></i>
+                  </a>
+                  {{entry.notes}}
+                </p>
+              </td>
+              <td>{{entry.quantity}}</td>
+              <td>
+                <a href="{% url 'toggle_check' entry.id %}">
+                  <i class="fa-regular fa-square" aria-label="checkbox icon"></i>
+                </a>
+              </td>
+
+              <!-- Edit the Shopping list item, target by it's id -->
+              <td>
+                <a href="{% url 'edit' entry.id %}">
+                  <i class="fa-solid fa-pencil" aria-label="pencil icon"></i> Edit</a>
+              </td>
+              
+              <!-- Delete the Shopping list item, target by it's id -->
+              <td>
+                <a href="{% url 'delete' entry.id %}">
+                  <i class="fa-solid fa-trash-can"></i> Delete</a>
+              </td>
 
               {% endif %}
             </tr>
+
+            <!-- if there are no items in the shopping list -->
             {% empty %}
-              <tr>
+            <tr>
               The Shopping list is currently empty.
-              </tr>
+            </tr>
             {% endfor %}
           </tbody>
         </table>
@@ -143,33 +134,11 @@
     </div>
 
     {% else %}
-    
-    <!-- if user is not authenticated  -->
-    <!-- <div class="table-responsive-sm">
-      <table class="table">
-        <tr></tr>
 
-        {% for entry in entry_list|slice:':3' %}
 
-        <tr>
-          <td class="text-left text-capitalize">{{ entry.item_name }}</td>
-          <td>{{entry.quantity}}</td>
-        </tr>
-        {% empty %}
-        <tr>
-          The Shopping list is currently empty.
-        </tr>
-        {% endfor %}
-      </table> 
-    </div> -->
-    </div>
-    <!-- <div class="row justify-content-center">
-    <p> Please <a href="{% url 'account_signup' %}" class="card-link"> 
-        Register </a>to use The Shopping List application.<br>
-        If you already have an account 
-        <a href="{% url 'account_login' %}" class="card-link">Login</a>.</p>
-    </div> -->
   </div>
-  {% endif %}
+
+</div>
+{% endif %}
 </div>
 {% endblock %}

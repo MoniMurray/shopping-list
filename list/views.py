@@ -38,6 +38,9 @@ def get_context_data(self, **kwargs):
 
 
 class EntryList(LoginRequiredMixin, generic.ListView):
+    """A logged in User will be able to view their entire
+    shopping list in the Home page, and have access to all the features
+    of the list ie. CRUD, Search and Adding Notes"""
 
     model = Entry
     template_name = 'index.html'
@@ -59,12 +62,11 @@ class EntryList(LoginRequiredMixin, generic.ListView):
                     choice[1].lower().startswith(search.lower())])
 
             )
-
         return queryset
 
 
 class AddView(FormView):
-    # CRUD - Create a new shopping list entry using the fields from Entry model
+    """Create a new shopping list entry using the fields from Entry model"""
 
     template_name = 'add_to_list.html'
     form_class = AddForm
@@ -80,15 +82,15 @@ class AddView(FormView):
 
 
 class EditView(UserPassesTestMixin, UpdateView):
-    # CRUD - Edit shopping list entry using the entry's primary key
+    """Edit shopping list entry using the entry's primary key"""
 
     model = Entry
-
     template_name = 'edit_entry.html'
     form_class = AddForm
     pk_url_kwarg = 'pk'
     success_url = reverse_lazy('home')
 
+    # only permit edit if logged-in user created item
     def test_func(self):
         return self.request.user == self.get_object().user
 
@@ -98,12 +100,12 @@ class EditView(UserPassesTestMixin, UpdateView):
         return super(EditView, self).form_valid(form)
 
 
-# get an instance of the shopping list item with an id equal to the
-# one that was clicked in the index.html template but
-# call the note.html template having populated it with the shopping
-# list item name and add our note to the body field, return to 'Home'
-
 def add_note(request, item_id):
+    # get an instance of the shopping list item with an id equal to the
+    # one that was clicked in the index.html template but
+    # call the note.html template having populated it with the shopping
+    # list item name and add our note to the body field, return to 'Home'
+
     entry = get_object_or_404(Entry, id=item_id)
     if request.method == "POST":
         form = NoteForm(request.POST)
@@ -127,7 +129,7 @@ def add_note(request, item_id):
 
 
 class Delete(UserPassesTestMixin, DeleteView):
-    # CRUD - Target the entry with the pk again to Delete Item
+    """Target the entry with the pk again to Delete Item"""
 
     model = Entry
     pk_url_kwarg = 'pk'
@@ -141,12 +143,11 @@ class Delete(UserPassesTestMixin, DeleteView):
     def form_valid(self, form):
         instance = form.save()
         messages.success(self.request, 'Deleted successfully.')
-
         return super(Delete, self).form_valid(form)
 
 
 def toggle_star(request, item_id):
-    # toggle the star state to solid/empty
+    # toggle the star state to On/Off
 
     item = get_object_or_404(Entry, id=item_id)
     item.star = not item.star
@@ -155,7 +156,7 @@ def toggle_star(request, item_id):
 
 
 def toggle_check(request, item_id):
-    # toggle the checkbox state to solid/empty
+    # toggle the checkbox state to On/Off
 
     item = get_object_or_404(Entry, id=item_id)
     item.check_item_as_done = not item.check_item_as_done

@@ -1,4 +1,4 @@
-  @import url('https://fonts.googleapis.com/css2?family=Bona+Nova:wght@700&family=Nanum+Myeongjo&family=Roboto:wght@100&display=swap');
+  @import url("https://fonts.googleapis.com/css2?family=Lato:wght@300&family=Noto+Sans:wght@300&display=swap");
 
 html, body {
     height: 100%;
@@ -6,7 +6,7 @@ html, body {
 
 body {
     background-color: #fff;
-    font-family: 'Nanum Myeongjo', 'Roboto', sans-serif;
+    font-family: 'Lato', sans-serif;
     color: #fff;
     text-align: center;
     font-weight: 300;
@@ -15,37 +15,43 @@ body {
 }
 
 .heading {
-    font-family: 'Bona Nova', sans-serif;
+    font-family: 'Lato', sans-serif;
     text-align: center;
     font-weight: 300;
 }
 
 h1, h2, h3, h4, h5, h6, p {
-    font-family: 'Roboto', sans-serif;
+    font-family: 'Lato', sans-serif;
     color: black;
     font-weight: 700;
 }
 
 
 .form-group {
-    font-family: 'Roboto', sans-serif;
+    font-family: 'Lato', sans-serif;
     color: black;
     font-weight: 700;
 }
 
 a.link {
     font-weight: 800;
+    font-size: large;
+}
+
+.btn {
+    font-size: 1.5rem;
+    font-weight: bold;
 }
 
 .font-italic {
     font-size: smaller;
 }
 
+/* add aspect ratio so size of space required for image is accounted
+for when rendering the page */
 img .img-fluid {
     aspect-ratio: auto 640/360;
-    /* height: auto;
-    width: 100%; */
-
+   
 }
 
 /* Target the active class to underline the active page in the Nav bar*/
@@ -54,21 +60,19 @@ img .img-fluid {
     font-weight: 500;
 }
 
+/* enable scrolling in table so User can view all shopping list items */
 tbody {
     height: 120px;
     overflow-y: scroll;
 }
 
 /* footer */
-
 .footer {
     clear: both;
     position: relative;
     margin-top: -100px; 
     height: 100px;
-     
-
-  } 
+} 
 
   
 /* from Bootstrap */
@@ -97,14 +101,6 @@ tbody {
         background-size: cover;
     }    
 }
-
-/* Large devices (desktops, 992px and up) */
-/* @media (min-width: 992px) { ... } */
-
-/* Extra large devices (large desktops, 1200px and up) */
-/* @media (min-width: 1200px) { ... } */
-
-
 
 .list-group-item {
     border: none;

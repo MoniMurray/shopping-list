@@ -93,13 +93,9 @@ These colours were chosen based on a possible homepage image I used during early
 
 Typography
 
-Google Fonts was used for the following fonts:
+Google Fonts was initially used for the following fonts:
 
-Roboto is used as a traditional, backup font.
-
-Roboto is used for the header text on the site, 700 weight. It is a sans-serif font.
-
-Nanum Myeongjo font is used for the shopping list items, 300 weight. It is a lighter font and font-weight and suits a traditional handwritten shopping list style.
+Roboto and Nanum Myeongjo.  However, during testing these fonts were too light and would pose problems for accessibility of the application.  As such, Lato and using Noto as a backup font were imported from Google Fonts are suit the application style.
 
 
 Wireframes

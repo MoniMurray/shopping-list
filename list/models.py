@@ -2,7 +2,7 @@ from django.db import models
 from django.contrib.auth.models import User
 from cloudinary.models import CloudinaryField
 
-
+# category will appear as a drop down list to user to choose from
 CATEGORY_CHOICES = [
     ('a', 'Fresh'),
     ('b', 'Dairy'),
@@ -16,7 +16,7 @@ CATEGORY_CHOICES = [
     ('j', 'Alcohol')
 ]
 
-
+# user can choose from a number in the drop down list
 QUANTITY_CHOICES = [
     (1, '1'),
     (2, '2'),
