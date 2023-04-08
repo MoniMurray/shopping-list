@@ -5,8 +5,8 @@
 
 <!-- Shopping List Image -->
 <div class="image-container mt-3">
-  <img src="{% static 'images/shopping_list_image_of_shopping_bags.jpg' %}" class="img-fluid" width="auto"
-    height="auto" alt="" />
+  <img src="{% static 'images/shopping_list_image_of_shopping_bags.jpg' %}" class="img-fluid" width="auto" height="auto"
+    alt="" />
 
 </div>
 
@@ -47,7 +47,7 @@
             features in its own table row -->
           <tbody>
             {% for entry in entry_list %}
-            
+
             <tr>
 
               <!-- Toggle Star on/off to mark item Urgent -->
@@ -57,14 +57,14 @@
                   <i class="fa-solid fa-star" aria-label="font awesome solid star icon" style="color: gold"></i>
                 </a>
               </td>
-              
+
               {% else %}
               <td>
                 <a href="{% url 'toggle_star' entry.id %}">
                   <i class="fa-regular fa-star" aria-label="font awesome regular star icon" style="color: gold"></i>
                 </a>
               </td>
-              
+
               {% endif %}
 
               <!-- Toggle on/off Mark item as Done  -->
@@ -83,7 +83,8 @@
               </td>
               <td></td>
               <td>
-                <a href="{% url 'delete' entry.id %}"><i class="fa-solid fa-trash-can" aria-label="font awesome trash-can delete icon"></i>
+                <a href="{% url 'delete' entry.id %}"><i class="fa-solid fa-trash-can"
+                    aria-label="font awesome trash-can delete icon"></i>
                   Delete</a>
               </td>
 
@@ -111,7 +112,7 @@
                 <a href="{% url 'edit' entry.id %}">
                   <i class="fa-solid fa-pencil" aria-label="font awesome solid pencil icon"></i> Edit</a>
               </td>
-              
+
               <!-- Delete the Shopping list item, target by it's id -->
               <td>
                 <a href="{% url 'delete' entry.id %}">

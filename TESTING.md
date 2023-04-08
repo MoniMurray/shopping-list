@@ -1,9 +1,6 @@
 PROJECT PORTFOLIO 4 THE SHOPPING LIST - TESTING
 
-
-👩🏻‍💻 View an example of this section here
-
-Add an image of the finished site here. I like to use amiresponsive to get an image of my site on all device sizes, and amiresponsive allows you to click links on the page and scroll, so each device can show a different element of your site.
+![Amiresponsive image](static/images/screenshots/amiresponsive_screenshot.png)
 
 
 CONTENTS
@@ -29,13 +26,26 @@ The most popular HTML validator is W3C.
 
 CSS Validation
 
-CSS Validation can only be done by copying and pasting the CSS file contents into the direct input. Make sure that the checkbox for CSS is selected.
+CSS Validation can only be done by copying and pasting the CSS file contents into the direct input. 
 
-W3C CSS Validation
+[W3C CSS Validation](https://jigsaw.w3.org/css-validator/validator)
+
+![W3C CSS Validation](static/images/screenshots/w3c_css_validation.png)
 
 Python Code testing
 
 [CI Python Linter](https://pep8ci.herokuapp.com/)
+
+All clear, no errors found.
+
+The following files were tested:
+
+- views.py
+- admin.py
+- forms.py
+- models.py
+- test_views.py
+- test_models.py
 
 
 Lighthouse
@@ -85,10 +95,6 @@ Testing Features
 
 This is where you will test the features as you create them in the README against your site. Use a table for this section - base the table on the User Acceptance Criteria for the User Cases.
 
-Full Testing
-👩🏻‍💻 View an example of a completed full testing section here
-
-Full testing is when you go through the site and test every single thing that can be tested, which should be displayed in a table.
 
 Coverage Tool
 
@@ -182,7 +188,7 @@ This is where I tested the User Stories I created and listed in [AGILE.md](AGILE
 | As a logged in user I can tick a star icon so that the item is marked Urgent.                                   | 36          | Test User can toggle 'Star' icon on(solid)/off(outline),                                                                                                                                                                                                                                                                                      | Pass     |
 | As a logged in user I can add a comment to an item so that that item has more detail                            | 37          | Test User can click on the 'Note' icon to launch Note form,                                                                                                                                                                                                                                                                                   | Pass     |
 |                                                                                                                 | 38          | Test Item name can be chosen from drop-down list                                                                                                                                                                                                                                                                                              | Pass     |
-|                                                                                                                 | 39          | Test User field is pre-populated with logged in User,                                                                                                                                                                                                                                                                                         | Fail     |
+|                                                                                                                 | 39          | Test User field is pre-populated with logged in User,                                                                                                                                                                                                                                                                                         | Pass     |
 |                                                                                                                 | 40          | Test User can add text to Body field,                                                                                                                                                                                                                                                                                                         | Pass     |
 |                                                                                                                 | 41          | Test 'Cancel' button returns User to homepage without changes to that item,                                                                                                                                                                                                                                                                   | Pass     |
 |                                                                                                                 | 42          | Test if user clicks 'Submit' button it will prompt user to complete required fields if left blank,                                                                                                                                                                                                                                            | Pass     |

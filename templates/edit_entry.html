@@ -15,21 +15,21 @@ pre-populated form to the user for 'editing' -->
     <form method="post">
         {% csrf_token %}
         {% for field in form.visible_fields %}
-            <div class="form-group row offset-md-2">
+        <div class="form-group row offset-md-2">
             <label for="{{field.id_for_label}}" class="col-sm-2 col-form-label">{{ field.label }}:</label>
             <div class="col-sm-8">
-            {{ field|add_class:'form-control col-sm-8 text-capitalize'}}
+                {{ field|add_class:'form-control col-sm-8 text-capitalize'}}
             </div>
             {% for error in field.errors %}
-                <span class="help-block">{{error}}</span>
+            <span class="help-block">{{error}}</span>
             {% endfor %}
-            </div>
+        </div>
         {% endfor %}
-            
+
         <div class="form-group pt-3">
-        <button type="submit" class="btn btn-primary mb-3">Submit</button>
-        <a href="{% url 'home' %}" class="btn btn-default mb-3">Cancel</a>
+            <button type="submit" class="btn btn-primary mb-3">Submit</button>
+            <a href="{% url 'home' %}" class="btn btn-default mb-3">Cancel</a>
         </div>
     </form>
 </div>
-{% endblock %} 
+{% endblock %}

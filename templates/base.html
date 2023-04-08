@@ -14,159 +14,158 @@
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/css/bootstrap.min.css"
     integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
 
-      <!-- link to css -->
+  <!-- link to css -->
   <link rel="stylesheet" href="{% static 'css/style.css' %}">
 
 
   <!-- font awesome kit code -->
   <script src="https://kit.fontawesome.com/785586cce1.js" crossorigin="anonymous"></script>
-  
-  
-    <title>THE SHOPPING LIST</title>
+
+
+  <title>THE SHOPPING LIST</title>
 </head>
 
 <!-- Content -->
+
 <body class="dark-bg">
 
-    <!-- navigation -->
-    <header>
+  <!-- navigation -->
+  <header>
 
-      <!-- Checks whether the current url name is being used and if it is
+    <!-- Checks whether the current url name is being used and if it is
         turn on the active class to underline that navigation link name -->
-      {% with request.resolver_match.url_name as url_name %}
-                
-          <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
-            <div class="container-fluid">
-              <div class="nav bg-dark">
-                <a class="navbar-brand" href="{% url 'home' %}"></a>
-                  <button class="navbar-toggler" type="button" 
-                  data-toggle="collapse" data-target="#navbarNavAltMarkup"
-                  aria-controls="navbarNavAltMarkup" aria-expanded="false" 
-                  aria-label="Toggle navigation">
-                  <span class="navbar-toggler-icon"></span>
-                  </button>
-                  <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
-                    <div class="navbar-nav">
-                      
+    {% with request.resolver_match.url_name as url_name %}
 
-                        <!-- Checks that a registered user is logged in 
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+      <div class="container-fluid">
+        <div class="nav bg-dark">
+          <a class="navbar-brand" href="{% url 'home' %}"></a>
+          <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup"
+            aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+            <div class="navbar-nav">
+
+
+              <!-- Checks that a registered user is logged in 
                         and changes navigation bar content to Home, 
                         Logout and Search bar-->
 
-                      {% if user.is_authenticated %}
-                        <a class="nav-item nav-link {% if url_name == 'home' %}active{% endif %} text-white"
-                          href="{% url 'home' %}">Home <span class="sr-only">(current)</span></a>
-                        <a class="nav-item nav-link {% if url_name == 'account_logout' %}active{% endif %} text-white"
-                          href="{% url 'account_logout' %}">Logout</a>
-                        
-                        </div>
-                  </div>
-              </div>
-                        <form class="d-inline-flex" role="search" method="GET" action="{% url 'home' %}">
-                          <input class="form-control me-2" name="query" type="search" placeholder="Search Item or Category" aria-label="Search">
-                          <button class="btn btn-outline-success ml-1" type="submit">Search</button>
-                        </form>
-                        
-                        <!-- Else navigation bar contains only Register 
-                          and Login to prevent unauthorised users proceeding -->
-                        {% else %}
-                        <a class="nav-item nav-link {% if url_name == 'account_signup' %}active{% endif %} text-white"
-                          href="{% url 'account_signup' %}">Register</a>
-                        <a class="nav-item nav-link {% if url_name == 'account_login' %}active{% endif %} text-white"
-                          href="{% url 'account_login' %}">Login</a>
-                      
-                      {% endif %}
+              {% if user.is_authenticated %}
+              <a class="nav-item nav-link {% if url_name == 'home' %}active{% endif %} text-white"
+                href="{% url 'home' %}">Home <span class="sr-only">(current)</span></a>
+              <a class="nav-item nav-link {% if url_name == 'account_logout' %}active{% endif %} text-white"
+                href="{% url 'account_logout' %}">Logout</a>
 
-                    </div>
-                  </div>
-              </div>
-              
             </div>
-          </nav>  
-      {% endwith %}
-
-      <!-- heading -->
-      <div class="heading-sm text-center">
-        <h1 class="m-5">
-          THE SHOPPING LIST<br>Organised | Everywhere
-        </h1>
-      </div>
-    </header>
-
-    <!-- Django flash messages -->
-
-    <div class="container">
-      <div class="row">
-        <div class="col-md-8 offset-md-2">
-          {% for message in messages %}
-          <div class="alert {{ message.tags }} alert-dismissible fade show" id="msg" role="alert">
-            {{ message | safe }}
-            <button type="button" class="close btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
           </div>
-
-          {% endfor %}
         </div>
+        <form class="d-inline-flex" role="search" method="GET" action="{% url 'home' %}">
+          <input class="form-control me-2" name="query" type="search" placeholder="Search Item or Category"
+            aria-label="Search Item or Category">
+          <button class="btn btn-outline-success ml-1" type="submit">Search</button>
+        </form>
+
+        <!-- Else navigation bar contains only Register 
+                          and Login to prevent unauthorised users proceeding -->
+        {% else %}
+        <a class="nav-item nav-link {% if url_name == 'account_signup' %}active{% endif %} text-white"
+          href="{% url 'account_signup' %}">Register</a>
+        <a class="nav-item nav-link {% if url_name == 'account_login' %}active{% endif %} text-white"
+          href="{% url 'account_login' %}">Login</a>
+
+        {% endif %}
+
+      </div>
+      </div>
+      </div>
+
+      </div>
+    </nav>
+    {% endwith %}
+
+    <!-- heading -->
+    <div class="heading-sm text-center">
+      <h1 class="m-5">
+        THE SHOPPING LIST<br>Organised | Everywhere
+      </h1>
+    </div>
+  </header>
+
+  <!-- Django flash messages -->
+
+  <div class="container">
+    <div class="row">
+      <div class="col-md-8 offset-md-2">
+        {% for message in messages %}
+        <div class="alert {{ message.tags }} alert-dismissible fade show" id="msg" role="alert">
+          {{ message | safe }}
+          <button type="button" class="close btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+        </div>
+
+        {% endfor %}
       </div>
     </div>
+  </div>
 
-    <!-- main shopping list content displayed as a card -->
-<div class="card text-center bg-light">
+  <!-- main shopping list content displayed as a card -->
+  <div class="card text-center bg-light">
 
-        {% block content %}
-        <!-- content goes here -->
-        {% endblock %}
-
-
-
+    {% block content %}
+    <!-- content goes here -->
+    {% endblock %}
 
 
 
-      </div>
 
 
 
-      <!-- footer -->
+  </div>
 
-      <footer class="footer mt-auto py-4 light-bg bg-dark">
 
-        <p class="m-0 text-center text-white">
-          Made by Monica Murray for CI P4 
-          <a href="https://github.com/MoniMurray/shopping-list" target="_blank" rel="noopener"
-          aria-label="Visit my Github profile to see more about this project (Opens a new browser page)">
-          <i class="fa-brands fa-github pl-1"></i></a></p>
-        <p class="m-0 text-center text-white">Follow me: <a href="https://www.facebook.com" target="_blank"
-            rel="noopener" aria-label="Visit my Facebook page (Opens a new browser page)"><i
-              class="fa-brands fa-facebook pl-2"></i></a>
-          <a href="https://www.instagram.com" target="_blank" rel="noopener"
-            aria-label="Visit my Instagram page (Opens a new browser page)"><i class="fa-brands fa-instagram pl-2"></i></a>
-          <a href="https://www.twitter.com" target="_blank" rel="noopener"
-            aria-label="Visit my Twitter page (Opens a new browser page)"><i class="fa-brands fa-twitter pl-2"></i></a>
-           
 
-      </footer>
+  <!-- footer -->
 
-      <!-- Use Javascript to automatically dismiss flash success 
+  <footer class="footer mt-auto py-4 light-bg bg-dark">
+
+    <p class="m-0 text-center text-white">
+      Made by Monica Murray for CI P4
+      <a href="https://github.com/MoniMurray/shopping-list" target="_blank" rel="noopener"
+        aria-label="Visit my Github profile to see more about this project (Opens a new browser page)">
+        <i class="fa-brands fa-github pl-1"></i></a></p>
+    <p class="m-0 text-center text-white">Follow me: <a href="https://www.facebook.com" target="_blank" rel="noopener"
+        aria-label="Visit my Facebook page (Opens a new browser page)"><i class="fa-brands fa-facebook pl-2"></i></a>
+      <a href="https://www.instagram.com" target="_blank" rel="noopener"
+        aria-label="Visit my Instagram page (Opens a new browser page)"><i class="fa-brands fa-instagram pl-2"></i></a>
+      <a href="https://www.twitter.com" target="_blank" rel="noopener"
+        aria-label="Visit my Twitter page (Opens a new browser page)"><i class="fa-brands fa-twitter pl-2"></i></a>
+
+
+  </footer>
+
+  <!-- Use Javascript to automatically dismiss flash success 
         messages after a 3 second delay -->
 
-      <script>
-        setTimeout(function () {
-          let messages = document.getElementById("msg");
-          let alert = new bootstrap.Alert(messages);
-          alert.close();
-        }, 3000);
-      </script>
-      
-      <!-- link to js -->
+  <script>
+    setTimeout(function () {
+      let messages = document.getElementById("msg");
+      let alert = new bootstrap.Alert(messages);
+      alert.close();
+    }, 3000);
+  </script>
 
-      <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
-        integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous">
-      </script>
-      <script src="https://cdn.jsdelivr.net/npm/popper.js@1.14.7/dist/umd/popper.min.js"
-        integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous">
-      </script>
-      <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/js/bootstrap.min.js"
-        integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous">
-      </script>
+  <!-- link to js -->
+
+  <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+    integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous">
+  </script>
+  <script src="https://cdn.jsdelivr.net/npm/popper.js@1.14.7/dist/umd/popper.min.js"
+    integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous">
+  </script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/js/bootstrap.min.js"
+    integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous">
+  </script>
 
 </body>
 

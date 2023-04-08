@@ -12,13 +12,13 @@
         {% csrf_token %}
         <p class="text-capitalize">Are you sure you want to delete {{ entry.item_name }}?</p>
         {% for error in field.errors %}
-                <span class="help-block">{{error}}</span>
+        <span class="help-block">{{error}}</span>
         {% endfor %}
-       
+
         <div class="form-group pt-3">
             <button type="submit" class="btn btn-primary mb-3">Delete</button>
             <a href="{% url 'home' %}" class="btn btn-default mb-3">Cancel</a>
-            </div>
+        </div>
     </form>
 </div>
 

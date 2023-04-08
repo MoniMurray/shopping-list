@@ -22,8 +22,8 @@ class EntryAdmin(SummernoteModelAdmin):
         'star',
         'check_item_as_done')
     # add the additional table to the Entry model table in admin's view
-    inlines = [EntryNoteInline,]
-    list_filter = ['category',]
+    inlines = [EntryNoteInline, ]
+    list_filter = ['category', ]
     search_fields = ['item_name', 'category']
     actions = ['mark_as_urgent', 'mark_as_done']
 
@@ -45,5 +45,5 @@ class NoteAdmin(SummernoteModelAdmin):
     # a summernote field
     list_filter = ('item', 'added_on')
     list_display = ('item', 'added_on')
-    search_fields = ['item',]
+    search_fields = ['item', ]
     summernote_fields = ('body')

@@ -57,7 +57,9 @@ The six-week deadline is fixed and the timeline is tight.  MVP is priority.
 
 - Structure
 
-User will only have access to features and functionality following registration.  Registration and Login links are on the Nav bar and also on a reminder text paragraph on the Landing page.  Successful login expands to a 'Home' page view and returns an authenticated view of Shopping list, with add, edit, delete, toggling, and search features.  Logout feature is automatic following successful login and appears on navigation bar.  Logout returns the user to Login page.
+To ensure the Security of a registered user's data, User will only have access to features and functionality following registration and login.  Registration and Login links are on the Nav bar and also on a reminder text paragraph on the Landing page.  Successful login expands to a 'Home' page view and returns an authenticated view of The Shopping List, with add, edit, delete, toggling, and search features.  Logout feature is automatic following successful login and appears on navigation bar.  Logout returns the user to Login page.
+
+The functionality of The Shopping List is a relational database-backed MVC web application which allows the user to store and manipulate their shopping list items, which are data records, and where that data is stored in a consistent and well-organised manner..
 
 - Skeleton
 
