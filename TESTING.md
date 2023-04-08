@@ -19,19 +19,13 @@ AUTOMATED TESTING<a name="automated testing"></a>
 Automated Testing includes all testing that is carried out by a program -  W3C HTML validation and CSS Validation, PEP8 Python Compliance, Lighthouse responsiveness.
 
  W3C Validator
-👩🏻‍💻 View an example of a completed W3C HTML & CSS validation section here
 
-The most popular HTML validator is W3C. There are two ways to validate the HTML for your first milestone - you can copy the live link for your site page and paste into the validate by URI field, or you can copy all the code for your page and paste this into the validate by direct input field.
+The most popular HTML validator is W3C. 
 
-URL Input
-If you validate with your sites URL, you can run the validation and then copy the link from the address bar and insert the link here as your proof of validation.
+[W3C URL Validator](https://validator.w3.org/nu/?doc=https%3A%2F%2Fmym-shopping-list.herokuapp.com%2F)
 
-W3C URL Validator
+![W3C URL Validato](static/images/screenshots/w3validator_result.png)
 
-Direct Input
-If you validate with the code, you will need to screenshot the validation results and then link the image here.
-
-W3C Direct Input Validator
 
 CSS Validation
 
@@ -43,21 +37,46 @@ Python Code testing
 
 [CI Python Linter](https://pep8ci.herokuapp.com/)
 
+
 Lighthouse
-👩🏻‍💻 View an example of a completed lighthouse testing section here
 
 Lighthouse Testing is part of the Chrome Developer Tools. For more information on how to use this tool, please visit chrome Lighthouse.
 
 You will need to run the Lighthouse testing on each individual page of your site, for desktop as a minimum. If you have time it would be great to also add in the mobile testing.
 
-WAVE
-👩🏻‍💻 View an example of a completed WAVE testing section here
+Login page - Desktop
 
-WAVE is an accessibility testing tool. I like to run this on each page of my site and take a screenshot of the results to add here. They have a website for testing and a Chrome extension.
+![Login page - Desktop](static/images/screenshots/lighthouse_score_screenshot.png)
 
-Wave Desktop
+Register page - Desktop
 
-Wave Exetension
+![Register page - Desktop](static/images/screenshots/lighthouse_register_desktop_score_screenshot.png)
+
+Logout page - Desktop
+
+![Logout page - Desktop](static/images/screenshots/lighthouse_logout_desktop_score_screenshot.png)
+
+Home page - Desktop
+
+![Home page - Desktop](static/images/screenshots/lighthouse_home_desktop_score_screenshot.png)
+
+Add Item page - Desktop
+
+![Add Item page - Desktop](static/images/screenshots/lighthouse_add_item_desktop_score_screenshot.png)
+
+Edit Item page - Desktop
+
+![Edit Item page - Desktop](static/images/screenshots/lighthouse_edit_desktop_score_screenshot.png)
+
+Delete Item page - Desktop
+
+![Delete Item page - Desktop](static/images/screenshots/lighthouse_delete_desktop_score_screenshot.png)
+
+Add Note page - Desktop
+
+![Add Note page - Desktop](static/images/screenshots/lighthouse_add_note_desktop_score_screenshot.png)
+
+
 
 I tested this project using [Django TestCase](https://docs.djangoproject.com/en/4.1/topics/testing/overview/)
 

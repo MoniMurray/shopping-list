@@ -54,14 +54,14 @@
               {% if entry.star %}
               <td>
                 <a href="{% url 'toggle_star' entry.id %}">
-                  <i class="fa-solid fa-star" aria-label="star icon" style="color: gold"></i>
+                  <i class="fa-solid fa-star" aria-label="font awesome solid star icon" style="color: gold"></i>
                 </a>
               </td>
               
               {% else %}
               <td>
                 <a href="{% url 'toggle_star' entry.id %}">
-                  <i class="fa-regular fa-star" aria-label="star icon" style="color: gold"></i>
+                  <i class="fa-regular fa-star" aria-label="font awesome regular star icon" style="color: gold"></i>
                 </a>
               </td>
               
@@ -77,13 +77,13 @@
               <td>
                 <a href="{% url 'toggle_check' entry.id %}">
 
-                  <i class="fa-solid fa-square-check" aria-label="checkbox icon"></i>
+                  <i class="fa-solid fa-square-check" aria-label="font awesome solid checkbox icon"></i>
 
                 </a>
               </td>
               <td></td>
               <td>
-                <a href="{% url 'delete' entry.id %}"><i class="fa-solid fa-trash-can" aria-label="trash-can icon"></i>
+                <a href="{% url 'delete' entry.id %}"><i class="fa-solid fa-trash-can" aria-label="font awesome trash-can delete icon"></i>
                   Delete</a>
               </td>
 
@@ -94,7 +94,7 @@
 
                 <p class="text-capitalize font-italic text-wrap" style="width: 6rem">
                   <a href="{% url 'note' entry.id %}">
-                    <i class="fa-regular fa-message text-center" aria-label="note icon"></i>
+                    <i class="fa-regular fa-message text-center" aria-label="font awesome regular add note icon"></i>
                   </a>
                   {{entry.notes}}
                 </p>
@@ -102,20 +102,20 @@
               <td>{{entry.quantity}}</td>
               <td>
                 <a href="{% url 'toggle_check' entry.id %}">
-                  <i class="fa-regular fa-square" aria-label="checkbox icon"></i>
+                  <i class="fa-regular fa-square" aria-label="font awesome regular checkbox icon"></i>
                 </a>
               </td>
 
               <!-- Edit the Shopping list item, target by it's id -->
               <td>
                 <a href="{% url 'edit' entry.id %}">
-                  <i class="fa-solid fa-pencil" aria-label="pencil icon"></i> Edit</a>
+                  <i class="fa-solid fa-pencil" aria-label="font awesome solid pencil icon"></i> Edit</a>
               </td>
               
               <!-- Delete the Shopping list item, target by it's id -->
               <td>
                 <a href="{% url 'delete' entry.id %}">
-                  <i class="fa-solid fa-trash-can"></i> Delete</a>
+                  <i class="fa-solid fa-trash-can" aria-label="font awesome solid trash-can delete icon"></i> Delete</a>
               </td>
 
               {% endif %}
