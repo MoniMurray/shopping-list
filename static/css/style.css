@@ -79,6 +79,7 @@ tbody {
 
 /* Small devices  */
   @media screen and (max-width: 600px) {
+
     table {width:100%;}
     thead {display: none;}
     tr:nth-of-type(2n) {background-color: inherit;}
@@ -89,18 +90,26 @@ tbody {
         display: block;
         text-align:center;  
     }
+
+    .image-container {
+        background: url(../shopping_bags.webp) no-repeat center center;
+        height: 100%;
+    
+        background-color: #fff;
+        background-size: cover;
+    } 
  }
 
 /* Medium devices (tablets, 768px and up) */
-@media (min-width: 768px) { 
+/* @media (min-width: 768px) { 
     .image-container {
-        background: url(../organiser_image.jpg) no-repeat center center;
+        background: url(../shopping_bags.webp) no-repeat center center;
         height: 100%;
     
         background-color: #fff;
         background-size: cover;
     }    
-}
+} */
 
 .list-group-item {
     border: none;
