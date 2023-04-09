@@ -91,13 +91,13 @@ tbody {
         text-align:center;  
     }
 
-    .image-container {
+    /* .image-container {
         background: url(../shopping_bags.webp) no-repeat center center;
         height: 100%;
     
         background-color: #fff;
         background-size: cover;
-    } 
+    }  */
  }
 
 /* Medium devices (tablets, 768px and up) */
