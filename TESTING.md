@@ -207,14 +207,15 @@ Full Testing
 
 Full testing was performed on the following devices:
 
-Laptop:
-Samsung
-iPhone12
+- Laptop
+- Samsung
+- iPhone12
 
 Each device tested the site using the following browsers:
 
-Google Chrome
-Firefox
+- Google Chrome
+- Firefox
+
 Additional testing was taken by friends and family on a variety of devices and screen sizes. A Big thank you to CI colleagues for taking the time to thoroughly test the site for me.
 
 | Feature                                          | Expected Outcome                                                                                                                                                              | Testing Performed                                      | Result                                                                                                             | Pass/Fail |
