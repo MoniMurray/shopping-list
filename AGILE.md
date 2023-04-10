@@ -15,13 +15,13 @@ The Shopping List
 I have used GitHub Projects to plan the Agile development of my project.  I created a new project in the Projects tab of my repository, named ['@MoniMurray's Shopping List Project'](https://github.com/users/MoniMurray/projects/6).  Within this Project I used a Kanban Board to track each User Story as I incrementally developed the MVP of the project.  
 
 This is a screenshot of the Kanban board in Projects.
-![Kanban board in Projects!](static/images/screenshots/agile/kanban_board.png) 
+![Kanban board in Projects!](readme_media/screenshots/agile/kanban_board.png) 
 
 **USER STORIES**<a name="user_stories"></a>
 
 A user story is a small, self-contained unit of development.  They are used to map the development progress of the project via a Kanban board.  I have used these units in my Project to incrementally achieve the MVP.  Each user story is based on a bespoke user story Template which is created in the Settings tab of my GitHub repository.
 
-![bespoke user story Template!](static/images/screenshots/agile/user_story_bespoke_template.png)
+![bespoke user story Template!](readme_media/screenshots/agile/user_story_bespoke_template.png)
 
 Each User Story extends from the Template and is created in the Issues tab of my Github repository.  
 
@@ -128,7 +128,7 @@ I have used the acceptance criteria steps to create tasks to facilitate the exec
 | \- On the landing page I can see the shopping list;<br>\- If I am registered/logged in, I can see the expanded view shopping list;<br>\- If a new item is added to the shopping list I can see it on the list.                                                                                                                                                                                                                                                                 | 1\. Create the view code in views.py;<br>2\. Create the base.html template to render the view, extend base.html into index.html, add if statement to conditionally check if user is authenticated to render full list or else a limited list;<br>3\. Connect up the URLS in the urls.py file                                                                                                                                                                                                                                                                       |
 
 This is a screenshot of the Kandban board as I worked through the User Story Tasks.
-![User Story Tasks!](static/images/screenshots/agile/Toggling_In_Progress.png).
+![User Story Tasks!](readme_media/screenshots/agile/Toggling_In_Progress.png).
 
 You will see from this screenshot above that some User Stories are in the 'Done' column, those whose User Story Tasks I was actively working on when this screenshot was captured are visible in the 'In Progress' column, and User Stories in the 'ToDo' column which have yet to be assigned to me to be worked on.
 
