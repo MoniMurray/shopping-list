@@ -86,11 +86,11 @@ Colour Scheme
 
 The Shopping List colour scheme is designed to be crisp, clean, sophisticated.  I used [Coolors](https://coolors.co) to generate a colour palette.
 
-![colour palette!](static/images/coolorspalette.png). 
+![colour palette!](readme_media/wireframes/coolorspalette.png). 
 
 These colours were chosen based on a possible homepage image I used during early development of a personal organiser which employed a colour palette which was cool and calming.
 
-![personal organiser!](static/images/organiser_image.jpg) .
+![personal organiser!](readme_media/wireframes/organiser_image.jpg)
 
 
 Typography
@@ -110,51 +110,51 @@ The following are the Wireframes I created to represent how the Registration, Lo
 
 Restricted view of Homepage to an unregistered user
 
-![Restricted Homepage!](static/images/wireframes/Authentication-restricted-homepage-wireframe.png)
+![Restricted Homepage!](readme_media/wireframes/Authentication-restricted-homepage-wireframe.png)
 
 User Registration form 
 
-![form!](static/images/wireframes/Registration-form-wireframe.png)
+![form!](readme_media/wireframes/Registration-form-wireframe.png)
 
 Registered user Login form 
 
-![form!](static/images/wireframes/Login-form-wireframe.png)
+![form!](readme_media/wireframes/Login-form-wireframe.png)
 
 User Authentication Confirmed, with additional user functionality 
 
-![Homepage expanded view!](static/images/wireframes/Authentication-confirmed-homepage-wireframe.png)
+![Homepage expanded view!](readme_media/wireframes/Authentication-confirmed-homepage-wireframe.png)
 
 - CRUD
 
 Add Item form
 
-![Add Item!](static/images/wireframes/Add-item-wireframe.png)
+![Add Item!](readme_media/wireframes/Add-item-wireframe.png)
 
 Edit Item form
 
-![Edit Item!](static/images/wireframes/Edit-item-wireframe.png)
+![Edit Item!](readme_media/wireframes/Edit-item-wireframe.png)
 
 Delete Item Confirmation page
 
-![Delete Item!](static/images/wireframes/Delete-item-user-clarification-msg-wireframe.png)
+![Delete Item!](readme_media/wireframes/Delete-item-user-clarification-msg-wireframe.png)
 
 - User Messages Wireframes
 
 These messages will be presented to the User as Flash messages which will automatically close after 3 seconds.
 
-![Successful Login!](static/images/wireframes/Successful-login-confirmation-msg-wireframe.png)
+![Successful Login!](readme_media/wireframes/Successful-login-confirmation-msg-wireframe.png)
 
-![User Clarification of Logout Request!](static/images/wireframes/Logout-user-clarification-msg-wireframe.png)
+![User Clarification of Logout Request!](readme_media/wireframes/Logout-user-clarification-msg-wireframe.png)
 
-![Flash Success message on Deletion!](static/images/wireframes/Item-deletion-successful-user-flash-msg-wireframe.png)
+![Flash Success message on Deletion!](readme_media/wireframes/Item-deletion-successful-user-flash-msg-wireframe.png)
 
-![Flash Success message on Adding Item!](static/images/wireframes/Add-item-user-flash-msg-wireframe.png)
+![Flash Success message on Adding Item!](readme_media/wireframes/Add-item-user-flash-msg-wireframe.png)
 
 The Entity Relationship Model for the relational database was first created on paper and then a model designed using Smartdraw.
 
-![SmartdrawERD!](static/images/wireframes/ERD_Shopping_List_created_with_smartdraw.png)
+![SmartdrawERD!](readme_media/wireframes/ERD_Shopping_List_created_with_smartdraw.png)
 
-![DIAGRAM!](static/images/wireframes/Shopping_List_ERD.png)
+![DIAGRAM!](readme_media/wireframes/Shopping_List_ERD.png)
 
 
 **FEATURES**<a name="features"></a>
@@ -210,82 +210,90 @@ Screenshots
 
 Login Page, small screen navigation view. 
 
-![Login page!](static/images/screenshots/login_screenshot.png)
+![Login page!](readme_media/screenshots/functionality/login_screenshot.png)
 
 Login Page, large screen navigation view.
 
-![Login large screen page!](static/images/screenshots/login_large_screen_screenshot.png)
+![Login large screen page!](readme_media/screenshots/functionality/login_large_screen_screenshot.png)
 
 Register Page
 
-![Register page!](static/images/screenshots/register_screenshot.png)
+![Register page!](readme_media/screenshots/functionality/register_screenshot.png)
 
 Home Page, flash successful login message.
 
-![Login flash success message](static/images/screenshots/flash_login_success_screenshot.png)
+![Login flash success message](readme_media/screenshots/functionality/flash_login_success_screenshot.png)
 
 Home Page
 
-![Home page after login!](static/images/screenshots/home_page_screenshot.png)
+![Home page after login!](readme_media/screenshots/functionality/home_page_screenshot.png)
 
 Logout Page
 
-![Logout Page](static/images/screenshots/logout_screenshot.png)
+![Logout Page](readme_media/screenshots/functionality/logout_screenshot.png)
 
 Logout Page, flash success message.
 
-![Logout flash success message](static/images/screenshots/flash_logout_success_screenshot.png)
+![Logout flash success message](readme_media/screenshots/functionality/flash_logout_success_screenshot.png)
 
 Search Function
 
-![Search Function](static/images/screenshots/search_function_screenshot.png)
+![Search Function](readme_media/screenshots/functionality/search_function_screenshot.png)
 
 Add Item to The Shopping List
 
-![Add item to TSL!](static/images/screenshots/add_item_screenshot.png)
+![Add item to TSL!](readme_media/screenshots/functionality/add_item_screenshot.png)
 
 Add Item, flash success message
 
-![Add Item flash success message](static/images/screenshots/flash_add_success_screenshot.png)
+![Add Item flash success message](readme_media/screenshots/functionality/flash_add_success_screenshot.png)
 
 Edit Item on The Shopping List
 
-![Edit item on TSL!](static/images/screenshots/edit_item_screenshot.png)
+![Edit item on TSL!](readme_media/screenshots/functionality/edit_item_screenshot.png)
 
 Edit Item, flash success message
 
-![Edit Item flash success message](static/images/screenshots/flash_edit_success_screenshot.png)
+![Edit Item flash success message](readme_media/screenshots/functionality/flash_edit_success_screenshot.png)
 
 Delete Item
 
-![Delete from TSL!](static/images/screenshots/delete_screenshot.png)
+![Delete from TSL!](readme_media/screenshots/functionality/delete_screenshot.png)
+
+Delete Item, flash success message
+
+![Delete Item flash success message](readme_media/screenshots/functionality/flash_delete_success_screenshot.png)
 
 Scroll table list
 
-![Scroll table list](static/images/screenshots/scroll_table_list_screenshot.png)
+![Scroll table list](readme_media/screenshots/functionality/scroll_table_list_screenshot.png)
 
 Add Note
 
-![Add Note to item!]()
+![Add Note to item!](readme_media/screenshots/functionality/add_note_screenshot.png)
 
 403 Page
 
-![Bespoke 403 Error page!](static/images/screenshots/403_page_screenshot.png)
+![Bespoke 403 Error page!](readme_media/screenshots/functionality/403_page_screenshot.png)
 
 
 
 Future Implementations
 
-Future features of the application would be to add additional organiser functions to plan calendar events, holidays and finances with links to these features added to Navigation and launching as seperate features for the Registered User.
+Future features of the application would be to add additional personal organiser functions to enable the User to plan calendar events, holidays and finances, and with links to these features added to Navigation enabling them to launch as seperate features for the Registered User.
 
 
 Accessibility
 
-Be an amazing developer and get used to thinking about accessibility in all of your projects!
+Throughout this project I have endeavoured to implement good accessibility practices, but in testing at the end of the project I acknowledge that I score poorly in this regard.  Using the tips provided in Lighthouse and [Wave](https://wave.webaim.org/) I have improved their scores and learned more about developing an accessible site.
 
-This is the place to make a note of anything you have done with accessibility in mind. Some examples include:
+Some examples include:
 
 I have used [fontawesome](https://fontawesome.com/search?q=checkbox&o=r&m=free) icons in my application and to each icon I have added aria-labels to enable screen readers to understand them.  I have endeavored to ensure the application meets the minimum contrast requirements between background and text colours.  I have chosen font sizes and type that are dyslexia/accessible friendly, for example there are no buttons or text that are in all capitals.
+
+[The A11y Collective](https://www.a11y-collective.com/) is a useful site at which I saw why I was scoring poorly in relation to links on my application.
+
+The CI a11y accessibility Slack channel is a useful and detailed resource which I will use earlier in my next project and post-Diploma.
 
 
 **TECHNOLOGIES USED**<a name="technologies"></a>
@@ -322,43 +330,6 @@ Frameworks, Libraries & Programs Used
 **TESTING**<a name="testing"></a>
 
 Testing is documented in TESTING.md file [here](TESTING.md)
-
-**CREDITS**<a name="credits"></a>
-
-This project is based on and borrows from the design of both the 'Hello Django' and the 'Django Blog' Walkthrough projects during the CI Module on FST Frameworks. 
-
-README.md - I used the [README.md example](https://github.com/kera-cudmore/readme-examples/blob/main/milestone1-readme.md) by Kera Kudmore to plan and layout my headings and content, to ensure I didn't omit any important content.
-
-On the CI Slack Community I saw a reference to [this YouTube video](https://www.youtube.com/watch?v=RwWhQTSV44Q) on building a CRUD Application using Class-based views, which helped supplement the learning from the FST Django Module from this course, in particular using CreateView to add an item to the database, and the reference to Django Widget Tweaks to collect the fields from the database and render form input elements in a html file if necessary.
-
-- On further research about [Widget Tweaks](https://pypi.org/project/django-widget-tweaks/) and looking at the [following YouTube video](https://www.google.com/search?q=django+widget-tweaks+vs+crispy-forms&rlz=1C1ONGR_enIE1019IE1019&sxsrf=AJOqlzWoraYzLPN2lHNHFLqvsMPTx369yA%3A1678736692259&ei=NH0PZMmbD9CGgQbl2pzgAg&oq=is+django+widget+tweaks+the+same+as+crispy&gs_lcp=Cgxnd3Mtd2l6LXNlcnAQARgEMgoIABBHENYEELADMgoIABBHENYEELADMgoIABBHENYEELADMgoIABBHENYEELADMgoIABBHENYEELADMgoIABBHENYEELADMgoIABBHENYEELADMgoIABBHENYEELADSgQIQRgAUABYAGDDFmgBcAF4AIABAIgBAJIBAJgBAMgBCMABAQ&sclient=gws-wiz-serp#fpstate=ive&vld=cid:b254270b,vid:ynToND_xOAM), it appears to be the most Pythonic way to create forms for my project.
-
-I found Dee Mc's YouTube videos on creating a [Django Recipe Sharing tutorial](https://www.youtube.com/watch?v=E9eWdZTpiGA&list=PLXuTq6OsqZjbCSfiLNb2f1FOs8viArjWy&index=4) useful to solidify what had been taught on the FSF Django module as she explained similar aspects in a different way that made sense to me.  For example, Dee Mc uses Django to load static files such as style.css using the curly braces syntax which I am already using for all href links throughout the project, and once I saw this it made perfect sense to extend this syntax to use within the head tags of of my templates.  Another conditional statement used on this Recipe Sharing tutorial was the one adding the 'active' class to the navigation bar which I also included in this Project.
-
-- when I researched how to fix the Login bug which is documented in my [TESTING.md](TESTING.md) file under 'Manual Testing', I once again found this tutorial particularly useful in its explanation of Mixins and how and where to apply them.
-
-Reverse_lazy tool was referenced in [this YouTube video](https://www.youtube.com/watch?v=RwWhQTSV44Q) which is a tool I imported from django.urls and used in my Create function to return the user to the home page upon successfully adding a new item to the shopping list.
-
-Though ultimately not an ideal fix to how to scroll my user's shopping list, [this Stack Overflow](https://stackoverflow.com/questions/21168521/table-fixed-header-and-scrollable-body) question and the answers provided helped me to troubleshoot how to best display the shopping list in a table.
-
-In order to make my table responsive at small screen sizes I added a CSS breakpoint to screens with a max-width of 600px to hide the row of table headers, and display the table rows as table columns instead, removing the need for horizontal scrolling for the application user.  I used Javascript to look for heading cells in a thead element, and reassign them as HTML attributes to data cells in a tbody element. Using the breakpoint in CSS, I hide the row of table headers, rearrange the table rows into columns, and add the content of the rows to each data cell.  I used the code in this [wpDataTables article](https://wpdatatables.com/how-to-make-a-table-responsive/) to achieve this responsiveness.
-
-Tutor Support helped me to understand how to create an inline view of a model within the Admin section by sharing [this letscodemore link](https://www.letscodemore.com/blog/django-inline-admin-with-examples/).
-
-Due to the requirment to have custom user messages throughout this project I could not use standard Django 403 error message to return an error to the users of The Shopping List as it was too generic.  Instead I created a [custom 403 template](https://stackoverflow.com/questions/31981239/django-custom-403-template) to relay a very simple but more elegant 403 forbidden error message where required.  It may never be needed, but will maintain the Users connection with the application if it is.
-
-Fixing the footer to the bottom of the page was achieved using [this SO link](https://stackoverflow.com/questions/10099422/flushing-footer-to-bottom-of-the-page-twitter-bootstrap).
-
-Searching for items on The Shopping List and filtering the list by category is an important feature in my design.  When researching the way to use Django's filter method I Googled and found [this django filter package article](https://www.codechit.com/django-filter-search-form-guide/) which initially I thought would be very useful, until I realised that I could extend the filter method I was already using in my application to display the current logged in user's list.  As as result the django filter package was installed but not subsequently used.
-
-Delete success message was not displaying to user.  Tutor support helped me understand the Django DeleteView bug which can prevent messages from working correctly and directed me to [this SO message](https://stackoverflow.com/questions/48777015/djangos-successmessagemixin-not-working-with-deleteview/66622933#66622933) to help me resolve the issue.
-
-
-Acknowledgments
-
-The CI Slack Community is a resource I used almost as much as Google for this project! This community is so kind and generous with their collective and individual knowlege and I used them to bounce ideas off, ask for advice, and to seek guidance where code went awry.  
-
-CI Tutor Support were also a well-used resource for this project and I'm grateful to all the patient Tutors from whom I received a huge amount of reasurance and guidance.
 
 
 **DEPLOYMENT**<a name="deployment"></a>
@@ -424,7 +395,7 @@ In the newly created Procfile, add the line 'web: gunicorn PROJECTNAME.wsgi'.
  - '.wsgi' stands for 'web services gateway server' and is the standard that allows Python services to integrate with web servers.
 
  The Project is now successfully deployed.
- ![successfully deployed!](static/images/screenshots/deployment/django-successful_installation_screenshot.png).
+ ![successfully deployed!](readme_media/screenshots/deployment/django-successful_installation_screenshot.png).
 
 How to Fork
 
@@ -440,4 +411,48 @@ In Gitpod click on the green 'Gitpod' button and the cloned repository will open
 git clone {insert the copied url here} 
 
 The Forked repository will now clone to your preferred development method.
+
+
+
+**CREDITS**<a name="credits"></a>
+
+This project is based on and borrows from the design of both the 'Hello Django' and the 'Django Blog' Walkthrough projects during the CI Module on FST Frameworks. 
+
+README.md - I used the [README.md example](https://github.com/kera-cudmore/readme-examples/blob/main/milestone1-readme.md) by Kera Kudmore to plan and layout my headings and content, to ensure I didn't omit any important content.
+
+On the CI Slack Community I saw a reference to [this YouTube video](https://www.youtube.com/watch?v=RwWhQTSV44Q) on building a CRUD Application using Class-based views, which helped supplement the learning from the FST Django Module from this course, in particular using CreateView to add an item to the database, and the reference to Django Widget Tweaks to collect the fields from the database and render form input elements in a html file if necessary.
+
+- On further research about [Widget Tweaks](https://pypi.org/project/django-widget-tweaks/) and looking at the [following YouTube video](https://www.google.com/search?q=django+widget-tweaks+vs+crispy-forms&rlz=1C1ONGR_enIE1019IE1019&sxsrf=AJOqlzWoraYzLPN2lHNHFLqvsMPTx369yA%3A1678736692259&ei=NH0PZMmbD9CGgQbl2pzgAg&oq=is+django+widget+tweaks+the+same+as+crispy&gs_lcp=Cgxnd3Mtd2l6LXNlcnAQARgEMgoIABBHENYEELADMgoIABBHENYEELADMgoIABBHENYEELADMgoIABBHENYEELADMgoIABBHENYEELADMgoIABBHENYEELADMgoIABBHENYEELADMgoIABBHENYEELADSgQIQRgAUABYAGDDFmgBcAF4AIABAIgBAJIBAJgBAMgBCMABAQ&sclient=gws-wiz-serp#fpstate=ive&vld=cid:b254270b,vid:ynToND_xOAM), it appears to be the most Pythonic way to create forms for my project.
+
+I found Dee Mc's YouTube videos on creating a [Django Recipe Sharing tutorial](https://www.youtube.com/watch?v=E9eWdZTpiGA&list=PLXuTq6OsqZjbCSfiLNb2f1FOs8viArjWy&index=4) useful to solidify what had been taught on the FSF Django module as she explained similar aspects in a different way that made sense to me.  For example, Dee Mc uses Django to load static files such as style.css using the curly braces syntax which I am already using for all href links throughout the project, and once I saw this it made perfect sense to extend this syntax to use within the head tags of of my templates.  Another conditional statement used on this Recipe Sharing tutorial was the one adding the 'active' class to the navigation bar which I also included in this Project.
+
+- when I researched how to fix the Login bug which is documented in my [TESTING.md](TESTING.md) file under 'Manual Testing', I once again found this tutorial particularly useful in its explanation of Mixins and how and where to apply them.
+
+Reverse_lazy tool was referenced in [this YouTube video](https://www.youtube.com/watch?v=RwWhQTSV44Q) which is a tool I imported from django.urls and used in my Create function to return the user to the home page upon successfully adding a new item to the shopping list.
+
+Though ultimately not an ideal fix to how to scroll my user's shopping list, [this Stack Overflow](https://stackoverflow.com/questions/21168521/table-fixed-header-and-scrollable-body) question and the answers provided helped me to troubleshoot how to best display the shopping list in a table.
+
+In order to make my table responsive at small screen sizes I added a CSS breakpoint to screens with a max-width of 600px to hide the row of table headers, and display the table rows as table columns instead, removing the need for horizontal scrolling for the application user.  I used Javascript to look for heading cells in a thead element, and reassign them as HTML attributes to data cells in a tbody element. Using the breakpoint in CSS, I hide the row of table headers, rearrange the table rows into columns, and add the content of the rows to each data cell.  I used the code in this [wpDataTables article](https://wpdatatables.com/how-to-make-a-table-responsive/) to achieve this responsiveness.
+
+Tutor Support helped me to understand how to create an inline view of a model within the Admin section by sharing [this letscodemore link](https://www.letscodemore.com/blog/django-inline-admin-with-examples/).
+
+Due to the requirment to have custom user messages throughout this project I could not use standard Django 403 error message to return an error to the users of The Shopping List as it was too generic.  Instead I created a [custom 403 template](https://stackoverflow.com/questions/31981239/django-custom-403-template) to relay a very simple but more elegant 403 forbidden error message where required.  It may never be needed, but will maintain the Users connection with the application if it is.
+
+Fixing the footer to the bottom of the page was achieved using [this SO link](https://stackoverflow.com/questions/10099422/flushing-footer-to-bottom-of-the-page-twitter-bootstrap).
+
+Searching for items on The Shopping List and filtering the list by category is an important feature in my design.  When researching the way to use Django's filter method I Googled and found [this django filter package article](https://www.codechit.com/django-filter-search-form-guide/) which initially I thought would be very useful, until I realised that I could extend the filter method I was already using in my application to display the current logged in user's list.  As as result the django filter package was installed but not subsequently used.
+
+Delete success message was not displaying to user.  Tutor support helped me understand the Django DeleteView bug which can prevent messages from working correctly and directed me to [this SO message](https://stackoverflow.com/questions/48777015/djangos-successmessagemixin-not-working-with-deleteview/66622933#66622933) to help me resolve the issue.
+
+I found suitable images for my shopping list application on [Unsplash](https://unsplash.com/s/photos/shopping). All wireframes, ERD and screenshots are my own creation.
+
+
+Acknowledgments
+
+The CI Slack Community is a resource I used almost as much as Google for this project! This community is so kind and generous with their collective and individual knowlege and I used them to bounce ideas off, ask for advice, and to seek guidance where code went awry.  
+
+CI Tutor Support were an invaluable resource for this project and I'm so grateful to all the patient Tutors from whom I received a huge amount of reasurance and guidance.
+
+Thanks to my mentor Jubril Akolade for all his encouragement!
+
 

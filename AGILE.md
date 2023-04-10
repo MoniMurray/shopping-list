@@ -132,4 +132,8 @@ This is a screenshot of the Kandban board as I worked through the User Story Tas
 
 You will see from this screenshot above that some User Stories are in the 'Done' column, those whose User Story Tasks I was actively working on when this screenshot was captured are visible in the 'In Progress' column, and User Stories in the 'ToDo' column which have yet to be assigned to me to be worked on.
 
+The following screenshot shows all User Stories in the 'Done' column at the end of the iteration.
+
+![Final Kanban view](readme_media/screenshots/agile/final_kanban_screenshot_all_done.png)
+
 The User Tasks lists will be used as a basis for Manual Testing steps to ensure full application testing.  Follow this [link to read more about the Testing for this application](TESTING.md)
