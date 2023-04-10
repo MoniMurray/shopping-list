@@ -78,7 +78,11 @@ tbody {
 /* from Bootstrap */
 
 /* Small devices  */
+
+@media (min-width: @screen-sm-min) { 
+    
   @media screen and (max-width: 600px) {
+    
 
     table {width:100%;}
     thead {display: none;}
@@ -99,6 +103,8 @@ tbody {
         background-size: cover;
     }  */
  }
+}
+
 
 /* Medium devices (tablets, 768px and up) */
 /* @media (min-width: 768px) { 
