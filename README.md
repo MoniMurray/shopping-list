@@ -11,7 +11,7 @@ User's Goal
 
 An image of the finished site generated from [Amiresponsive](https://ui.dev/amiresponsive?url=https://8000-monimurray-shoppinglist-wasy52ssiii.ws-eu93.gitpod.io/) which displays the application at four screen size breakpoints.
 
-![Amiresponsive](static/images/screenshots/amiresponsive_screenshot.png) 
+![Amiresponsive](readme_media/screenshots/testing/amiresponsive_screenshot.png) 
 
 
 Please visit the live site via [this link](https://mym-shopping-list.herokuapp.com/).

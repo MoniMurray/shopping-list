@@ -1,6 +1,6 @@
 PROJECT PORTFOLIO 4 THE SHOPPING LIST - TESTING
 
-![Amiresponsive image](static/images/screenshots/amiresponsive_screenshot.png)
+![Amiresponsive image](readme_media/screenshots/testing/amiresponsive_screenshot.png)
 
 
 CONTENTS

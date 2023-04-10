@@ -1,5 +1,9 @@
 **Agile Methodology**
 
+The Shopping List 
+
+![AmIresponsive](readme_media/screenshots/testing/amiresponsive_screenshot.png)
+
 1. [User Stories](#user_stories)
 
 2. [User Acceptance Criteria](#acceptance_criteria)
