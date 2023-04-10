@@ -34,7 +34,7 @@ ACCOUNT_EMAIL_VERIFICATION = 'none'
 SECRET_KEY = os.environ.get('SECRET_KEY')
 
 # SECURITY WARNING: don't run with debug turned on in production!
-# DEBUG = False
+# ensure DEBUG = False
 DEBUG = 'DEVELOPMENT' in os.environ
 
 ALLOWED_HOSTS = ['mym-shopping-list.herokuapp.com', 'localhost']
@@ -130,8 +130,8 @@ WSGI_APPLICATION = 'shoppinglist.wsgi.application'
 #     }
 # else:
 DATABASES = {
-       'default': dj_database_url.parse(os.environ.get('DATABASE_URL'))
-   }
+    'default': dj_database_url.parse(os.environ.get('DATABASE_URL'))
+}
 
 
 # Password validation
