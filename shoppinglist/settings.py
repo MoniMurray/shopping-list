@@ -65,7 +65,7 @@ INSTALLED_APPS = [
     'allauth.account',
     'allauth.socialaccount',
     'django_summernote',
-    
+
     'widget_tweaks',
     'list',
 ]

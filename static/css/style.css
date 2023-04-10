@@ -33,6 +33,7 @@ h1, h2, h3, h4, h5, h6, p {
     font-weight: 700;
 }
 
+/* Increase link and button sizes for better user accessibility */
 a.link {
     font-weight: 800;
     font-size: large;
@@ -87,9 +88,7 @@ tbody {
 
 /* Small devices  */
 
-@media (min-width: @screen-sm-min) { 
-
-  @media screen and (max-width: 600px) {
+@media screen and (max-width: 600px) {
     
 
     table {width:100%;}
@@ -103,7 +102,7 @@ tbody {
         text-align:center;  
     }
  }
-}
+
 
 .list-group-item {
     border: none;
