@@ -285,7 +285,7 @@ Future features of the application would be to add additional personal organiser
 
 Accessibility
 
-Throughout this project I have endeavoured to implement good accessibility practices, but in testing at the end of the project I acknowledge that I score poorly in this regard.  Using the tips provided in Lighthouse and [Wave](https://wave.webaim.org/) I have improved their scores and learned more about developing an accessible site.
+Throughout this project I have endeavoured to implement good accessibility practices, but in testing at the end of the project I acknowledge that I score poorly in this regard.  Using the tips provided in Lighthouse and [Wave](https://wave.webaim.org/) I have marginally improved their scores and learned more about developing an accessible site.
 
 Some examples include:
 
@@ -325,6 +325,8 @@ Frameworks, Libraries & Programs Used
 - GitHub - Distributed Version Control;
 
 - Smartdraw - To create the Entity Relationship Model - ERD 2 Template.
+
+- Cloudinary - Cloud-based programmable media storage - used for the image on my application.
 
 
 **TESTING**<a name="testing"></a>
