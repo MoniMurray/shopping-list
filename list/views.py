@@ -135,7 +135,7 @@ class Delete(UserPassesTestMixin, DeleteView):
     pk_url_kwarg = 'pk'
     template_name = 'delete.html'
     success_url = reverse_lazy('home')
-    success_message = "Deleted successfully"
+    success_message = "Deleted successfully."
 
     # only permit delete if logged-in user created item
     def test_func(self):
@@ -147,7 +147,6 @@ class Delete(UserPassesTestMixin, DeleteView):
 
     def delete(self, request, *args, **kwargs):
         messages.success(self.request, self.success_message)
-
         return super(Delete, self).delete(request, *args, **kwargs)
 
 

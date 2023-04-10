@@ -66,6 +66,14 @@ tbody {
     overflow-y: scroll;
 }
 
+/* style Register fields */
+
+/* .container .text-center {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+} */
+
 /* footer */
 .footer {
     clear: both;
@@ -80,7 +88,7 @@ tbody {
 /* Small devices  */
 
 @media (min-width: @screen-sm-min) { 
-    
+
   @media screen and (max-width: 600px) {
     
 
@@ -94,28 +102,8 @@ tbody {
         display: block;
         text-align:center;  
     }
-
-    /* .image-container {
-        background: url(../shopping_bags.webp) no-repeat center center;
-        height: 100%;
-    
-        background-color: #fff;
-        background-size: cover;
-    }  */
  }
 }
-
-
-/* Medium devices (tablets, 768px and up) */
-/* @media (min-width: 768px) { 
-    .image-container {
-        background: url(../shopping_bags.webp) no-repeat center center;
-        height: 100%;
-    
-        background-color: #fff;
-        background-size: cover;
-    }    
-} */
 
 .list-group-item {
     border: none;

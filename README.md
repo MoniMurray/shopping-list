@@ -351,6 +351,8 @@ Fixing the footer to the bottom of the page was achieved using [this SO link](ht
 
 Searching for items on The Shopping List and filtering the list by category is an important feature in my design.  When researching the way to use Django's filter method I Googled and found [this django filter package article](https://www.codechit.com/django-filter-search-form-guide/) which initially I thought would be very useful, until I realised that I could extend the filter method I was already using in my application to display the current logged in user's list.  As as result the django filter package was installed but not subsequently used.
 
+Delete success message was not displaying to user.  Tutor support helped me understand the Django DeleteView bug which can prevent messages from working correctly and directed me to [this SO message](https://stackoverflow.com/questions/48777015/djangos-successmessagemixin-not-working-with-deleteview/66622933#66622933) to help me resolve the issue.
+
 
 Acknowledgments
 
