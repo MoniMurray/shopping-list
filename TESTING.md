@@ -11,7 +11,7 @@ CONTENTS
 
 
 
-AUTOMATED TESTING<a name="automated testing"></a>
+AUTOMATED TESTING<a name="automated_testing"></a>
 
 Automated Testing includes all testing that is carried out by a program -  W3C HTML validation and CSS Validation, PEP8 Python Compliance, Lighthouse responsiveness.
 
@@ -30,7 +30,7 @@ CSS Validation can only be done by copying and pasting the CSS file contents int
 
 [W3C CSS Validation](https://jigsaw.w3.org/css-validator/validator)
 
-![W3C CSS Validation](static/images/screenshots/w3c_css_validation.png)
+![W3C CSS Validation](readme_media/screenshots/testing/w3c_css_validation.png)
 
 Python Code testing
 
@@ -56,35 +56,35 @@ You will need to run the Lighthouse testing on each individual page of your site
 
 Login page - Desktop
 
-![Login page - Desktop](static/images/screenshots/lighthouse_score_screenshot.png)
+![Login page - Desktop](readme_media/screenshots/testing/lighthouse_score_screenshot.png)
 
 Register page - Desktop
 
-![Register page - Desktop](static/images/screenshots/lighthouse_register_desktop_score_screenshot.png)
+![Register page - Desktop](readme_media/screenshots/testing/lighthouse_register_desktop_score_screenshot.png)
 
 Logout page - Desktop
 
-![Logout page - Desktop](static/images/screenshots/lighthouse_logout_desktop_score_screenshot.png)
+![Logout page - Desktop](readme_media/screenshots/testing/lighthouse_logout_desktop_score_screenshot.png)
 
 Home page - Desktop
 
-![Home page - Desktop](static/images/screenshots/lighthouse_home_desktop_score_screenshot.png)
+![Home page - Desktop](readme_media/screenshots/testing/lighthouse_home_desktop_score_screenshot.png)
 
 Add Item page - Desktop
 
-![Add Item page - Desktop](static/images/screenshots/lighthouse_add_item_desktop_score_screenshot.png)
+![Add Item page - Desktop](readme_media/screenshots/testing/lighthouse_add_item_desktop_score_screenshot.png)
 
 Edit Item page - Desktop
 
-![Edit Item page - Desktop](static/images/screenshots/lighthouse_edit_desktop_score_screenshot.png)
+![Edit Item page - Desktop](readme_media/screenshots/testing/lighthouse_edit_desktop_score_screenshot.png)
 
 Delete Item page - Desktop
 
-![Delete Item page - Desktop](static/images/screenshots/lighthouse_delete_desktop_score_screenshot.png)
+![Delete Item page - Desktop](readme_media/screenshots/testing/lighthouse_delete_desktop_score_screenshot.png)
 
 Add Note page - Desktop
 
-![Add Note page - Desktop](static/images/screenshots/lighthouse_add_note_desktop_score_screenshot.png)
+![Add Note page - Desktop](readme_media/screenshots/testing/lighthouse_add_note_desktop_score_screenshot.png)
 
 
 
@@ -132,7 +132,7 @@ Solved Bugs
 This is where all solved bugs go once squashed. List what the bug was, and how you managed to fix it. You can also include images/videos here if you wanted.
 
 
-MANUAL TESTING<a name="manual testing"></a>
+MANUAL TESTING<a name="manual_testing"></a>
 
 Manual testing tests as follows:
 
