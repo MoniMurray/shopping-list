@@ -5,8 +5,8 @@
 
 <!-- Shopping List Image -->
 <div class="image-container mt-3">
-  <img src="https://res.cloudinary.com/dyiiqx4el/image/upload/v1681138690/shopping_bags_u5yemi.webp" class="img-fluid" width="auto" height="auto"
-    alt="" />
+  <img src="https://res.cloudinary.com/dyiiqx4el/image/upload/v1681138690/shopping_bags_u5yemi.webp" class="img-fluid"
+    width="auto" height="auto" alt="" />
 
 </div>
 
@@ -92,13 +92,20 @@
               <!-- add a Note to a Shopping list item -->
               <td class="text-capitalize">
                 {{ entry.item_name }}
+                  {% if entry.notes %}
+                  <p class="text-capitalize font-italic text-center" style="width: 6rem">
 
-                <p class="text-capitalize font-italic text-wrap" style="width: 6rem">
-                  <a href="{% url 'note' entry.id %}">
                     <i class="fa-regular fa-message text-center" aria-label="font awesome regular add note icon"></i>
-                  </a>
-                  {{entry.notes}}
-                </p>
+                    {{entry.notes}}
+                  </p>
+                  {% else %}
+                  <p class="text-capitalize font-italic text-wrap" style="width: 6rem">
+                    <a href="{% url 'note' entry.id %}">
+                      <i class="fa-regular fa-message text-center" aria-label="font awesome regular add note icon"></i>
+                    </a>
+                    {{entry.notes}}
+                  </p>
+                {% endif %}
               </td>
               <td>{{entry.quantity}}</td>
               <td>

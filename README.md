@@ -3,7 +3,7 @@
 
 ## Overview
 
-The Shopping List is an organisation application designed to enable a User to create and maintain a centralised shopping list available on their prefered device.  The application features a Search feature which can enable the User to organise their shopping list by category of item, or search for a single item on their list.  There is a Note feature on the application which can enable the User to make an additional note on a list item, ie to specify a prefered brand name for the list item. 
+The Shopping List is an organisation application designed to enable a User to create and maintain a centralised shopping list available on their prefered device.  The application features a Search feature which can enable the User to organise their shopping list by category of item, or search for a single item on their list.  There is a Note feature on the application which can enable the User to make an additional note on a list item, ie to specify a prefered brand name for the list item. A checkbox feature enables the User to strike through items from the list as they shop.
 
 Developed by Monica Murray
 
@@ -292,6 +292,8 @@ Add Note
 ### Future Implementations
 
 Future features of the application would be to add additional personal organiser functions to enable the User to plan calendar events, holidays and finances, and with links to these features added to Navigation enabling them to launch as seperate features for the Registered User.
+
+Another future feature would be to give the User more function control of the Note feature to enable them to edit or delete a note.
 
 
 ### Accessibility
