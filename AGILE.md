@@ -1,5 +1,4 @@
-# THE SHOPPING LIST
-# Organised | Everywhere
+# THE SHOPPING LIST Organised | Everywhere
 
 ## Agile Methodology Overview
 
