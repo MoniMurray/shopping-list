@@ -5,9 +5,6 @@
 
 I have used GitHub Projects in the Agile development of my project.  I created a new project in the Projects tab of my repository, named ['@MoniMurray's Shopping List Project'](https://github.com/users/MoniMurray/projects/6).  Within this Project I used a Kanban Board to track each User Story as I incrementally developed the MVP of the project.  
 
-This is a screenshot of the Kanban board in Projects.
-
-![Kanban board in Projects!](readme_media/screenshots/agile/kanban_board.png) 
 
 ## CONTENTS
 
@@ -67,6 +64,10 @@ User Stories have been grouped and categorised into Epics using bespoke 'labels'
 | Feedback to User on all feedback - Success/Error                            |                                                                                     | As I user I can see response messages to each action so that I know if they have been successful or not         |
 
 
+
+This is a screenshot of the Kanban board in Projects.
+
+![Kanban board in Projects!](readme_media/screenshots/agile/kanban_board.png) 
 
 
 ## User Acceptance Criteria<a name="acceptance_criteria"></a>
