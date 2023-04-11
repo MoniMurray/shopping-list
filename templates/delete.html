@@ -3,23 +3,23 @@
 <!-- template for Delete a shopping list item -->
 
 {% block content %}
+<div class="container">
+    <div class="row justify-content-center">
+        <h3 class="mt-3">Deleting {{ entry.item_name }} from your Shopping List:</h3>
+    </div>
+    <div class="container pt-5">
+        <form method="post">
+            {% csrf_token %}
+            <p class="text-capitalize">Are you sure you want to delete {{ entry.item_name }}?</p>
+            {% for error in field.errors %}
+            <span class="help-block">{{error}}</span>
+            {% endfor %}
 
-<div class="row justify-content-center">
-    <h3 class="mt-3">Deleting {{ entry.item_name }} from your Shopping List:</h3>
+            <div class="form-group pt-3">
+                <button type="submit" class="btn btn-primary mb-3">Delete</button>
+                <a href="{% url 'home' %}" class="btn btn-default mb-3">Cancel</a>
+            </div>
+        </form>
+    </div>
 </div>
-<div class="container pt-5">
-    <form method="post">
-        {% csrf_token %}
-        <p class="text-capitalize">Are you sure you want to delete {{ entry.item_name }}?</p>
-        {% for error in field.errors %}
-        <span class="help-block">{{error}}</span>
-        {% endfor %}
-
-        <div class="form-group pt-3">
-            <button type="submit" class="btn btn-primary mb-3">Delete</button>
-            <a href="{% url 'home' %}" class="btn btn-default mb-3">Cancel</a>
-        </div>
-    </form>
-</div>
-
 {% endblock %}
