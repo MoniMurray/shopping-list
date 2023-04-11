@@ -64,7 +64,7 @@ User Stories have been grouped and categorised into Epics using bespoke 'labels'
 | Feedback to User on all feedback - Success/Error                            |                                                                                     | As I user I can see response messages to each action so that I know if they have been successful or not         |
 
 
-* In my Testing file [Testing.md](TESTING.md), please see ['Squashed bug # 1'](#squash_1).  The fix to this bug was to further secure the application and reduce an unregistered user's view to only the Login and Registration pages.
+* In my Testing file [Testing.md](TESTING.md), please see 'Squashed bug # 1'.  The fix to this bug was to further secure the application and reduce an unregistered user's view to only the Login and Registration pages.
 
 This is a screenshot of the Kanban board in Projects.
 
