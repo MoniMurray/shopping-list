@@ -11,8 +11,7 @@
 </div>
 
 <div class="card-body justify-content-center">
-  <div class="row justify-content-center">
-
+  
     <!-- If a user is authorised, display their Shopping List
     items in a table with each item row containing additional features -->
 
@@ -132,7 +131,7 @@
             <!-- if there are no items in the shopping list -->
             {% empty %}
             <tr>
-              The Shopping list is currently empty.
+              No items to display.
             </tr>
             {% endfor %}
           </tbody>
@@ -144,8 +143,7 @@
     {% else %}
 
 
-  </div>
-
+  
 </div>
 {% endif %}
 </div>
