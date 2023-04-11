@@ -1,9 +1,20 @@
-**THE SHOPPING LIST
-Organised | Everywhere**
+# THE SHOPPING LIST
+# Organised | Everywhere
 
-- A Shopping List application
+## Overview
 
-User's Goal
+The Shopping List is an organisation application designed to enable a User to create and maintain a centralised shopping list available on their prefered device.  The application features a Search feature which can enable the User to organise their shopping list by category of item, or search for a single item on their list.  There is a Note feature on the application which can enable the User to make an additional note on a list item, ie to specify a prefered brand name for the list item. 
+
+Developed by Monica Murray
+
+
+## Goals
+
+### Project Goal
+
+This is my fourth Diploma Project for Code Institute and combines my newly acquired skills in Bootstrap and Django to develop a Full-Stack site based on business logic to control a centrally-owned dataset.
+
+### User Goal
 
 - A User of The Shopping List wants to have a shopping list available on the go, on their portable device, secure thanks to login requirements to access their account.  A user wants to create their shopping list, add items to the list, edit items, add comments, mark items as urgent or as done, and delete items from their shopping list.
 
@@ -16,7 +27,7 @@ An image of the finished site generated from [Amiresponsive](https://ui.dev/amir
 
 Please visit the live site via [this link](https://mym-shopping-list.herokuapp.com/).
 
-**CONTENTS**
+# CONTENTS
 
 1. [User Experience(UX)](#ux)
 
@@ -37,13 +48,13 @@ Please visit the live site via [this link](https://mym-shopping-list.herokuapp.c
 
 
 
-**USER EXPERIENCE (UX) DESIGN**<a name="ux"></a>
+## User Experience (UX) Design<a name="ux"></a>
 
-- Strategy
+### Strategy
 
 Our user is looking for an efficient and convenient means of maintaining a shopping list, having it to hand when shopping, being able to filter by category. Branding should be clean, uncluttered, without distraction, but not sparse.  The features are created with user ease of use in mind.
 
-- Scope
+### Scope
 
 A simple, uncomplicated, uncluttered shopping list with the following features is the Minimum Viable Product (MVP): 
 
@@ -55,34 +66,34 @@ A simple, uncomplicated, uncluttered shopping list with the following features i
 
 The six-week deadline is fixed and the timeline is tight.  MVP is priority.  
 
-- Structure
+### Structure
 
 To ensure the Security of a registered user's data, User will only have access to features and functionality following registration and login.  Registration and Login links are on the Nav bar and also on a reminder text paragraph on the Landing page.  Successful login expands to a 'Home' page view and returns an authenticated view of The Shopping List, with add, edit, delete, toggling, and search features.  Logout feature is automatic following successful login and appears on navigation bar.  Logout returns the user to Login page.
 
 The functionality of The Shopping List is a relational database-backed MVC web application which allows the user to store and manipulate their shopping list items, which are data records, and where that data is stored in a consistent and well-organised manner..
 
-- Skeleton
+### Skeleton
 
 Visual icon employed for ease of use, repeated on each page in the same location where appropriate.  A user will be familiar with clicking on icons to perform an action, this app will conform with this convention.  Uncluttered, simple UI. Use of wireframes to confirm the important information is seen first and to ensure labels, navigation and arrangement will make sense to the user.
 
-- Surface
+### Surface
 
 Colours will be crisp, clean, sophisticated.  Black on white, cool clean colour palette.  White background #ffffff, dark grey #4b4f58 or black text for accessibility, list container colour rgba (240, 251, 247, 1), #f3f4f6 or black.  Fonts will follow the clean, uncluttered scope with Roboto, Caveat, Nanum Myeongjo in combination look sleak and are easy to read on all devices.
 
 The User's interaction with this responsive application should be easy and natural.  Use of icons will make actions like edit and delete intuitive. Efficient use of response messages will confirm successful actions to the user, with unsuccessful action messages easy to understand.
 
-**AGILE METHODOLOGY**<a name="agile"></a>
+## Agile Methodology<a name="agile"></a>
 
 Please follow this link to open my [AGILE.md](AGILE.md) file and read about how I used Agile Methodology in the planning and development of The Shopping List application.
 
 
-**DESIGN**<a name="design"></a>
+## Design<a name="design"></a>
 
 
 I began my design of the database structure by creating an Entity Relationship Diagram, which can be viewed [here](static/images/wireframes/Shopping_List_ERD.png).  The Diagram helped me to consider what to include in each Model and the relationships between the models of the database.
  
 
-Colour Scheme
+### Colour Scheme
 
 The Shopping List colour scheme is designed to be crisp, clean, sophisticated.  I used [Coolors](https://coolors.co) to generate a colour palette.
 
@@ -93,18 +104,18 @@ These colours were chosen based on a possible homepage image I used during early
 ![personal organiser!](readme_media/wireframes/organiser_image.jpg)
 
 
-Typography
+### Typography
 
 Google Fonts was initially used for the following fonts:
 
 Roboto and Nanum Myeongjo.  However, during testing these fonts were too light and would pose problems for accessibility of the application.  As such, Lato and using Noto as a backup font were imported from Google Fonts are suit the application style.
 
 
-Wireframes
+### Wireframes
 
 I created my wireframes using Balsamiq to create the early UX Design Wireframe images.
 
-- Registration/Authentication
+#### Registration/Authentication
 
 The following are the Wireframes I created to represent how the Registration, Login and Logout user views will appear.
 
@@ -124,7 +135,7 @@ User Authentication Confirmed, with additional user functionality
 
 ![Homepage expanded view!](readme_media/wireframes/Authentication-confirmed-homepage-wireframe.png)
 
-- CRUD
+#### CRUD
 
 Add Item form
 
@@ -138,7 +149,7 @@ Delete Item Confirmation page
 
 ![Delete Item!](readme_media/wireframes/Delete-item-user-clarification-msg-wireframe.png)
 
-- User Messages Wireframes
+#### User Messages Wireframes
 
 These messages will be presented to the User as Flash messages which will automatically close after 3 seconds.
 
@@ -157,12 +168,12 @@ The Entity Relationship Model for the relational database was first created on p
 ![DIAGRAM!](readme_media/wireframes/Shopping_List_ERD.png)
 
 
-**FEATURES**<a name="features"></a>
+## Features<a name="features"></a>
 
 The Shopping List is a useful tool for a User to create and update their shopping list wherever they are on their available device.  The User can group shopping list items by category for ease of use when shopping, can see urgent items at a glance when in a hurry, and can easily toggle items off the list as they shop.
 
 
-Landing Page
+### Landing Page
 
 On first arriving to the site the user is presented with an uncluttered Login page with simple instruction to the user to Login to access the features of the application.  If the User is not yet Registered, there is a link in the text and also in the navigation bar for a new user to follow in order to Register for an account.  
 
@@ -172,7 +183,7 @@ Bespoke pages for following are launched from the navigation bar on the Landing 
 - Login
 
 
-Home Page
+### Home Page
 
 Following Registration or Login, all features and functionality for the application are contained in the 'Home' page.  On the 'Home' page, a user can add a new shopping list item to their list, toggle the gold star on/off to mark the item as urgent, toggle the checkbox on/off to mark an item as done, add a note to the item using the note icon, and also edit and delete an item using the edit and delete icons.  
 
@@ -189,24 +200,24 @@ Bespoke pages for following are launched from the Home page:
 - 403 Error page.
 
 
-General features on each page
+### General features on each page
 
-- The Navigation Bar 
+#### The Navigation Bar 
 
 Pre-Registration the Navigation bar contains two links - Registration and Login.
 
 After user has logged in, the Navigation bar changes to contain Home, Logout and a Search feature.
 
-- Search Feature
+#### Search Feature
 
 A User can search The Shopping List by the name of an item or by Category of items and that item or items will be returned to the user in the table.
 
-- Footer
+#### Footer
 
 The bespoke footer contains a line of text "Made by Monica Murray for CI P4" with an external link to my GitHub profile. The footer also contains external links to Facebook, Instagram and Twitter.
 
 
-Screenshots
+### Screenshots
 
 Login Page, small screen navigation view. 
 
@@ -278,12 +289,12 @@ Add Note
 
 
 
-Future Implementations
+### Future Implementations
 
 Future features of the application would be to add additional personal organiser functions to enable the User to plan calendar events, holidays and finances, and with links to these features added to Navigation enabling them to launch as seperate features for the Registered User.
 
 
-Accessibility
+### Accessibility
 
 Throughout this project I have endeavoured to implement good accessibility practices, but in testing at the end of the project I acknowledge that I score poorly in this regard.  Using the tips provided in Lighthouse and [Wave](https://wave.webaim.org/) I have marginally improved their scores and learned more about developing an accessible site.
 
@@ -296,13 +307,13 @@ I have used [fontawesome](https://fontawesome.com/search?q=checkbox&o=r&m=free) 
 The CI a11y accessibility Slack channel is a useful and detailed resource which I will use earlier in my next project and post-Diploma.
 
 
-**TECHNOLOGIES USED**<a name="technologies"></a>
+## Technologies Used**<a name="technologies"></a>
 
-Languages Used
+### Languages Used
 
 Languages in this project were Python, HTML, CSS and JavaScript.
 
-Frameworks, Libraries & Programs Used
+### Frameworks, Libraries & Programs Used
 
 - Balsamiq Version: 4.5.5 - Editor Version: 5.3.1 - Used to create wireframes.
 
@@ -329,16 +340,16 @@ Frameworks, Libraries & Programs Used
 - Cloudinary - Cloud-based programmable media storage - used for the image on my application.
 
 
-**TESTING**<a name="testing"></a>
+## Testing<a name="testing"></a>
 
 Testing is documented in TESTING.md file [here](TESTING.md)
 
 
-**DEPLOYMENT**<a name="deployment"></a>
+## Deployment<a name="deployment"></a>
 
 The site is deployed using Heroku - [MYM Shopping List](https://mym-shopping-list.herokuapp.com/)
 
-To Deploy the site using Heroku:
+### To Deploy the site using Heroku:
 
 - Login (or signup) to Heroku;
 - From the dashboard, click on 'New' and select 'Create New App';
@@ -358,7 +369,7 @@ In the 'Deploy' tab:
 - Connect to the GitHub repository for this project;
 - Select 'Enable Automatic Deploys' from the the Automatic Deploy section.
 
-Create a new database on ElephantSQL
+### Create a new database on ElephantSQL
 
 Heroku uses an ephemeral file system - which means it is wiped clean every time Heroku updates, or every time the app is redeployed.
 
@@ -387,9 +398,9 @@ Test the connection in ElephantSQL:
 
 You should see that the dropped down list has been populated from the Django migrations.
 
-Create Procfile in Gitpod
+### Create Procfile in Gitpod
 
-Heroku needs a Profile so it knows how to run a project.
+Heroku needs a Procfile so it knows how to run a project.
 
 In the newly created Procfile, add the line 'web: gunicorn PROJECTNAME.wsgi'.
  - 'web:' tells Heroku that this is a process that should accept http traffic;
@@ -399,13 +410,13 @@ In the newly created Procfile, add the line 'web: gunicorn PROJECTNAME.wsgi'.
  The Project is now successfully deployed.
  ![successfully deployed!](readme_media/screenshots/deployment/django-successful_installation_screenshot.png).
 
-How to Fork
+### How to Fork
 
 A Fork of a repository is a copy of the original repository that you now own. Any changes made to the project in your fork will not affect the original. 
 
 To make a fork, go to my [repository](https://github.com/MoniMurray/shopping-list), and click on the "Fork" button in the top right of the screen. The window should then refresh, and you should be redirected to your newly created Fork of the project.
 
-How to Clone
+### How to Clone
 
 Go to the forked (which is the copy of the original, you made above) repository in Github under your list of repositories. Click on the green "Code" button and from the panel, in the 'Local' tab select the 'HTTPS' tab and click the icon to copy the prepopulated link.
 In Gitpod click on the green 'Gitpod' button and the cloned repository will open for editing.  If you use an alternative IDE/Editor, open the CLI and type the following: 
@@ -416,7 +427,7 @@ The Forked repository will now clone to your preferred development method.
 
 
 
-**CREDITS**<a name="credits"></a>
+## Credits<a name="credits"></a>
 
 This project is based on and borrows from the design of both the 'Hello Django' and the 'Django Blog' Walkthrough projects during the CI Module on FST Frameworks. 
 
@@ -449,7 +460,7 @@ Delete success message was not displaying to user.  Tutor support helped me unde
 I found suitable images for my shopping list application on [Unsplash](https://unsplash.com/s/photos/shopping). All wireframes, ERD and screenshots are my own creation.
 
 
-Acknowledgments
+### Acknowledgments
 
 The CI Slack Community is a resource I used almost as much as Google for this project! This community is so kind and generous with their collective and individual knowlege and I used them to bounce ideas off, ask for advice, and to seek guidance where code went awry.  
 
