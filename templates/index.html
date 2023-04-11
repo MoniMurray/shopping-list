@@ -92,13 +92,13 @@
               <td class="text-capitalize">
                 {{ entry.item_name }}
                   {% if entry.notes %}
-                  <p class="text-capitalize font-italic text-center">
+                  <p class="text-capitalize font-italic text-wrap">
 
                     <i class="fa-regular fa-message text-center" aria-label="font awesome regular add note icon"></i>
                     {{entry.notes}}
                   </p>
                   {% else %}
-                  <p class="text-capitalize font-italic text-wrap">
+                  <p>
                     <a href="{% url 'note' entry.id %}">
                       <i class="fa-regular fa-message text-center" aria-label="font awesome regular add note icon"></i>
                     </a>
