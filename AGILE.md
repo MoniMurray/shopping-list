@@ -47,7 +47,7 @@ User Stories have been grouped and categorised into Epics using bespoke 'labels'
 | Logout                                                                      |                                                                                     | As a logged-in user I can Logout of the app when finished using the list.                                       |
 |                                                                             |                                                                                     |                                                                                                                 |
 | CRUD                                                                        |                                                                                     |                                                                                                                 |
-| Read                                                                        |                                                                                     | As an unregistered user, I can only see the updated list on the Home page.                                      |
+| Read                                                                        |                                                                                     | As an unregistered user, I can only see the updated list on the Home page.*                                      |
 | Add Item to List                                                            |                                                                                     | As a logged in user I can click Add so that I can add an item to my List                                        |
 | Edit existing Item on List                                                  |                                                                                     | As a logged in user I can click Edit so that I can edit the detail of an item on my List                        |
 | Toggle/Tick list item as complete                                           |                                                                                     | As a logged in user I can tick the checkbox of an item so that I can mark the item as done.                     |
@@ -64,6 +64,7 @@ User Stories have been grouped and categorised into Epics using bespoke 'labels'
 | Feedback to User on all feedback - Success/Error                            |                                                                                     | As I user I can see response messages to each action so that I know if they have been successful or not         |
 
 
+* In my Testing file [Testing.md](TESTING.md), please see 'Squashed bug # 1'.  The fix to this bug was to further secure the application and reduce an unregistered user's view to only the Login and Registration pages.
 
 This is a screenshot of the Kanban board in Projects.
 
