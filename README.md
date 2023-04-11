@@ -168,6 +168,39 @@ The Entity Relationship Model for the relational database was first created on p
 ![DIAGRAM!](readme_media/wireframes/Shopping_List_ERD.png)
 
 
+### Data Schema Planning
+
+Database consists of two tables, Entry and Note.
+
+#### Entry
+
+The following fields are contained within the Entry table:
+
+| Entry(models.Model) |                      | One Item, one note    |                                                                                                   |
+| ------------------- | -------------------- | --------------------- | ------------------------------------------------------------------------------------------------- |
+| KEY                 | NAME                 | TYPE                  | Extra Info                                                                                        |
+| Unique/PK           | item_name            | CharField(max-length) |                                                                                                   |
+|                     |                      |                       |                                                                                                   |
+|                     | quantity             | IntegerField          | choices()                                                                                         |
+|                     | category             | CharField(choices)    | choices()                                                                                         |
+|                     | star                 | BooleanField          |                                                                                                   |
+|                     | status done/not done | BooleanField          | default=F;<br>If T then strikethrough                                                             |
+|                     | added_on date        | DateTimeField         | auto_now_add=True;<br>for display ordering in class Meta;                                         |
+| FK                  | user                 | ForeignKey(User)      | FK to User Model (allauth)                                                                                  |
+
+#### Note
+
+The following fields are contained within the Note table:
+
+| Note(models.Model) |               |               |                            |
+| ------------------ | ------------- | ------------- | -------------------------- |
+| KEY                | NAME          | TYPE          | Extra Info                 |
+| OneToOne           | Itemname      | List_Item     | FK to Entry Model          |
+| FK                 | User          | User          | FK to User Model (allauth) |
+|                    | body          | TextField     |                            |
+|                    | Added_on date | DateTimeField | auto_now_add=True;         |
+
+
 ## Features<a name="features"></a>
 
 The Shopping List is a useful tool for a User to create and update their shopping list wherever they are on their available device.  The User can group shopping list items by category for ease of use when shopping, can see urgent items at a glance when in a hurry, and can easily toggle items off the list as they shop.

@@ -86,6 +86,8 @@ This is where I manually tested each of the User Stories I created during Agile 
 - Samsung
 - iPhone12
 
+Full Feature Testing passed across all screen sizes. 
+
 #### Each device tested the site using the following browsers:
 
 - Google Chrome
