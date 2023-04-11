@@ -7,6 +7,12 @@ The Shopping List is an organisation application designed to enable a User to cr
 
 Developed by Monica Murray
 
+An image of the finished site generated from [Amiresponsive](https://ui.dev/amiresponsive?url=https://8000-monimurray-shoppinglist-wasy52ssiii.ws-eu93.gitpod.io/) which displays the application at four screen size breakpoints.
+
+![Amiresponsive](readme_media/screenshots/testing/amiresponsive_screenshot.png) 
+
+
+Please visit the live site via [this link](https://mym-shopping-list.herokuapp.com/).
 
 ## Goals
 
@@ -20,12 +26,6 @@ This is my fourth Diploma Project for Code Institute and combines my newly acqui
 
 - A User wants response messages to their actions, sucessful or unsuccessful.
 
-An image of the finished site generated from [Amiresponsive](https://ui.dev/amiresponsive?url=https://8000-monimurray-shoppinglist-wasy52ssiii.ws-eu93.gitpod.io/) which displays the application at four screen size breakpoints.
-
-![Amiresponsive](readme_media/screenshots/testing/amiresponsive_screenshot.png) 
-
-
-Please visit the live site via [this link](https://mym-shopping-list.herokuapp.com/).
 
 # CONTENTS
 
