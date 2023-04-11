@@ -235,6 +235,11 @@ The following files were tested:
 - test_views.py
 - test_models.py
 
+### Javascript Testing
+
+base.html contains Javascript which handles the alert messages for the site, and which has a timeout set to 3 seconds, after which the message fades from the user's screen. 
+
+This was manually tested and works as expected. [JShint](https://jshint.com/) was also used to test this Javascript with no errors reported.
 
 ### Lighthouse
 

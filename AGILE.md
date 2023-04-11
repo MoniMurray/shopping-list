@@ -1,8 +1,15 @@
-**Agile Methodology**
+# THE SHOPPING LIST
+# Organised | Everywhere
 
-The Shopping List 
+## Agile Methodology Overview
 
-![AmIresponsive](readme_media/screenshots/testing/amiresponsive_screenshot.png)
+I have used GitHub Projects in the Agile development of my project.  I created a new project in the Projects tab of my repository, named ['@MoniMurray's Shopping List Project'](https://github.com/users/MoniMurray/projects/6).  Within this Project I used a Kanban Board to track each User Story as I incrementally developed the MVP of the project.  
+
+This is a screenshot of the Kanban board in Projects.
+
+![Kanban board in Projects!](readme_media/screenshots/agile/kanban_board.png) 
+
+## CONTENTS
 
 1. [User Stories](#user_stories)
 
@@ -12,14 +19,14 @@ The Shopping List
 
 4. [User Story Tasks](#user_tasks)
 
-I have used GitHub Projects to plan the Agile development of my project.  I created a new project in the Projects tab of my repository, named ['@MoniMurray's Shopping List Project'](https://github.com/users/MoniMurray/projects/6).  Within this Project I used a Kanban Board to track each User Story as I incrementally developed the MVP of the project.  
 
-This is a screenshot of the Kanban board in Projects.
-![Kanban board in Projects!](readme_media/screenshots/agile/kanban_board.png) 
 
-**USER STORIES**<a name="user_stories"></a>
 
-A user story is a small, self-contained unit of development.  They are used to map the development progress of the project via a Kanban board.  I have used these units in my Project to incrementally achieve the MVP.  Each user story is based on a bespoke user story Template which is created in the Settings tab of my GitHub repository.
+## User Stories<a name="user_stories"></a>
+
+A user story is a small, self-contained unit of development.  They are used to map the development progress of the project via a Kanban board.  I have used these units in my Project to incrementally achieve the MVP.  
+
+Each user story is based on a bespoke user story Template which is created in the Settings tab of my GitHub repository.
 
 ![bespoke user story Template!](readme_media/screenshots/agile/user_story_bespoke_template.png)
 
@@ -62,7 +69,7 @@ User Stories have been grouped and categorised into Epics using bespoke 'labels'
 
 
 
-USER ACCEPTANCE CRITERIA<a name="acceptance_criteria"></a>
+## User Acceptance Criteria<a name="acceptance_criteria"></a>
 
 I created a set of Acceptance Criteria for each User Story to set out a clear objective of what to achieve to complete each story.  The objective is broken down into steps, and in that way is a clear and measurable way of confirming the work on that user story is complete and it can be moved to 'Done':
 
@@ -82,9 +89,9 @@ I created a set of Acceptance Criteria for each User Story to set out a clear ob
 | As a logged in user I can filter my shopping list by category so that I know where to shop.                     |                                                                                                                                                                                                                                                                                                                                                                                                                                                                                |
 | As a user I can view the shopping list.                                                                         | \- On the landing page I can see the shopping list;<br>\- If I am registered/logged in, I can see the expanded view shopping list;<br>\- If a new item is added to the shopping list I can see it on the list.                                                                                                                                                                                                                                                                 |
 
-MOSCOW PRIORITISATION<a name="moscow"></a>
+## MoSCoW Prioritisation<a name="moscow"></a>
 
-- Prioritisation of User Stories
+### Prioritisation of User Stories
 
 I have used MoSCoW Prioritisation to assign a priority level to the User Stories of the Project.  'MoSCoW' is an acronym for 'Must have', 'Should have', 'Could have, 'Will not have' and represent the prioritisation level applied to User Stories during this iteration of production.  For the purpose of this project, 'an iteration' represents this project's lifecycle up to submission.
 
@@ -108,9 +115,10 @@ I have used MoSCoW Prioritisation to assign a priority level to the User Stories
 | As a user I can view the shopping list.                                                                         | Must have   |
 | As I user I can see response messages to each action so that I know if they have been successful or not         | Should have |
 
-USER STORY TASKS<a name="user_tasks"></a>
 
-I have used the acceptance criteria steps to create tasks to facilitate the execution of each User Story.  Once these tasks for each User Story are complete and tested, the User Story is finished and is assigned as 'Done' in the Project Kanban.
+## User Story Tasks<a name="user_tasks"></a>
+
+I have used the acceptance criteria steps to create user story tasks to facilitate the execution of each User Story.  Once these tasks for each User Story are complete and tested, the User Story is finished and is assigned as 'Done' in the Project Kanban.
 
 
 | Acceptance Criteria                                                                                                                                                                                                                                                                                                                                                                                                                                                            | User Story Task                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                    |
@@ -127,7 +135,7 @@ I have used the acceptance criteria steps to create tasks to facilitate the exec
 | \- Click on the list item to open the Item;<br>\- Click on Comment body field;<br>\- Add comment;<br>\- Save to return to Home page.                                                                                                                                                                                                                                                                                                                                           | 1\. Create a clickable comment link using fontawesome icon,<br>2\. Create a new class-based View in views.py to add a comment to an item<br>3\. Create a new note html Template,<br>4\. Connect the path url in urls.py.                                                                                                                                                                                                                                                                                                                                           |
 | \- On the landing page I can see the shopping list;<br>\- If I am registered/logged in, I can see the expanded view shopping list;<br>\- If a new item is added to the shopping list I can see it on the list.                                                                                                                                                                                                                                                                 | 1\. Create the view code in views.py;<br>2\. Create the base.html template to render the view, extend base.html into index.html, add if statement to conditionally check if user is authenticated to render full list or else a limited list;<br>3\. Connect up the URLS in the urls.py file                                                                                                                                                                                                                                                                       |
 
-This is a screenshot of the Kandban board as I worked through the User Story Tasks.
+This is a screenshot of the Kanban board as I worked through the User Story Tasks.
 ![User Story Tasks!](readme_media/screenshots/agile/Toggling_In_Progress.png).
 
 You will see from this screenshot above that some User Stories are in the 'Done' column, those whose User Story Tasks I was actively working on when this screenshot was captured are visible in the 'In Progress' column, and User Stories in the 'ToDo' column which have yet to be assigned to me to be worked on.
@@ -136,4 +144,4 @@ The following screenshot shows all User Stories in the 'Done' column at the end 
 
 ![Final Kanban view](readme_media/screenshots/agile/final_kanban_screenshot_all_done.png)
 
-The User Tasks lists will be used as a basis for Manual Testing steps to ensure full application testing.  Follow this [link to read more about the Testing for this application](TESTING.md)
+The User Story Tasks lists will be used as a basis for Manual Testing steps to ensure full application testing.  Follow this [link to Testing](TESTING.md) to read more about the Testing undertaken for this application.
