@@ -1,157 +1,32 @@
-PROJECT PORTFOLIO 4 THE SHOPPING LIST - TESTING
+# THE SHOPPING LIST
+# Organised | Everywhere
+
+## Testing Overview
 
 ![Amiresponsive image](readme_media/screenshots/testing/amiresponsive_screenshot.png)
 
 
-CONTENTS
+## CONTENTS
 
-1. [AUTOMATED TESTING](#automated_testing)
+1. [MANUAL TESTING](#manual_testing)
 
-2. [MANUAL TESTING](#manual_testing)
+2. [AUTOMATED TESTING](#automated_testing)
 
 
 
-AUTOMATED TESTING<a name="automated_testing"></a>
+## Manual Testing<a name="manual_testing"></a>
 
-Automated Testing includes all testing that is carried out by a program -  W3C HTML validation and CSS Validation, PEP8 Python Compliance, Lighthouse responsiveness.
+### Manual testing tests as follows:
 
- W3C Validator
-
-The most popular HTML validator is W3C. 
-
-[W3C URL Validator](https://validator.w3.org/nu/?doc=https%3A%2F%2Fmym-shopping-list.herokuapp.com%2F)
-
-![W3C URL Validato](static/images/screenshots/w3validator_result.png)
-
-
-CSS Validation
-
-CSS Validation can only be done by copying and pasting the CSS file contents into the direct input. 
-
-[W3C CSS Validation](https://jigsaw.w3.org/css-validator/validator)
-
-![W3C CSS Validation](readme_media/screenshots/testing/w3c_css_validation.png)
-
-Python Code testing
-
-[CI Python Linter](https://pep8ci.herokuapp.com/)
-
-All clear, no errors found.
-
-The following files were tested:
-
-- views.py
-- admin.py
-- forms.py
-- models.py
-- test_views.py
-- test_models.py
-
-
-Lighthouse
-
-Lighthouse Testing is part of the Chrome Developer Tools. For more information on how to use this tool, please visit chrome Lighthouse.
-
-You will need to run the Lighthouse testing on each individual page of your site, for desktop as a minimum. If you have time it would be great to also add in the mobile testing.
-
-Login page - Desktop
-
-![Login page - Desktop](readme_media/screenshots/testing/lighthouse_score_screenshot.png)
-
-Register page - Desktop
-
-![Register page - Desktop](readme_media/screenshots/testing/lighthouse_register_desktop_score_screenshot.png)
-
-Logout page - Desktop
-
-![Logout page - Desktop](readme_media/screenshots/testing/lighthouse_logout_desktop_score_screenshot.png)
-
-Home page - Desktop
-
-![Home page - Desktop](readme_media/screenshots/testing/lighthouse_home_desktop_score_screenshot.png)
-
-Add Item page - Desktop
-
-![Add Item page - Desktop](readme_media/screenshots/testing/lighthouse_add_item_desktop_score_screenshot.png)
-
-Edit Item page - Desktop
-
-![Edit Item page - Desktop](readme_media/screenshots/testing/lighthouse_edit_desktop_score_screenshot.png)
-
-Delete Item page - Desktop
-
-![Delete Item page - Desktop](readme_media/screenshots/testing/lighthouse_delete_desktop_score_screenshot.png)
-
-Add Note page - Desktop
-
-![Add Note page - Desktop](readme_media/screenshots/testing/lighthouse_add_note_desktop_score_screenshot.png)
-
-
-
-I tested this project using [Django TestCase](https://docs.djangoproject.com/en/4.1/topics/testing/overview/)
-
-Testing Features
-
-| Testing Result Key:<br>. = Pass<br>F = Fail<br>E = Error |                                        |                                       | Pause - think about what to test for!                                                                                                                                                                                                         |                                             |                                                             |
-| -------------------------------------------------------- | -------------------------------------- | ------------------------------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------- | ----------------------------------------------------------- |
-| Test Number                                              | Test file name                         | Step                                  | Code                                                                                                                                                                                                                                          | Terminal Command                            | Notes                                                       |
-| 1                                                        | [test.py](http://test.py/)             | Test testing                          | Test.py<br>class TestDjango(TestCase):<br>def test_this_thing_works(self):<br>self.assertEqual(1,0)                                                                                                                                           | python3 [manage.py](http://manage.py/) test | Good, as expected, this test failed = AssertionError 1 != 0 |
-| 2                                                        | [test_views.py](http://test_views.py/) | Test we can get EntryList             | def test_get_Entry_list(self):<br>response = self.client.get('/')<br>self.assertEqual(response.status_code, 200)<br>self.assertTemplateUsed(response, 'index.html')                                                                           | python3 manage.py test list.test_views      | F -                                                         |
-| 3                                                        | [test_views.py](http://test_views.py/) | Test we can get Add to List html page | def test_get_add_to_list_page(self):<br>response = self.client.get('/add', follow=True)<br>self.assertEqual(response.status_code, 200)<br>self.assertTemplateUsed(response, 'add_to_list.html')                                               | python3 manage.py test list.test_views      | .                                                           |
-| 4                                                        | [test_forms.py](http://test_forms.py/) | Test an empty item_name is not valid  | def test_item_name_is_required(self):<br>form = AddForm({'item_name': ''})<br>self.assertFalse(form.is_valid())<br>self.assertIn('item_name', form.errors.keys())<br>self.assertEqual(form.errors['item_name'][0], 'This field is required.') | python3 manage.py test list.test_forms      | .                                                           |
-| 5                                                        | [test_forms.py](http://test_forms.py/) | Test Category field is required       | def test_category_field_is_required(self):<br>form = AddForm({'item_name': 'Test List Items'})<br>self.assertFalse(form.is_valid())                                                                                                           | python3 manage.py test list.test_forms      | .                                                           |
-
-
-Coverage Tool
-
-The Coverage testing tool evaluates your whole project and reports on what percentage of the project has been tested with automated testing.  This tool needs to be installed, in the CLI type:  
-
-pip3 install coverage
-
-To run the Coverage tool, in the CLI type:
-
-coverage run --source=list manage.py test
-
-Coverage tells you what percentage of the application's code has been tested - it does not tell you what percentage of your code passed the tests. Coverage generates a report in HTML, in the CLI type:
-
-coverage report
-
-To generate an interactive HTML report use the following command in the CLI:
-
-coverage html
-
-This will create a new folder called 'htmlcov' in which there is an index.html file.  As with all html files, in order to view the file, in the CLI type:
-
-python3 -m http.server
-
-Open the browser to inspect files which will indicate where in the application tests still need to be performed.
-
-Write any remaining tests Coverage reports has gone untested.
-
-BUGS
-Known Bugs
-List (or put in a table) all known bugs on your site here as soon as you find them. This will prevent you from forgetting any at the end. Some (if not all) of these bugs will hopefully make their way over to the next section, solved bugs, as you progress through your project.
-
-Solved Bugs
-👩🏻‍💻View an example of a completed bugs section here
-
-This is where all solved bugs go once squashed. List what the bug was, and how you managed to fix it. You can also include images/videos here if you wanted.
-
-
-MANUAL TESTING<a name="manual_testing"></a>
-
-Manual testing tests as follows:
-
-- Each Feature
 - Each User Story
-- Visual Responsiveness
-- Browser Compatibility Testing
-- Report on Bugs resolves/unresolved
+- Full Feature functionality
+- Browser Compatibility 
+- Report on Bugs resolved/unresolved
 
 
-Testing User Stories
+### Testing User Stories
 
-This is where I tested the User Stories I created and listed in [AGILE.md](AGILE.md) against my application. I have used the User Stories table for this Test Case list, the Acceptance Criteria Tasks are repurposed to become the Tests.
+This is where I manually tested each of the User Stories I created during Agile planning, and which are listed in [AGILE.md](AGILE.md), against my application. I have used the User Stories table for the following Test Case list, the Acceptance Criteria Tasks are repurposed to become the Tests.
 
 
 | User Story                                                                                                      | Test Number | Manual Test Expected result list                                                                                                                                                                                                                                                                                                              | Test P/F |
@@ -203,20 +78,20 @@ This is where I tested the User Stories I created and listed in [AGILE.md](AGILE
 | As a user I can view the shopping list.                                                                         | 45          | Test logged in user can view message 'Shopping List Empty' or view full shopping list by scrolling up/down the entire list                                                                                                                                                                                                                    | Pass     |
 |                                                                                                                 |             |                                                                                                                                                                                                                                                                                                                                               |
 
-Full Testing
+### Full Feature Manual Testing
 
-Full testing was performed on the following devices:
+#### Full feature testing was performed on the following devices:
 
 - Laptop
 - Samsung
 - iPhone12
 
-Each device tested the site using the following browsers:
+#### Each device tested the site using the following browsers:
 
 - Google Chrome
 - Firefox
 
-Additional testing was taken by friends and family on a variety of devices and screen sizes. A Big thank you to CI colleagues for taking the time to thoroughly test the site for me.
+Additional testing was undertaken by friends and family on a variety of devices and screen sizes. A Big thank you to them and to my CI colleagues for taking the time to thoroughly test the site for me.
 
 | Feature                                          | Expected Outcome                                                                                                                                                              | Testing Performed                                      | Result                                                                                                             | Pass/Fail |
 | ------------------------------------------------ | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------ | --------- |
@@ -267,7 +142,7 @@ Additional testing was taken by friends and family on a variety of devices and s
 | Delete item in Shopping list - 'trashcan' icon   | The user should be taken to the delete item page with the selected item pre-populated in the body text and user asked to confirm delete                                       | Clicked button                                         | Taken to delete item page and see confirm deletion message populated with item name                                | Pass      |
 | Toggle Star On/Off                               | The User should be able to click on gold Star icon to toggle it from solid to regular and back                                                                                | Clicked Icon                                           | Toggle gold Star to solid from regular and from solid to regular                                                   | Pass      |
 | Toggle Done checkbox On/Off                      | The User should be able to click on Checkbox icon to toggle it from ticked to empty and back.                                                                                 | Clicked Icon                                           | Toggle checkbox from empty to ticked and from ticked to empty                                                      | Pass      |
-| Toggle Done checkbox On                          | When user clicks checkbox on, item name text should be struck through, edit and note icons should be removed                                                                  | Toggle Done On                                         | item name text is struck through, edit and note icons are removed                                                  | Pass      |
+| Toggle Done checkbox On                          | When user clicks checkbox on, item name text should be struck through, edit and note icons should be removed                                                                  | Toggle Done On                                         | Item name text is struck through, edit and note icons are removed                                                  | Pass      |
 | Add Note icon in Item name cell                  | When the user clicks this link they should be taken to the add note page                                                                                                      | Clicked Icon                                           | Redirected to the add note page                                                                                    | Pass      |
 |                                                  |                                                                                                                                                                               |                                                        |                                                                                                                    |           |
 | Add Item Page                                    |                                                                                                                                                                               |                                                        |                                                                                                                    |           |
@@ -304,15 +179,15 @@ Additional testing was taken by friends and family on a variety of devices and s
 | Cancel button on Add Note page                   | User can cancel note and redirect to Home page                                                                                                                                | Clicked Cancel button                                  | Redirected to Home page                                                                                            | Pass      |
 | Submit button                                    | Saves the Note to the database, redirects the user to the home page and displays note beneath item name in table cell                                                         | Clicked Submit button                                  | Note saved to the database, redirected to the home page and see note displayed beneath item name.                  | Pass      |
 
-BUGS
+### Bugs
 
-Known Bugs
+#### Known Bugs
 
 |   | Bug Reported                                                                                                                                                                   | Fixed Y/N | Fix                                                                                           |
 | - | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ | --------- | --------------------------------------------------------------------------------------------- |
 | 1 | If user clicks on icon link when an item note already exists, and completes the Note form to add a second note, the User receives an IntegrityError when they click on Submit. | N         | This bug is known but is not fixed at time of deployment, it will be fixed on next iteration. |
 
-Solved Bugs
+#### Solved ('Squashed') Bugs
 
 |   | Bug Reported                                                                                                                                                                                                                              | Fixed Y/N | Fix                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                             |
 | - | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | --------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
@@ -322,3 +197,108 @@ Solved Bugs
 | 4 | Images and screen size responsive code not rendering on deployed site                                                                                                                                                                     | Y         | Image needed to be imported to Cloudinary and the url from Cloudinary pased into the image src.                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                 |
 | 5 | Delete success message not displaying                                                                                                                                                                                                     | Y         | DeleteView django bug preventing message from displaying correctly. Added function to overcome that django bug, message now displays.                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                           |
 | 6 | CSS responsivity not appearing in deployed site                                                                                                                                                                                           | Y         | All images for the application were being stored in the Static Folder. Tutor Support explained anything in the static/ folder will be uploaded to cloudinary, including the README wireframes and screenshots I was storing there. This needlessly used up storage space on cloudinary. If a README image files had spaces in the name it would cause a cloudinary error. The fix was to delete all the files off cloudinary, move the unnecessary files from static/ into a new folder named 'readme_media/' and redeploy. In short, my static/ folder should only include the files that will appear on on my application. README images should go elsewhere. |
+
+
+## Automated Testing<a name="automated_testing"></a>
+
+Automated Testing includes all testing that is carried out by a program -  W3C HTML validation and CSS Validation, PEP8 Python Compliance, Lighthouse responsiveness.
+
+### W3C Validator
+
+The most popular HTML validator is W3C. 
+
+[W3C URL Validator](https://validator.w3.org/nu/?doc=https%3A%2F%2Fmym-shopping-list.herokuapp.com%2F)
+
+![W3C URL Validato](static/images/screenshots/w3validator_result.png)
+
+
+### CSS Validation
+
+CSS Validation can only be done by copying and pasting the CSS file contents into the direct input. 
+
+[W3C CSS Validation](https://jigsaw.w3.org/css-validator/validator)
+
+![W3C CSS Validation](readme_media/screenshots/testing/w3c_css_validation.png)
+
+### Python Code testing
+
+[CI Python Linter](https://pep8ci.herokuapp.com/)
+
+All clear, no errors found.
+
+The following files were tested:
+
+- views.py
+- admin.py
+- forms.py
+- models.py
+- test_views.py
+- test_models.py
+
+
+### Lighthouse
+
+Lighthouse Testing is part of the Chrome Developer Tools. For more information on how to use this tool, please visit chrome Lighthouse.
+
+
+Login page - Desktop
+
+![Login page - Desktop](readme_media/screenshots/testing/lighthouse_score_screenshot.png)
+
+Register page - Desktop
+
+![Register page - Desktop](readme_media/screenshots/testing/lighthouse_register_desktop_score_screenshot.png)
+
+Logout page - Desktop
+
+![Logout page - Desktop](readme_media/screenshots/testing/lighthouse_logout_desktop_score_screenshot.png)
+
+Home page - Desktop
+
+![Home page - Desktop](readme_media/screenshots/testing/lighthouse_home_desktop_score_screenshot.png)
+
+Add Item page - Desktop
+
+![Add Item page - Desktop](readme_media/screenshots/testing/lighthouse_add_item_desktop_score_screenshot.png)
+
+Edit Item page - Desktop
+
+![Edit Item page - Desktop](readme_media/screenshots/testing/lighthouse_edit_desktop_score_screenshot.png)
+
+Delete Item page - Desktop
+
+![Delete Item page - Desktop](readme_media/screenshots/testing/lighthouse_delete_desktop_score_screenshot.png)
+
+Add Note page - Desktop
+
+![Add Note page - Desktop](readme_media/screenshots/testing/lighthouse_add_note_desktop_score_screenshot.png)
+
+
+### Django TestCase
+
+I tested some feature of this project using [Django TestCase](https://docs.djangoproject.com/en/4.1/topics/testing/overview/)
+
+#### Testing Features
+
+| Testing Result Key:<br>. = Pass<br>F = Fail<br>E = Error |                                        |                                       | Pause - think about what to test for!                                                                                                                                                                                                         |                                             |                                                             |
+| -------------------------------------------------------- | -------------------------------------- | ------------------------------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------- | ----------------------------------------------------------- |
+| Test Number                                              | Test file name                         | Step                                  | Code                                                                                                                                                                                                                                          | Terminal Command                            | Notes                                                       |
+| 1                                                        | [test.py](http://test.py/)             | Test testing                          | Test.py<br>class TestDjango(TestCase):<br>def test_this_thing_works(self):<br>self.assertEqual(1,0)                                                                                                                                           | python3 [manage.py](http://manage.py/) test | Good, as expected, this test failed = AssertionError 1 != 0 |
+| 2                                                        | [test_views.py](http://test_views.py/) | Test we can get EntryList             | def test_get_Entry_list(self):<br>response = self.client.get('/')<br>self.assertEqual(response.status_code, 200)<br>self.assertTemplateUsed(response, 'index.html')                                                                           | python3 manage.py test list.test_views      | F -                                                         |
+| 3                                                        | [test_views.py](http://test_views.py/) | Test we can get Add to List html page | def test_get_add_to_list_page(self):<br>response = self.client.get('/add', follow=True)<br>self.assertEqual(response.status_code, 200)<br>self.assertTemplateUsed(response, 'add_to_list.html')                                               | python3 manage.py test list.test_views      | .                                                           |
+| 4                                                        | [test_forms.py](http://test_forms.py/) | Test an empty item_name is not valid  | def test_item_name_is_required(self):<br>form = AddForm({'item_name': ''})<br>self.assertFalse(form.is_valid())<br>self.assertIn('item_name', form.errors.keys())<br>self.assertEqual(form.errors['item_name'][0], 'This field is required.') | python3 manage.py test list.test_forms      | .                                                           |
+| 5                                                        | [test_forms.py](http://test_forms.py/) | Test Category field is required       | def test_category_field_is_required(self):<br>form = AddForm({'item_name': 'Test List Items'})<br>self.assertFalse(form.is_valid())                                                                                                           | python3 manage.py test list.test_forms      | .                                                           |
+
+Test_forms.py
+
+![test_forms.py](readme_media/screenshots/testing/terminal_results_test_forms.py.png)
+
+Test_views.py
+
+![test_views.py](readme_media/screenshots/testing/terminal_results_test_views.py.png)
+
+
+
+As such thorough Manual Feature Testing was performed on this iteration, additional Automated Testing was not undertaken.
+
+

@@ -311,7 +311,12 @@ The CI a11y accessibility Slack channel is a useful and detailed resource which 
 
 ### Languages Used
 
-Languages in this project were Python, HTML, CSS and JavaScript.
+Languages in this project were:
+
+- Python, 
+- HTML, 
+- CSS,  and 
+- JavaScript.
 
 ### Frameworks, Libraries & Programs Used
 
@@ -462,7 +467,7 @@ I found suitable images for my shopping list application on [Unsplash](https://u
 
 ### Acknowledgments
 
-The CI Slack Community is a resource I used almost as much as Google for this project! This community is so kind and generous with their collective and individual knowlege and I used them to bounce ideas off, ask for advice, and to seek guidance where code went awry.  
+The CI Slack Community is a resource I used almost as much as Google for this project! This community is so kind and generous with their collective and individual knowlege and I used them to bounce ideas off, ask for advice, and to seek guidance where code went awry.  A Big thank you to CI colleagues for taking the time to thoroughly test the site for me.
 
 CI Tutor Support were an invaluable resource for this project and I'm so grateful to all the patient Tutors from whom I received a huge amount of reasurance and guidance.
 
