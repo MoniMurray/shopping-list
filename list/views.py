@@ -90,7 +90,7 @@ class EditView(UserPassesTestMixin, UpdateView):
     pk_url_kwarg = 'pk'
     success_url = reverse_lazy('home')
 
-    # only permit edit if logged-in user created item
+    # extra security - only permit edit if logged-in user created item
     def test_func(self):
         return self.request.user == self.get_object().user
 
@@ -137,7 +137,7 @@ class Delete(UserPassesTestMixin, DeleteView):
     success_url = reverse_lazy('home')
     success_message = "Deleted successfully."
 
-    # only permit delete if logged-in user created item
+    # extra security - only permit delete if logged-in user created item
     def test_func(self):
         return self.request.user == self.get_object().user
 

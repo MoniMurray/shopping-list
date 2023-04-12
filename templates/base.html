@@ -21,7 +21,7 @@
   <!-- font awesome kit code -->
   <script src="https://kit.fontawesome.com/785586cce1.js" crossorigin="anonymous"></script>
 
-
+  <!-- Application title -->
   <title>THE SHOPPING LIST</title>
 </head>
 
@@ -68,7 +68,7 @@
         </form>
 
         <!-- Else navigation bar contains only Register 
-                          and Login to prevent unauthorised users proceeding -->
+        and Login to prevent unauthorised users proceeding -->
         {% else %}
         <a class="nav-item nav-link {% if url_name == 'account_signup' %}active{% endif %} text-white"
           href="{% url 'account_signup' %}">Register</a>

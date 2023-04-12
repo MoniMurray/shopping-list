@@ -6,7 +6,6 @@ class AddForm(forms.ModelForm):
     """Form to add a new Item to the user's shopping list"""
     class Meta:
         model = Entry
-        # fields = '__all__'
         fields = ('item_name', 'quantity', 'star', 'category',)
 
 
