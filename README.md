@@ -204,7 +204,7 @@ The following fields are contained within the Note table:
 
 ## Features<a name="features"></a>
 
-The Shopping List is a useful tool for a User to create and update their shopping list wherever they are on their available device.  The User can group shopping list items by category for ease of use when shopping, can see urgent items at a glance when in a hurry, and can easily toggle items off the list as they shop.
+The Shopping List is a useful application tool in which a User can create and update their shopping list wherever they are on their available device.  The logged in User can group shopping list items by category for ease of use when shopping, can see urgent items at a glance when in a hurry, and can easily check items off the list as they shop.
 
 
 ### Landing Page
@@ -221,7 +221,7 @@ Bespoke pages for following are launched from the navigation bar on the Landing 
 
 Following Registration or Login, all features and functionality for the application are contained in the 'Home' page.  On the 'Home' page, a user can add a new shopping list item to their list, toggle the gold star on/off to mark the item as urgent, toggle the checkbox on/off to mark an item as done, add a note to the item using the note icon, and also edit and delete an item using the edit and delete icons.  
 
-The contents of The Shopping List, when there are any, are displayed in a table on the 'Home' page.
+The contents of The Shopping List, when there are any, are displayed in a vertically scrollable table on the 'Home' page.
 
 Bespoke pages for following are launched from the Home page:
 
